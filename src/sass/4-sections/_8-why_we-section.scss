@@ -1,0 +1,154 @@
+.why_we-section {
+	padding: 70px 0 20px;
+	margin-bottom: 65px;
+
+	background-color: $white_grey_1;
+	background: {
+		image: url(../img/bg-bed_3.jpg);
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+	}
+}
+
+// .why_we-section__top {
+// 	@include grid-row();
+// 	border-bottom: 3px solid $white;
+// 	margin-bottom: 25px;
+
+// 	.why_we__title {
+// 	@include grid-col(5);
+
+// 	font-size: rem(30);
+// 	font-weight: 300;
+// 	color: $white;
+// 	text-transform: uppercase;
+// 	}
+// }
+
+.title-section__why-we {
+	border-color: $white;
+}
+
+.title-section__why-we-header {
+	@include grid-col(5);
+	color: $white;
+}
+
+
+.why_we__cards {
+	@include grid-row();
+
+	.cards__item {
+		@include grid-col(4);
+		position: relative;
+		text-align: right;
+	}
+	
+	:last-child {
+		@include grid-col-end();
+		@include grid-col-off(1);
+		margin-bottom: 0
+	}
+
+	:nth-child(4) {
+		@include grid-col-off(1);
+		margin-bottom: 0;
+	}
+
+
+	// Item style
+	//-----------------
+	.item {
+		// background-color: orange;
+
+		position: relative;
+		display: inline-block;
+		width: 85%;
+		// width: 220px;
+		height: 115px;
+		margin-bottom: 50px;
+		// padding: 15px 15px;
+		padding-left: 100px;
+		border-top: 2px solid $blue;
+		border-right: 2px solid $blue;
+		border-bottom: 2px solid $blue;
+
+		text-align: center;
+		vertical-align: middle;
+
+		.item-text {
+			// background-color: tomato;
+			height: 100%;
+			padding-top: 15px;
+			padding-left: 40px;
+
+			color: $white;
+			font-size: 15px;
+			text-align: left;
+			font-weight: 300;
+
+			line-height: 22px;
+
+			// Выравниваем текст в блоке задавая каждому индивидуальный класс
+			&.item-2 {
+				padding-top: 40px;
+			}
+
+			&.item-3 {
+				padding-top: 35px;
+			}
+
+			&.item-5 {
+				padding-top: 24px;
+			}
+
+		}
+
+		.line-small {
+			width: 2px;
+			height: 15px;
+			background-color: $blue;
+
+			&.top {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			&.bottom {
+				@extend .top;
+				top: auto;
+				bottom: 0;
+			}
+		} // end small line
+
+		.line-big {
+			width: 2px;
+			height: 100%;
+			background-color: $blue;
+
+			position: absolute;
+			top: 0;
+			left: 80px;
+		}
+
+	} // end .item
+	
+	.number {
+		// background-color: green;
+		font-size: 50px;
+		color: $white;
+		font-weight: 300;
+		position: absolute;
+		top: 23px;
+		left: -10px;
+
+		width: 120px;
+		text-align: center;
+		// letter-spacing: 5px;
+		word-spacing: 1px;
+	}
+
+
+}

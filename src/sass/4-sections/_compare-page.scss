@@ -1,0 +1,88 @@
+// compare page
+.compare-wrap{
+	
+}
+.compare-wrap__content{
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.compare__content{
+	@include grid-col(20%,0);
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+.compare__content ul{
+	-webkit-box-shadow: inset -2px -3px 19px 1px rgba(237,238,247,1);
+	-moz-box-shadow: inset -2px -3px 19px 1px rgba(237,238,247,1);
+	box-shadow: inset -2px -3px 19px 1px rgba(237,238,247,1);
+}
+// Критерии сравнения
+.list_descr{ //описание
+	background-color: #252525;
+	height: 60px;
+	color: #fff;
+	text-align: center;
+	padding-top: 9%;
+}
+.list_img{//изображение
+	background-color: #252525;
+	color: #fff;
+	height: 110px;
+	text-align: center;
+	padding-top: 18%;
+}
+.list_inf{//проч. критерии
+	color:#404040;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+// Сравниваемые блоки
+.list_name{ //название матраса
+	background-color: #363636;
+	color:#fff;
+	height: 60px;
+	text-align: center;
+	padding-top: 9%;
+}
+.list_image{ // изображение матраса
+	background-color: #fff;
+	color:#fff;
+	height: 110px;
+	padding: 10px;
+}
+.list_image img{
+	width: 100%;
+	height: 100%;
+}
+.list_info{ // инфо матраса
+	text-align: center;
+	padding: 10px 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+}
+
+.list_cart{
+	background-color: #363636;
+	color:#fff;
+	height: 60px;
+	text-align: center;
+	padding-top: 20px;
+}
+.list_button_to{
+	border: 1px solid #636363;
+	color: #fff;
+	padding-left: 30px;
+    padding-right: 30px;
+
+}
+.list_button_del{
+	background-color: inherit;
+	border:none;
+	color: #fff;
+}

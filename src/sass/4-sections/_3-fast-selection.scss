@@ -1,0 +1,37 @@
+.fast-selection {
+  margin-bottom: 60px;
+  padding: 70px 0 60px;
+
+  background-color: $grey_2;
+  background: {
+    image: url(../img/bg-bed_1.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
+
+}
+
+.fast-selection__content {
+  @include grid-col(4, 0);
+  @include grid-col-pos(1);
+}
+
+
+.fast-selection__title {
+  margin-bottom: 30px;
+  font-family: $font-extraBold;
+  font-size: rem(30);
+  color: $white;
+
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.fase-selection__title-custom {
+  font-size: rem(48);
+}
+
+
+
+

@@ -1,0 +1,40 @@
+/* 
+  
+  BRAND SECTION
+
+*/
+
+.brand-section__list {
+  @include grid-col(10);
+  @include grid-col-end();
+  @include grid-col-pos(1);
+}
+
+.brand-section__list-item {
+  @include grid-col(4);
+  height: 120px;
+  // background-color: tomato;
+  display: inline-block;
+  outline: none;
+  opacity: .5;
+  transition: all 180ms ease-in;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  position: relative;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

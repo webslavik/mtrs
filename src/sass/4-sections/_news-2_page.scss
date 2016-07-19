@@ -1,0 +1,119 @@
+/* 
+	
+	NEWS 2 PAGE STYLE
+
+*/
+
+
+.news-2-page__breadcrumbs {
+	margin-bottom: 21px;
+}
+
+.news-2-page__individual-section {
+	margin-bottom: 0;
+	background-image: url(../img/news-2-page__individual-section.jpg);
+}
+
+.news-2-page__title-section {
+	margin-bottom: 0;
+}
+
+.news-2-page__title-header {
+	font-family: $font-extraBold;
+	margin-bottom: 0;
+	@include grid-col(9);
+}
+
+
+.news-2__content {
+	@include clearfix;
+}
+
+.news-2__content-pic {
+	position: relative;
+	height: 300px;
+	max-height: 300px;
+
+	background-color: green;
+
+	@include grid-col(6);
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+}
+
+
+/* 
+
+	этот код дублируется!!! переписать.
+
+ */
+.news__news-link {
+	text-align: right;
+	margin-top: 10px;
+	@include grid-col(15%);
+
+	.link {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: rem(15);
+		color: $white_grey_1;
+		transition: all 185ms ease-in;
+
+		&:hover,
+		&:focus {
+			color: $orange;
+
+			svg * {
+				fill: $orange;
+			}
+		}
+
+		svg:first-child {
+			margin-left: 4px;
+		}
+
+		svg {
+			width: 10px;
+			height: 14px;
+			margin-left: -6px;
+			padding-top: 5px;
+
+			* {
+				transition: all 185ms ease-in;
+				fill: $arrows-color_1;
+			}		
+
+		} // end SVG
+
+	} // end .link
+
+
+
+	.link-arrow {
+		display: inline-block;
+		vertical-align: middle;
+		width: 6px;
+		height: 10px;
+		background: {
+			image: url('../img/icon/icon-arrow-right.png');
+			size: contain;
+			position: center;
+			repeat: no-repeat;
+		}
+
+		&.first {
+			margin-left: 8px;
+		}
+	}
+} // end news link
+
+//-------------------------------------------------------

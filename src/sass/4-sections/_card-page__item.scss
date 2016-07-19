@@ -1,0 +1,503 @@
+.card-pade__product-item {
+	margin-bottom: 77px;
+}
+
+// LEFT SIDE
+//-------------------------------------
+.product__slideshow {
+	@include grid-col(5);
+
+	// background-color: tomato;
+	padding: 15px 0 40px;
+}
+
+
+// top
+.slideshow__top-item {
+	@include clearfix;
+	margin-bottom: 45px;
+}
+
+.slideshow__action {
+	display: inline-block;
+	padding-top: 10px;
+	// background-color: green;
+	font-size: rem(14);
+	color: $orange;
+}
+
+.slideshow__compare {
+	display: inline-block;
+	float: right;
+	text-align: center;
+	cursor: pointer;
+	font-size: 0;
+}
+
+.compare__pic {
+	display: inline-block;
+	width: 100%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+
+	svg *{
+		fill: $grey_2;
+	}
+}
+
+.compare__text {
+	display: inline-block;
+	width: 100%;
+	font-family: $font-ultraLight;
+	font-size: rem(14);
+	font-weight: 300;
+	color: $white_grey_2;
+}
+
+
+// middle img
+.slideshow__display {
+	position: relative;
+	height: 200px;
+	// background-color: green;
+	margin-bottom: 115px;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 100%;
+		max-height: 100%;
+		margin: auto auto;
+	}
+}
+
+
+// slider thumbs
+.slideshow__thumbs-wrap {
+	position: relative;
+	margin-bottom: 30px;
+	// background-color: pink;
+}
+
+
+.slideshow__thumbs-left-arrow,
+.slideshow__thumbs-right-arrow {
+
+	position: absolute;
+	top: calc(50% - 7px);
+	left: 0;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+    svg * {
+      fill: $orange;
+    }
+  }
+
+  svg {
+    width: 10px;
+    height: 14px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.slideshow__thumbs-left-arrow {
+	left: -15px;
+}
+
+.slideshow__thumbs-right-arrow {
+	left: auto;
+	right: -15px;
+}
+
+.slideshow__thumbs-item {
+	display: inline-block;
+	height: 85px;
+	width: 23%;
+	// cursor: pointer;
+	
+}
+
+.slideshow__thumbs-link {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	// background-color: yellow;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #fff;
+	transition: all 180ms ease-in-out;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		border-bottom: 3px solid $blue;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 100%;
+		max-height: 100%;
+		margin: auto auto;
+	}
+}
+
+
+// social icon
+.slideshow__social {
+
+}
+
+
+.slideshow__social-text {
+	display: inline-block;
+	font-size: rem(14);
+	color: $white_grey_2;
+}
+
+
+.slideshow__social-items {
+	// background-color: purple;
+	display: inline-block;
+	padding-left: 15px;
+	vertical-align: middle;
+}
+
+.slideshow__social-item {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.slideshow__social-link {
+	width: 15px;
+	height: 15px;
+
+	&:hover,
+	&:focus {
+		svg * {
+			fill: $blue;
+		}
+	}
+
+	svg {
+		width: 15px;
+		height: 15px;
+		* {
+			transition: all 180ms ease-in-out;
+			fill: #c2c2c2;
+		}
+	}
+}
+
+
+
+
+// RIGHT SIDE
+//-------------------------------------
+.product__price {
+	// background-color: lightblue;
+	padding-top: 5px;
+
+	@include grid-col(7);
+}
+
+.product__article {
+	margin-bottom: 20px;
+	font-size: rem(14);
+	color: $grey_2;
+	// background-color: green;
+}
+
+
+.product__title-wrap {
+	margin-bottom: 35px;
+	@include clearfix;
+
+	// background-color: green;
+}
+
+.product__title {
+	float: left;
+	display: inline-block;
+	width: 60%;
+	font-family: $font-extraBold;
+	font-size: rem(30);
+	color: $black;
+	line-height: 25px;
+	// background-color: tomato;
+}
+
+.product_title-logo {
+	display: inline-block;
+	position: relative;
+	height: 55px;
+	width: 125px;
+	float: right;
+	vertical-align: bottom;
+
+	// background-color: green;
+
+	
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 100%;
+		max-height: 100%;
+		margin: auto auto;
+	}
+}
+
+
+.product__price-wrap {
+	margin-bottom: 20px;
+	// background-color: green;
+}
+
+
+.price-wrap__old-price {
+	display: inline-block;
+	padding: 0 10px;
+	font-family: $font-bold;
+	font-size: rem(18);
+	color: $white_grey_2;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		background-color: $blue;
+	}
+}
+
+.price-wrap__new-price {
+	display: inline-block;
+	margin-left: 20px;
+	font-family: $font-bold;
+	font-size: rem(30);
+	color: $orange;
+}
+
+
+
+
+.product__form-timer__wrap {
+	@include clearfix;
+}
+
+// form
+//
+.product__form {
+	@include grid-col(60%, 0);
+	// background-color: tomato;
+}
+
+.product__form-select {
+	width: 160px;
+}
+
+.product__form-count {
+	display: inline-block;
+	margin-left: 25px;
+	margin-bottom: 36px;
+}
+
+.form-count__input {
+	width: 40px;
+	height: 28px;
+	margin-right: 6px;
+	margin-left: 2px;
+	padding-right: 15px;
+	border: 1px solid #d0d0d0;
+	border-radius: 3px;
+	font-size: rem(14);
+	color: $white_grey_2;
+	text-align: right;
+}
+
+.form-count__minus,
+.form-count__plus {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 3px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 22px;
+	color: $white;
+	cursor: pointer;
+	border: 1px solid $blue;
+	background-color: lighten($blue, 5%);
+	transition: all 180ms ease-in-out;
+
+	&:hover,
+	&:focus {
+		background-color: $blue;
+	}
+
+	&::selection {
+		background-color: none;
+	}
+}
+
+
+// button
+.product__form-button {
+	padding: 12px 70px 12px 120px;
+	font-family: $font-ultraLight;
+	font-size: rem(24);
+	color: $white;
+	background-color: lighten($blue, 5%);
+	border: 1px solid $blue;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+	transition: all 180ms ease-in-out;
+
+	&:hover,
+	&:focus {
+		background-color: $blue;
+	}
+}
+
+.form-button__icon {
+	display: inline-block;
+	width: 60px;
+	height: 100%;
+	padding: 10px 15px;
+	// background-color: red;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	border-right: 1px dashed $white;
+
+	
+}
+
+// timer
+//
+.product__timer {
+	@include grid-col(40%, 0);
+	text-align: right;
+	padding-top: 60px;
+
+	// background-color: green;
+}
+
+
+.product__timer-text {
+	font-family: $font-ultraLight;
+	font-size: rem(16px);
+	color: $white_grey_2;
+	font-weight: 300;
+	margin-bottom: 4px;
+}
+
+.product__timer-icon {
+	vertical-align: bottom;
+	width: 31px;
+	height: 36px;
+	display: inline-block;
+	svg {
+		width: 31px;
+		height: 36px;
+
+		* {
+			fill: $blue;
+		}
+	}
+}
+
+.timer-wrap__day,
+.timer-wrap__hours {
+	display: inline-block;
+	font-family: $font-bold;
+	font-size: rem(30);
+	line-height: 25px;
+	color: $white_grey_2;
+	// background-color: tomato;
+}
+
+.timer-wrap__day {
+	margin-left: 17px;
+	margin-right: 10px;
+
+}
+
+
+// smal description
+.description-small__list {
+	margin-top: 40px;
+	padding: 20px 10px;
+	position: relative;
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 6px;
+		// background-color: red;
+		background: #00acb8;
+		background: -moz-linear-gradient(top,  #00acb8 0%, #00acb8 49%, #b6e7eb 50%, #b6e7eb 100%);
+		background: -webkit-linear-gradient(top,  #00acb8 0%,#00acb8 49%,#b6e7eb 50%,#b6e7eb 100%);
+		background: linear-gradient(to bottom,  #00acb8 0%,#00acb8 49%,#b6e7eb 50%,#b6e7eb 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00acb8', endColorstr='#b6e7eb',GradientType=0 );
+
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&:after {
+		@extend :before;
+		top: auto;
+		bottom: 0;
+
+		background: #b6e7eb;
+		background: -moz-linear-gradient(top,  #b6e7eb 0%, #b6e7eb 50%, #00acb8 51%, #00acb8 100%);
+		background: -webkit-linear-gradient(top,  #b6e7eb 0%,#b6e7eb 50%,#00acb8 51%,#00acb8 100%);
+		background: linear-gradient(to bottom,  #b6e7eb 0%,#b6e7eb 50%,#00acb8 51%,#00acb8 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6e7eb', endColorstr='#00acb8',GradientType=0 );
+
+	}
+
+}
+
+
+.description-small__item {
+	font-family: $font-ultraLight;
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.description-small__item-left,
+.description-small__item-right {
+	display: inline-block;
+	width: 49%;
+	color: $white_grey_2;
+}

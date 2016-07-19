@@ -1,0 +1,79 @@
+// Use Google Fonts
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+// }
+
+
+// or  Bourbon
+// @include font-face('OpenSansRegular', '../fonts/OpenSansRegular/OpenSansRegular', $file-formats: eof woff ttf);
+
+// @include font-face('FiraSans Regular', '/fonts/FiraSans/FiraSans-Regular', $file-formats: otf);
+// //
+// // @include font-face('FiraSans Book', '../fonts/FiraSans/FiraSans-Book', $file-formats: otf);
+// //
+// @include font-face('FiraSans ExtraBold', '../fonts/FiraSans/FiraSans-ExtraBold');
+// //
+// @include font-face('FiraSans Light', '../fonts/FiraSans/FiraSans-Light');
+//
+// @include font-face('FiraSans SemiBold', '../fonts/FiraSans/FiraSans-SemiBold', $file-formats: otf);
+//
+// @include font-face('FiraSans UltraLight', '../fonts/FiraSans/FiraSans-UltraLigth', $file-formats: otf);
+
+
+
+// @font-face {
+//   font-family: "FiraSans Regular";
+//   src: url("../fonts/FiraSans/FiraSans-ExtraBold.woff2") format("otf");
+// }
+
+
+@font-face {
+	font-family: "FiraSans Regular";
+	src: url("../fonts/FiraSans/FiraSans-Regular.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "FiraSans Light";
+	src: url("../fonts/FiraSans/FiraSans-Light.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+@font-face {
+	font-family: "FiraSans UltraLight";
+	src: url("../fonts/FiraSans/FiraSans-UltraLight.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+@font-face {
+	font-family: "FiraSans SemiBold";
+	src: url("../fonts/FiraSans/FiraSans-SemiBold.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "FiraSans ExtraBold";
+	src: url("../fonts/FiraSans/FiraSans-ExtraBold.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+@font-face {
+	font-family: "FiraSans Book";
+	src: url("../fonts/FiraSans/FiraSans-Book.otf");
+	font-style: normal;
+	font-weight: normal;
+}

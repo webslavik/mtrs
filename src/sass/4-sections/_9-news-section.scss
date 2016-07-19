@@ -1,0 +1,161 @@
+.news-section {
+	margin-bottom: 65px;
+}
+
+.news-section__top {
+	@include grid-row();
+	border-bottom: 3px solid $grey_2;
+	margin-bottom: 45px;
+
+	.news__title {
+		@include grid-col(5);
+
+		font-size: rem(30);
+		color: $grey_1;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-family: $font-light;
+	}
+
+	.news__news-link {
+		text-align: right;
+		margin-top: 10px;
+		@include grid-col(15%);
+
+		.link {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: rem(15);
+			color: $white_grey_1;
+			transition: all 185ms ease-in;
+
+			&:hover,
+			&:focus {
+				color: $orange;
+
+				svg * {
+					fill: $orange;
+				}
+			}
+
+			svg:first-child {
+				margin-left: 4px;
+			}
+
+			svg {
+				width: 10px;
+				height: 14px;
+				margin-left: -6px;
+				padding-top: 5px;
+
+				* {
+					transition: all 185ms ease-in;
+					fill: $arrows-color_1;
+				}		
+
+			} // end SVG
+
+		} // end .link
+
+
+
+		.link-arrow {
+			display: inline-block;
+			vertical-align: middle;
+			width: 6px;
+			height: 10px;
+			background: {
+				image: url('../img/icon/icon-arrow-right.png');
+				size: contain;
+				position: center;
+				repeat: no-repeat;
+			}
+
+			&.first {
+				margin-left: 8px;
+			}
+		}
+	} // end news link
+
+} // end news section
+
+
+.news-section__news {
+	@include grid-row();
+
+	.news-item {
+		// margin-bottom: 20px;
+		@include grid-col(4, 10);
+
+		&:last-child {
+			@include grid-col-end();
+		}
+
+		.item__pic {
+			margin-bottom: 20px;
+		}
+
+
+		// content
+		.news__content-wrap {
+			padding: 0 35px;
+		}
+
+		.news-title {
+			font-size: rem(20);
+			text-align: center;
+			color: $grey_1;
+			font-weight: 300;
+
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+
+		.news-date {
+			font-size: rem(14);
+			font-weight: 300;
+			color: $orange;
+		}
+
+		.news-text {
+			font-size: em(14);
+			color: $white_grey_2;
+			font-weight: 300;
+		}
+
+
+
+		// arrow
+		.news__arrow-wrap {
+			text-align: right;
+			padding-top: 10px;
+			padding-right: 20px;
+		}
+
+		.news__arrow {
+			display: inline-block;
+
+			&:hover,
+			&:focus {
+				svg * {
+					fill: $orange;
+				}
+			}
+	
+
+			svg {
+				width: 10px;
+				height: 14px;
+				margin-left: -6px;
+
+				* {
+					transition: all 185ms ease-in;
+					fill: $arrows-color_1;
+				}		
+
+			} // end lSVG
+		}
+
+
+	} // end item 
+} // end news

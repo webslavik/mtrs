@@ -1,0 +1,30 @@
+.first-factory__content {
+	font-size: em(14);
+	padding: 46px 0 65px;
+
+	@include grid-col(10);
+	@include grid-col-off(1);
+
+	.content__paragraph {
+		font-family: $font-roboto;
+		position: relative;
+		padding-right: 30px;
+		text-align: center;
+		border-right: 1px solid $grey_2;
+		line-height: 24px;
+
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 3px;
+			height: 80px;
+			background-color: $blue;
+
+			position: absolute;
+			top: 10px;
+			right: -2px;
+		}
+	}
+
+}

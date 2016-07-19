@@ -1,0 +1,50 @@
+.individual-section {
+	padding: 70px 0 50px;
+	margin-bottom: 65px;
+
+	background-color: $white_grey_1;
+	background: {
+		image: url(../img/bg-bed_2.jpg);
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+	}
+
+}
+
+
+.individual-section__content {
+	@include grid-col(8);
+	@include grid-col-pos(4);
+	text-align: right;
+}
+
+.individual-section__title {
+	font-family: $font-extraBold;
+	font-size: rem(30);
+	color: $white;
+
+	font-weight: normal;
+	margin-top: 0;
+
+}
+
+.individual-section__title-custom {
+	font-size: rem(48);
+	color: $orange;
+	text-transform: uppercase;
+}
+
+
+.individual-section__list {
+	margin-bottom: 30px;
+
+	li {
+		display: inline-block;
+		font-family: $font-light;
+		margin-left: 20px;
+		color: $white;
+	}
+}
+
+

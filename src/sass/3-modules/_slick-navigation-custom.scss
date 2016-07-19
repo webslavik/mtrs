@@ -1,0 +1,253 @@
+// .slider-top__arrow-wrap {
+// 	background-color: tomato;
+// 	position: relative;
+// 	width: 100%;
+// 	height: 100%;
+// }
+
+
+.slider-top__left-arrow,
+.slider-top__right-arrow {
+	display: inline-block;
+
+	position: absolute;
+	top: calc(50% - 60px);
+	z-index: 20;
+	cursor: pointer;
+
+	&:hover {
+		svg * {
+			fill: $arrows-color_1;
+		}
+	}
+
+	svg {
+		width: 34px;
+		height: 60px;
+
+		* {
+			transition: all 180ms ease-in;
+			fill: lighten($arrows-color_1, 10%);
+		}
+	}
+}
+
+.slider-top__left-arrow {
+	left: 30px;
+}
+
+.slider-top__right-arrow {
+	right: 30px;
+}
+
+
+// CUSTOM DOTS
+.slick-dots {
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0 13px;
+
+		&.slick-active {
+
+			button {
+				background-color: $blue;
+			}
+		}
+	}
+
+	button {
+		font-size: 0;
+		width: 23px;
+		height: 7px;
+		cursor: pointer;
+		// padding: 5px 10px;
+		border: 1px solid $blue;
+		border-radius: 5px;
+		background-color: $white;
+		outline: none;
+	}
+}
+
+
+//  BRANDS AND CLIENTS ARROWS
+.brand__arrow {
+  text-align: right;
+  @include grid-col(15%, 0);
+
+  .brand-arrow-left {
+    display: inline-block;
+    padding: 10px;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      svg * {
+        fill: $orange;
+      }
+    }
+
+    svg {
+      width: 10px;
+      height: 14px;
+
+      * {
+        transition: all 180ms ease-in;
+        fill: $arrows-color_1;
+      }
+    }
+  }
+
+  .brand-arrow-right {
+    @extend .brand-arrow-left;
+    // background-image: url("../img/icon/icon-arrow-right.png");
+    margin-left: 35px;
+  }
+}
+
+
+// .brand__arrow {
+//   text-align: right;
+//   @include grid-col(15%, 0);
+
+//   .brand-arrow-left {
+//     display: inline-block;
+//     padding: 10px;
+
+//     cursor: pointer;
+
+//     &:hover,
+//     &:focus {
+//       svg * {
+//         fill: $orange;
+//       }
+//     }
+
+//     svg {
+//       width: 10px;
+//       height: 14px;
+
+//       * {
+//         transition: all 180ms ease-in;
+//         fill: $arrows-color_1;
+//       }
+//     }
+//   }
+
+//   .brand-arrow-right {
+//     @extend .brand-arrow-left;
+//     // background-image: url("../img/icon/icon-arrow-right.png");
+//     margin-left: 35px;
+//   }
+// }
+
+
+.clients__arrow {
+  text-align: right;
+  @include grid-col(15%, 0);
+
+  .clients-arrow-left {
+    display: inline-block;
+    padding: 10px;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      svg * {
+        fill: $orange;
+      }
+    }
+
+    svg {
+      width: 10px;
+      height: 14px;
+
+      * {
+        transition: all 180ms ease-in;
+        fill: $arrows-color_1;
+      }
+    }
+  }
+
+  .clients-arrow-right {
+    @extend .clients-arrow-left;
+    margin-left: 35px;
+  }
+}
+
+
+
+// 
+//
+
+.card-page__arrows {
+  text-align: right;
+  @include grid-col(15%, 0);
+
+  .card-page__arrows-left {
+    display: inline-block;
+    padding: 10px;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      svg * {
+        fill: $orange;
+      }
+    }
+
+    svg {
+      width: 10px;
+      height: 14px;
+
+      * {
+        transition: all 180ms ease-in;
+        fill: $arrows-color_1;
+      }
+    }
+  }
+
+  .card-page__arrows-right {
+    @extend .card-page__arrows-left;
+    margin-left: 35px;
+  }
+}
+
+
+
+//  PAGINATION ARROW
+// 
+.pagination__control-left {
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 20px;
+  
+
+  &:hover,
+    &:focus {
+      svg * {
+        fill: $blue;
+      }
+  }
+
+  svg {
+    width: 10px;
+    height: 14px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.pagination__control-right {
+  @extend .pagination__control-left;
+  margin-right: 10px;
+  margin-left: 28px;
+}

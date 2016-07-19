@@ -1,0 +1,72 @@
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: $font-regular , sans-serif;
+  font-size: rem(16px);
+  background-color: #fff;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: $grey_1;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $grey_1;
+}
+
+img {
+  max-width: 100%
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    // display: inline-block;
+    list-style-type: none;
+  }
+}
+
+//
+//
+// // selection colors
+// ::selection
+//   background: #FFF498
+//
+// ::-moz-selection
+//   background: #FFF498
+//
+// img::selection
+//   background: transparent
+//
+// img::-moz-selection
+//   background: transparent
+//
+// body
+//   -webkit-tap-highlight-color: #FFF498
+//
+//
+// // User elements

@@ -1,0 +1,101 @@
+.personal-office__orders {
+	margin-bottom: 55px;
+}
+
+.personal-office__breadcrumbs {
+	margin-bottom: 55px;
+}
+
+.personal-office__user-account {
+	// background-color: tomato;
+	margin-bottom: 30px;
+	position: relative;
+
+	@include grid-col(12, 0);
+}
+
+.user-accout__title {
+	padding-left: 20px;
+	padding-bottom: 5px;
+	font-family: $font-ultraLight;
+	font-size: rem(30);
+	
+	border-bottom: 3px solid #c3c3c3;
+
+	// background-color: green;
+}
+
+
+.user-account__pic {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	margin-right: 10px;
+	// padding-top: 5px;
+	// background-color: tomato;
+
+	background-image: url(../img/icon/personal-account__person.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.user-accout__list-links {
+	padding-top: 23px;
+	padding-left: 48px;
+	// background-color: tomato;
+}
+
+.user-accout__item {
+	margin-bottom: 15px;
+}
+
+.user-accout__link {
+	font-family: $font-light;
+	font-size: rem(16);
+	color: $blue;
+	transition: all 180ms ease-in-out;
+
+	&:hover,
+	&:focus {
+		color: darken($blue, 10%);
+	}
+}
+
+
+
+.user-accout__card {
+	width: 220px;
+	padding: 18px 0;
+	background-color: $white;
+	box-shadow: 0px 3px 10px 0px #d4d4d4;
+
+	position: absolute;
+	top: 0;
+	right: 20px;
+
+}
+
+.user-accout__card-item {
+
+}
+
+.user-accout__card-link {
+	display: inline-block;
+	width: 100%;
+	padding: 12px 0 12px 26px;
+	font-size: rem(14);
+	color: #000;
+	transition: all 200ms ease-in-out;
+
+	&:hover,
+	&:focus {
+		background-color: #5aaeb8;
+		color: $white;
+	}
+
+}
+
+.user-account__pic-orders {
+	background-image: url(../img/icon/personal-accout__bag.png);
+}

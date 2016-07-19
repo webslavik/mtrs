@@ -1,0 +1,37 @@
+mixin matrasses-item(new_item, bed_image , title, price)
+	li.matrasses-model__item
+		.matrasses-model__item-wrap
+			.matrasses-model__item-new #{new_item}
+			.matrasses-model__item-pic
+				img(src="img/#{bed_image}", alt="Матрасы")
+			h3.matrasses-model__title #{title}
+			.matrasses-model__form
+				form(action="")
+					select(data-placeholder='Размер').matrasses-model__select
+						option
+						option Размер 1
+						option Размер 2
+						option Размер 3
+					span.matrasses-model__price #{price}
+					.matrasses-model__button-wrap
+						button.matrasses-model__button-click Купить в 1 клик
+						button.matrasses-model__button-basket В корзину
+// NEWS 
+
+section.news-section
+
+	.container
+
+		.news-section__top
+			h2.news__title  Новинки
+
+			.news__news-link
+				a(href="#").link Все новинки
+					include _0-icon-svg/arrow-right.svg
+					include _0-icon-svg/arrow-right.svg
+		
+		ul.matrasses-model__list-items
+
+			+matrasses-item('', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')

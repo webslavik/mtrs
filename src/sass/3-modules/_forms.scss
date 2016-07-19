@@ -1,0 +1,48 @@
+// CONTACT FORM - MAIN PAGE
+//------------------------------------
+.main-page__contact-form {
+	@include grid-col(8);
+	@include clearfix;
+
+	.forms__left,
+	.forms__right {
+		@include grid-col(6);
+	}
+
+
+	// FORM LEFT
+	.left__input {
+		width: 100%;
+		display: block;
+		margin-bottom: 15px;
+		padding: 12px 20px;
+		font-size: rem(14);
+		color: rgba($white, 0.4);
+		font-weight: 300;
+
+		background-color: $forms-brown;
+		border: none;
+		border-left: 1px solid $white;
+		border-radius: 3px;
+		outline: none;
+
+		transition: all 185ms ease-in;
+
+		&:hover,
+		&:focus {
+			color: rgba($white, 1);
+		}
+	}
+
+	.input-email {
+		margin-bottom: 35px;
+	}
+
+	// FORM RIGHT
+	.area {
+		@extend .left__input;
+		height: 162px;
+		margin-bottom: 0;
+	}
+		
+}

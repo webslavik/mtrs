@@ -1,0 +1,25 @@
+// pagination
+
+.mattresses-models__pagination
+	.pagination-wrap
+		span.pagination__control.pagination__control-left
+			include ../_0-icon-svg/arrow-left.svg
+		ul.pagination-list
+			li.pagination__item
+				a(href="#").item-link 1
+			li.pagination__item
+				a(href="#").item-link 2
+			li.pagination__item
+				a(href="#").item-link 3
+			li.pagination__item
+				a(href="#").item-link 4
+			li.pagination__item
+				a(href="#").item-link 5
+
+			li.pagination__item.dots ...
+
+			li.pagination__item
+				a(href="#").item-link 100
+
+		span.pagination__control.pagination__control-right
+			include ../_0-icon-svg/arrow-right.svg

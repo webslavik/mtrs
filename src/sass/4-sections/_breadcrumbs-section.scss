@@ -1,0 +1,48 @@
+// 
+// 
+
+.breadcrumbs {
+	// background-color: tomato;
+}
+
+.breadcrumbs__list {
+	width: 100%;
+	padding: 17px;
+}
+
+.breadcrumbs__item {
+	display: inline-block;
+
+	&:first-child {
+		.breadcrumbs__link {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.breadcrumbs__link {
+	font-family: $font-light;
+	font-size: em(12);
+	color: #555;
+	
+	&:before {
+		content: '/';
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+}
+
+.breadcrumbs__link_active {
+	color: $orange;
+	
+	&:before {
+		content: '/';
+		display: inline-block;
+		margin: 0 10px;
+		color: #555;
+	}
+
+}

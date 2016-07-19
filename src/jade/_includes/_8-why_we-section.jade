@@ -1,0 +1,35 @@
+mixin cards-item(number, text, padding_class)
+	.cards__item
+		.number #{number}
+		.item
+			.item-text(class='#{padding_class}') #{text}
+			span.line-small.top
+			span.line-small.bottom
+			span.line-big
+
+
+// WHY WE
+section.why_we-section
+
+	.container
+
+		.title-section.title-section__why-we
+			h2.title-section__header.title-section__why-we-header  Почему  с нами выгодно
+
+		.why_we__cards
+			+cards-item('3750', 'Отзывов от благодарных покупателей')
+			+cards-item('7 лет', '7 лет работы', 'item-2')
+			+cards-item('12', 'До 12 лет гарантии на матрасы', 'item-3')
+			+cards-item('70%', 'Постоянных покупателей рекомендуют нас своим знакомым ')
+			+cards-item('2', '2 Собственных завода с итальянским оборудованием', 'item-5')
+
+
+
+			//- .cards__item
+			//- 	.number 20
+			//- 	.item
+			//- 		.item-text Постоянных покупателей рекомендуют нас своим знакомым 
+			//- 		span.line-small.top
+			//- 		span.line-small.bottom
+			//- 		span.line-big
+

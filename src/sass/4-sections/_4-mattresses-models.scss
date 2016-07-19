@@ -1,0 +1,60 @@
+.main-page__mattresses-models {
+  margin-bottom: 65px;
+
+}
+
+.main-page__title-section-nav {
+  @include grid-col(9);
+}
+
+
+
+//----------------------------------
+// PAGINATION
+//----------------------------------
+.mattresses-models__pagination {
+  @include grid-row();
+
+  .pagination-wrap {
+    text-align: right;
+    @include grid-col(4, 0);
+    @include grid-col-off(8);
+  }
+
+  .pagination__control,
+  .pagination__item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pagination-list {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pagination__item {
+    margin: 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $white;
+    transition: all 180ms ease-in;
+    cursor: pointer;
+    
+    &:hover {
+      border-bottom: 1px solid $blue;  
+    }
+  }
+
+  .item-link {
+    vertical-align: middle;
+    color: $white_grey_2;
+    font-size: rem(14);
+  }
+
+
+  .pagination__item.dots {
+    border-bottom: none;
+    cursor: default;
+  }
+
+}
+

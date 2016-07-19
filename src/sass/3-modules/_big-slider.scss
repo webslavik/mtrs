@@ -1,0 +1,75 @@
+/* 
+
+  BIG SLIDER
+
+ */
+
+.big-slider-top {
+  padding-top: 26px;
+  padding-bottom: 82px;
+
+  position: relative;
+
+}
+
+.slider-top__items-list {
+  padding-left: 50px;
+}
+
+
+.big-slider__item {
+  display: inline-block;
+  outline: none;
+}
+
+.big-slider__image {
+  @include grid-col(5,0);
+}
+
+.big-slider__content {
+  padding-top: 62px;
+  @include grid-col(5,0);
+  @include grid-col-end();
+  @include grid-col-pos(1);
+}
+
+
+.big-slider__title {
+  margin-bottom: 10px;
+  font-family: $font-extraBold;
+  font-size: rem(60);
+  color: $blue;
+  text-transform: uppercase;
+
+}
+
+.big-slider__descr {
+  margin-bottom: 62px;
+  padding-left: 10px;
+  font-family: $font-book;
+  font-size: rem(16);
+  line-height: 22px;
+  color: $grey_3;
+}
+
+
+.big-slider__button {
+  display: inline-block;
+  margin-left: 35px;
+  margin-right: 60px;
+  padding: 13px 23px;
+  font-family: $font-light;
+  font-size: rem(16);
+  vertical-align: middle;
+}
+
+.big-slider__price {
+  display: inline-block;
+  font-family: $font-bold;
+  font-size: rem(48);
+  color: $grey_3 ;
+  vertical-align: middle;
+}
+
+
+
