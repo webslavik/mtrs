@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>TEST HTML</title>
+    <title>Catalog page</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=latin,cyrillic" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css"/>
@@ -71,6 +71,93 @@
           </div>
         </div>
       </header>
+      <section class="bed-top-section">
+        <div class="container">
+          <h1 class="bed-top-section__title">Матрасы</h1>
+          <p class="headwhitetext">Найдено 1025 товаров</p>
+        </div>
+      </section>
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">
+                 
+                Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link_active">Матрасы</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="catalog__main-content">
+        <div class="catalog-wrap">
+          <div class="container">
+            <div class="catalog-wrap__content">
+              <p class="catalog__sort_p">Сортировать : &#160;
+                <select class="catalog__sort_po">
+                  <option> По названию</option>
+                  <option> По цене</option>
+                </select>
+              </p>
+              <div class="catalog__select_wrap">
+                <div class="select_wrap">
+                  <select class="catalog__select">
+                    <option> Размер</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <select class="catalog__select">
+                    <option> Вес спящих</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <select class="catalog__select">
+                    <option> Жесткость</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <select class="catalog__select">
+                    <option> Высота</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <select class="catalog__select">
+                    <option> Пруж. блок</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <select class="catalog__select">
+                    <option> Бренд</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+              </div>
+              <div class="catalog__select_wrap">
+                <div class="select_wrap">
+                  <select class="catalog__select_big">
+                    <option> Жетскость 1-й стороны</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <select class="catalog__select_big">
+                    <option> Жетскость 2-й стороны</option>
+                    <option> 1</option>
+                  </select>
+                </div>
+                <div class="select_wrap">
+                  <input type="text" placeholder="от" class="price_catalog_input"/>
+                  <input id="newinp" type="range"/>
+                  <input type="text" placeholder="до" class="price_catalog_input"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- FOOTER -->
     <footer class="footer-main">

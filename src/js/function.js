@@ -1,4 +1,4 @@
-!(function() {
+﻿!(function() {
 
   
   // SLICK SLIDER 
@@ -132,16 +132,26 @@
     minimumResultsForSearch: -1,
   });
 
+$('.catalog__select').select2({
+  minimumResultsForSearch: -1,
+  width: '160px',
 
+})
+$('.catalog__select_big').select2({
+  minimumResultsForSearch: -1,
+  width: '220px',
+
+})
+  
   // Readmore js
   //--------------------------------------------------
   $('.description-section__definition').readmore({
     maxHeight: 10,
-  });
+})
   
 
 })();
-
+//ползунок 
 
 // Пришлось вынести за пределы аннонимной функции 
 // т.к. код отказывался работать
@@ -171,20 +181,21 @@ function initMap() {
   })
 
 
-} // end initMap()
+ } 
+ // end initMap()
 
-  // function initMap() {
-  //       var cairo = {lat: 49.8438884, lng: 24.0287383};
-  //       var map = new google.maps.Map(document.getElementById('map'), {
-  //         scaleControl: true,
-  //         center: cairo,
-  //         mapTypeId:google.maps.MapTypeId.ROADMAP,
-  //         zoom:17,
-  //         scrollwheel: false
-  //       });
-  //       var marker = new google.maps.Marker({
-  //         map: map, 
-  //         position: cairo,
-  //         animation:google.maps.Animation.BOUNCE
-  //       });
-  //     }
+//    function initMap() {
+//        var cairo = {lat: 49.8438884, lng: 24.0287383};
+//        var map = new google.maps.Map(document.getElementById('map'), {
+//           scaleControl: true,
+//           center: cairo,
+//           mapTypeId:google.maps.MapTypeId.ROADMAP,
+//            zoom:17,
+//            scrollwheel: false
+//         });
+//          var marker = new google.maps.Marker({
+//          map: map, 
+//           position: cairo,
+//            animation:google.maps.Animation.BOUNCE
+//          });
+//        }
