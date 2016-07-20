@@ -1,0 +1,38 @@
+mixin news-item(image, title, date, text)
+	li.news-item
+		img(src="img/#{image}", alt="картинка").item__pic
+		.news__content-wrap
+			h3.news-title Новая серия матрасов «Твин» на двойных пружинах
+			.news-date 25.09.2015
+			p.news-text Технология двойных пружин используется уже продолжительное время, но именно сейчас она становится наиболее актуальной.
+
+		.news__arrow-wrap
+			a(href="#").news__arrow
+				include ../_0-icon-svg/arrow-right.svg
+				include ../_0-icon-svg/arrow-right.svg
+
+
+// NEWS 
+
+section.news-section
+
+	.container
+
+		.news-section__top
+			h2.news__title  Полезные статьи и новости
+
+			.news__news-link
+				a(href="#").link Все новости
+					include ../_0-icon-svg/arrow-right.svg
+					include ../_0-icon-svg/arrow-right.svg
+		
+		// news items
+		.news-section__news
+			ul.news
+
+				+news-item('news-img.png', 'Новая серия матрасов «Твин» на двойных пружинах', '25.09.2015', 'Технология двойных пружин используется уже продолжительное время, но именно сейчас она становится наиболее актуальной.')
+
+				+news-item('news-img.png', 'Новая серия матрасов «Твин» на двойных пружинах', '25.09.2015', 'Технология двойных пружин используется уже продолжительное время, но именно сейчас она становится наиболее актуальной.')
+
+				+news-item('news-img.png', 'Новая серия матрасов «Твин» на двойных пружинах', '25.09.2015', 'Технология двойных пружин используется уже продолжительное время, но именно сейчас она становится наиболее актуальной.')
+				

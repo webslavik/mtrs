@@ -1,5 +1,9 @@
+//- на этой странице собираются все блоки которые повторяются в проекте
+//- для общего ознакомления
+
+
 //- отключаем карту на страницах где она не нужна
-- var map = false
+- var map = true
 
 
 <!DOCTYPE html>
@@ -10,7 +14,7 @@ html(lang="ru")
 
 		//- задаем заголовок нашей странице
 		title
-			| News 2 page
+			| TEST PAGE
 		
 		link(href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' type='text/css')
 		
@@ -28,10 +32,15 @@ html(lang="ru")
 			include _includes/_1-header-section
 
 			//- блоки
-			include _includes/news-2-page/_news-2-page__breadcrumbs
-			include _includes/news-2-page/_news-2-page__content-section
-			include _includes/news-2-page/_news-2-page__individual-section
-			
+			include _includes/blocks/_breadcrumbs
+			include _includes/blocks/_big-slider
+			include _includes/blocks/_fast-section
+			include _includes/blocks/_brends-section
+			include _includes/blocks/_individual-section
+			include _includes/blocks/_why-we-section
+			include _includes/blocks/_news-section
+			include _includes/blocks/_first-factory-section
+			include _includes/blocks/_big-contact-section
 
 		include _includes/_footer
 
@@ -48,4 +57,4 @@ html(lang="ru")
 		if map	
 			script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC0qKJVCPu4KhnZ6bEEQEyQ5bTDTJ8b-zE&callback=initMap')
 		
-
+	

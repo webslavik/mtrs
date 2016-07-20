@@ -1,23 +1,57 @@
-extends _layouts/pagewrapper
+//- отключаем карту на страницах где она не нужна
+- var map = true
 
 
-block title
-  | Project Title
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-block includes
-
-  .page-wrap
-
-    include _includes/_1-header-section
-    include _includes/_2-slider-top-section
-    include _includes/_3-fast-selection
-    include _includes/_4-matrasses-models-section
-    include _includes/_5-brends-section
-    include _includes/_6-individual-section
-    include _includes/_7-clients-section
-    include _includes/_8-why_we-section
-    include _includes/_9-news-section
-    include _includes/_10-contact-section
-    include _includes/_11-first-factory-section
+    //- задаем заголовок нашей странице
+    title
+      | Main page
     
-  include _includes/_footer
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' type='text/css')
+    
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css")
+    
+      
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+    link(rel="stylesheet", href="css/main.css")
+
+  
+  body
+    
+    //- подключаем основные блоким к нашей странице
+    .page-wrap
+      include _includes/_1-header-section
+
+      //- блоки
+      include _includes/index-page/_big-slider__index-page
+      include _includes/index-page/_fast-section__index-page
+      include _includes/index-page/_index-page__items-section
+      include _includes/index-page/_brends-section__index-page
+      include _includes/index-page/_individual-section__index-page
+      include _includes/index-page/_clients-section__index-page
+      include _includes/index-page/_why-we-section__index-page
+      include _includes/index-page/_news-section__index-page
+      include _includes/index-page/_big-contact-section__index-page
+      include _includes/index-page/_first-factory-section__index-page
+
+    include _includes/_footer
+
+    
+
+
+    script(src='js/jquery-2.1.4.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js')
+    script(src='js/slick.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js')
+    script(src='js/function.js')
+    
+    //- карта если нужна
+    if map  
+      script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC0qKJVCPu4KhnZ6bEEQEyQ5bTDTJ8b-zE&callback=initMap')
+    
+  

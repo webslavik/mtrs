@@ -1,18 +1,52 @@
-extends _layouts/pagewrapper
+//- отключаем карту на страницах где она не нужна
+- var map = false
 
 
-block title
-  | News 1
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-block includes
+		//- задаем заголовок нашей странице
+		title
+			| Personal office page
+		
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' type='text/css')
+		
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css")
+		
+			
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+		link(rel="stylesheet", href="css/main.css")
 
-  .page-wrap
+	
+	body
+		
+		//- подключаем основные блоким к нашей странице
+		.page-wrap
+			include _includes/_1-header-section
 
-    include _includes/_1-header-section
-    include _includes/_personal-office__bed-top-section
-    include _includes/_personal-office__breadcrumbs
-    include _includes/_personal-office__orders
-    include _includes/_personal-offcie__news
-    include _includes/_personal-offcie__new-product
-   
-  include _includes/_footer
+			//- блоки
+			include _includes/personal-office-page/_personal-office__bed-top-section
+			include _includes/personal-office-page/_personal-office__breadcrumbs
+			include _includes/personal-office-page/_personal-office__orders
+			include _includes/personal-office-page/_personal-office__news
+			include _includes/personal-office-page/_personal-office__new-product
+			
+
+		include _includes/_footer
+
+		
+
+
+		script(src='js/jquery-2.1.4.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js')
+		script(src='js/slick.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js')
+		script(src='js/function.js')
+		
+		//- карта если нужна
+		if map	
+			script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC0qKJVCPu4KhnZ6bEEQEyQ5bTDTJ8b-zE&callback=initMap')
+		

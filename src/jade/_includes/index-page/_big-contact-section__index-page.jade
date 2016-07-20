@@ -1,0 +1,48 @@
+// CONTACT
+
+section.contact-section
+
+	.contact-section__top-bg
+
+		.container
+
+			.contact-section__top
+				h2.contact__title Свяжитесь с нами
+
+
+			.contact__info
+				.info__text-info
+					p.text Наш специалист проконсультирует Вас по выбору матраса, а так же скинет полный каталог и расскажет о текущих акциях
+					.address
+						include ../_0-icon-svg/location.svg
+						span.addres__text г. Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое Кольцо"
+
+					.phone
+						include ../_0-icon-svg/phone.svg
+						.phone__number +7 (495) 181-09-00
+
+					button.button.button-contact Заказать звонок
+
+				.main-page__contact-form
+					form(action="").forms
+						.forms__left
+							input(type="text" placeholder='Имя').left__input.input-name
+							input(type="text" placeholder='Телефон').left__input.input-phone
+							input(type="text" placeholder='Email').left__input.input-email
+							input(type="button" value='Отправить').button.button-form
+
+						.forms__right
+							textarea(name="" placeholder="Ваше сообщение").area
+
+
+	.contact-section__map
+		.google-maps#main-map
+
+
+
+	.contact-section__bottom-line
+
+
+
+
+
