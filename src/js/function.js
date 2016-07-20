@@ -151,12 +151,13 @@ $('.catalog__select_big').select2({
 
 $(function(){ // Добавление  категорий сортировки 
     $("select").change(function(e){
-        var b = e.target.id;
-        console.log("id " + b);
+        var b = e.target.id; 
         var a = $(this).val();
-        console.log(a);
-        $("."+b).html(a + "<img class='sort_img' src='img/icon/arrdown.png', alt=''>");
-        $("."+b).addClass("visible");
+        $("."+b).html(a + "<img class='sort_img' src='img/icon/close.png', alt=''>");
+        $("."+b).addClass("visible").removeClass('hiden');
+        $(".sort_img").click(function(){
+          $(this).parent().addClass('hiden').removeClass('visible');
+        })
 
     })
  });
