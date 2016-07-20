@@ -10,7 +10,7 @@ html(lang="ru")
 
 		//- задаем заголовок нашей странице
 		title
-			| News 2 page
+			| Card page
 		
 		link(href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic' type='text/css')
 		
@@ -28,11 +28,9 @@ html(lang="ru")
 			include _includes/_1-header-section
 
 			//- блоки
-			include _includes/news-2-page/_news-2-page__breadcrumbs
-			include _includes/news-2-page/_news-2-page__content-section
-			include _includes/news-2-page/_news-2-page__social-block
-			include _includes/news-2-page/_news-2-page__individual-section
-			
+			include _includes/payment-page/_payment-page__breadcrumbs
+			include _includes/payment-page/_payment-page__list
+
 
 		include _includes/_footer
 
@@ -48,5 +46,3 @@ html(lang="ru")
 		//- карта если нужна
 		if map	
 			script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC0qKJVCPu4KhnZ6bEEQEyQ5bTDTJ8b-zE&callback=initMap')
-		
-
