@@ -7,54 +7,66 @@ section.catalog__main-content
 			.catalog-wrap__content
 
 				p.catalog__sort_p Сортировать : &#160;
-					select.catalog__sort_po
-						option  По названию
-						option  По цене
+					select.catalog__sort_po#sort_po
+						option(value="nazv")  По названию
+						option(value="cena")  По цене
 
 				.catalog__select_wrap
 
 					.select_wrap
-						select.catalog__select
-							option  Размер
-							option  1
+						select.catalog__select#razmer
+							option(value="ку")  Размер
+							option(value="1размер")  1размер
 					.select_wrap
-						select.catalog__select
-							option  Вес спящих
-							option  1
+						select.catalog__select#ves
+							option(value="12")  Вес спящих
+							option(value="1вес")  1 вес
 					.select_wrap
-						select.catalog__select
-							option  Жесткость
-							option  1
+						select.catalog__select#zhestkost
+							option(value="323")  Жесткость
+							option(value="1")  1 жестк
 					.select_wrap
-						select.catalog__select
-							option  Высота
-							option  1
+						select.catalog__select#visota
+							option(value="444")  Высота
+							option(value="12")  1 высота
 					.select_wrap
-						select.catalog__select
-							option  Пруж. блок
-							option  1
+						select.catalog__select#pruzhblock
+							option(value="323")  Пруж. блок
+							option(value="121")  1 пруж блок
 					.select_wrap
-						select.catalog__select
-							option  Бренд
-							option  1
+						select.catalog__select#brend
+							option(value="232")  Бренд
+							option(value="43")  1 бренд
 
 				.catalog__select_wrap
 
 					.select_wrap
-						select.catalog__select_big
-							option  Жетскость 1-й стороны
-							option  1
+						select.catalog__select_big#zhest1stor
+							option(value="123")  Жетскость 1-й стороны
+							option(value="323")  1
 
 					.select_wrap
-						select.catalog__select_big
-							option  Жетскость 2-й стороны
-							option  1
+						select.catalog__select_big#zhest2stor
+							option(value="11")  Жетскость 2-й стороны
+							option(value="232") 1
 
 					.select_wrap
 						input.price_catalog_input(type="text" placeholder="от")
 						input#newinp(type="range")
 						input.price_catalog_input(type="text" placeholder="до")
-					
+
+				.filter_select_wrap
+					span.filter_span.sort_po
+					span.filter_span.razmer
+					span.filter_span.ves
+					span.filter_span.zhestkost
+					span.filter_span.visota
+					span.filter_span.pruzhblock
+					span.filter_span.brend
+					span.filter_span.zhest1stor
+					span.filter_span.zhest2stor
+
+				
 
 
 

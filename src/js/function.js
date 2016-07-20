@@ -148,10 +148,22 @@ $('.catalog__select_big').select2({
   $('.description-section__definition').readmore({
     maxHeight: 10,
 })
-  
+
+$(function(){ // Добавление  категорий сортировки 
+    $("select").change(function(e){
+        var b = e.target.id;
+        console.log("id " + b);
+        var a = $(this).val();
+        console.log(a);
+        $("."+b).html(a + "<img class='sort_img' src='img/icon/arrdown.png', alt=''>");
+        $("."+b).addClass("visible");
+
+    })
+ });
 
 })();
 //ползунок 
+
 
 // Пришлось вынести за пределы аннонимной функции 
 // т.к. код отказывался работать
@@ -182,20 +194,4 @@ function initMap() {
 
 
  } 
- // end initMap()
-
-//    function initMap() {
-//        var cairo = {lat: 49.8438884, lng: 24.0287383};
-//        var map = new google.maps.Map(document.getElementById('map'), {
-//           scaleControl: true,
-//           center: cairo,
-//           mapTypeId:google.maps.MapTypeId.ROADMAP,
-//            zoom:17,
-//            scrollwheel: false
-//         });
-//          var marker = new google.maps.Marker({
-//          map: map, 
-//           position: cairo,
-//            animation:google.maps.Animation.BOUNCE
-//          });
-//        }
+ 

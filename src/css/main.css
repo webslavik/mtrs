@@ -2563,6 +2563,11 @@ ul {
   width: 50px;
   padding-left: 10px; }
 
+.filter_select_wrap span {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: lightblue; }
+
 .footer-main {
   height: 520px;
   margin-top: -520px;
