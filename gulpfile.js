@@ -19,7 +19,7 @@ gulp.task('jade', function() {
     }))
     .on('error', notify.onError(function(err) {
         return {
-          title: 'Sass',
+          title: 'Jade',
           message: err.message
         }
     }))

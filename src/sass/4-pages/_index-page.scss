@@ -1,0 +1,270 @@
+/* 
+
+  ОСНОВНАЯ СТРАНИЦА
+
+*/
+.main-page__mattresses-models {
+  margin-bottom: 65px;
+
+}
+
+.main-page__title-section-nav {
+  @include grid-col(9);
+}
+
+
+
+//----------------------------------
+// PAGINATION
+//----------------------------------
+.mattresses-models__pagination {
+  @include grid-row();
+
+  .pagination-wrap {
+    text-align: right;
+    @include grid-col(4, 0);
+    @include grid-col-off(8);
+  }
+
+  .pagination__control,
+  .pagination__item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pagination-list {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pagination__item {
+    margin: 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $white;
+    transition: all 180ms ease-in;
+    cursor: pointer;
+    
+    &:hover {
+      border-bottom: 1px solid $blue;  
+    }
+  }
+
+  .item-link {
+    vertical-align: middle;
+    color: $white_grey_2;
+    font-size: rem(14);
+  }
+
+
+  .pagination__item.dots {
+    border-bottom: none;
+    cursor: default;
+  }
+
+}
+
+/* 
+
+  СЕКЦИЯ КОНТАКТОВ НА ГЛАВНОЙ СТРАНИЦЕ
+
+*/
+
+
+.contact-section {
+  // padding: 60px 0 0 0;
+
+  // background-color: $white_grey_1;
+  // background: {
+  //  // image: url(../img/bg-contact-test.jpg);
+  //  size: cover;
+  //  repeat: no-repeat;
+  //  position: center top;
+  // }
+}
+
+
+// TOP BG 
+//----------------------------------------
+.contact-section__top-bg {
+  padding-top: 60px;
+  width: 100%;
+  background-color: $white_grey_1;
+  background: {
+    image: url(../img/bg-contact-test.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: center bottom;
+  }
+}
+
+.contact-section__top {
+  @include grid-row();
+  border-bottom: 3px solid $white;
+  margin-bottom: 40px;
+
+  .contact__title {
+    @include grid-col(5);
+
+    font-size: rem(30);
+    color: $white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: $font-light;
+  }
+}
+
+
+// FORM AND PHONE
+.contact__info {
+  margin-bottom: 65px;
+  @include grid-row();
+
+  
+  // LEFT 
+  .info__text-info {
+    @include grid-col(4, 10);
+    padding-left: 20px;
+    color: $white;
+    font-family: $font-light;
+
+
+    .text {
+      font-size: rem(14);
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    .address {
+      margin-bottom: 15px;
+
+      svg {
+        display: inline-block;
+        margin-right: 15px;
+        width: 16px;
+        vertical-align: top;
+
+        * {
+        fill: $white;
+        }
+      }
+
+      .addres__text {
+        display: inline-block;
+        width: 90%;
+        font-size: rem(14);
+      }
+    } // end Address
+
+    .phone {
+      margin-bottom: 33px;
+
+      svg {
+        display: inline-block;
+        margin-right: 10px;
+        width: 16px;
+        vertical-align: top;
+
+        * {
+        fill: $white;
+        }
+      }
+
+      .phone__number {
+        font-weight: 300;
+        display: inline-block;
+        width: 85%;
+        font-size: rem(20);
+
+      }
+
+    }
+
+  } // end left column forms
+}
+
+
+// CONTACT MAP
+//----------------------------------------
+.contact-section__map {
+  width: 100%;
+  height: 300px;
+  background-color: orange;
+  position: relative;
+
+  
+  .google-maps {
+    width: 100%;
+    height: 100%;
+    // width: 500px;
+    // height: 200px;
+    background-color: yellow;
+  }
+}
+
+
+
+// BG BOTTOM LINE
+//----------------------------------------
+.contact-section__bottom-line {
+  width: 100%;
+  height: 80px;
+  background-color: $white_grey_1;
+  background: {
+    image: url(../img/bg-contact-bottom-line.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: center bottom;
+  }
+}
+
+
+
+// CONTACT FORM - MAIN PAGE
+//------------------------------------
+.main-page__contact-form {
+  @include grid-col(8);
+  @include clearfix;
+
+  .forms__left,
+  .forms__right {
+    @include grid-col(6);
+  }
+
+
+  // FORM LEFT
+  .left__input {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    font-size: rem(14);
+    color: rgba($white, 0.4);
+    font-weight: 300;
+
+    background-color: $forms-brown;
+    border: none;
+    border-left: 1px solid $white;
+    border-radius: 3px;
+    outline: none;
+
+    transition: all 185ms ease-in;
+
+    &:hover,
+    &:focus {
+      color: rgba($white, 1);
+    }
+  }
+
+  .input-email {
+    margin-bottom: 35px;
+  }
+
+  // FORM RIGHT
+  .area {
+    @extend .left__input;
+    height: 162px;
+    margin-bottom: 0;
+  }
+    
+}
+
