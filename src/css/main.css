@@ -2741,6 +2741,77 @@ ul {
   margin-right: 7%;
   margin-left: 2%; }
 
+.headwhitetext {
+  color: #fff; }
+
+.catalog__sort_p {
+  font-family: "FiraSans Light";
+  text-align: right;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px; }
+
+.catalog__sort_po {
+  font-family: "FiraSans Light";
+  width: 130px;
+  border: none;
+  color: #61c2d0;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(/img/icon/arrdown.png);
+  background-position: right center;
+  background-repeat: no-repeat; }
+
+.catalog__sort_po option {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.catalog__select_wrap {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px; }
+
+.select_wrap {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px; }
+
+.price_catalog_input {
+  width: 50px;
+  padding-left: 10px; }
+
+.filter_select_wrap {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.filter_select_wrap span {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.filter_span {
+  display: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.visible {
+  display: inline !important; }
+
+.hiden {
+  display: none; }
+
+.sort_img {
+  margin-left: 1%;
+  cursor: pointer; }
+
+.catalog__filter.button_wrap {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 40px; }
+
 .footer-main {
   height: 520px;
   margin-top: -520px;

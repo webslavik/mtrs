@@ -1,0 +1,110 @@
+mixin matrasses-item(new_item, bed_image , title, price)
+	li.matrasses-model__item
+		.matrasses-model__item-wrap
+			.matrasses-model__item-new #{new_item}
+			.matrasses-model__item-pic
+				img(src="img/#{bed_image}", alt="Матрасы")
+			h3.matrasses-model__title #{title}
+			.matrasses-model__form
+				form(action="")
+					select(data-placeholder='Размер').matrasses-model__select
+						option
+						option Размер 1
+						option Размер 2
+						option Размер 3
+					span.matrasses-model__price #{price}
+					.matrasses-model__button-wrap
+						button.matrasses-model__button-click Купить в 1 клик
+						button.matrasses-model__button-basket В корзину
+
+
+
+
+
+
+section.catalog__main-content
+
+	.catalog-wrap
+
+		.container
+
+			.catalog-wrap__content
+
+				p.catalog__sort_p Сортировать : &#160;
+					select.catalog__sort_po#sort_po
+						option(value="nazv")  По названию
+						option(value="cena")  По цене
+
+				.catalog__select_wrap
+
+					.select_wrap
+						select.catalog__select#razmer
+							option Размер
+							option(value="1размер")  1размер
+					.select_wrap
+						select.catalog__select#ves
+							option  Вес спящих
+							option(value="1вес")  1 вес
+					.select_wrap
+						select.catalog__select#zhestkost
+							option  Жесткость
+							option(value="1 жестк")  1 жестк
+					.select_wrap
+						select.catalog__select#visota
+							option  Высота
+							option(value="1 высота")  1 высота
+					.select_wrap
+						select.catalog__select#pruzhblock
+							option  Пруж. блок
+							option(value="1 пруж блок")  1 пруж блок
+					.select_wrap
+						select.catalog__select#brend
+							option  Бренд
+							option(value="1 бренд")  1 бренд
+
+				.catalog__select_wrap
+
+					.select_wrap
+						select.catalog__select_big#zhest1stor
+							option  Жетскость 1-й стороны
+							option(value="1 жесткость")  2
+
+					.select_wrap
+						select.catalog__select_big#zhest2stor
+							option  Жетскость 2-й стороны
+							option(value="2 жесткость") 2
+
+					.select_wrap
+						input.price_catalog_input(type="text" placeholder="от")
+						input#newinp(type="range")
+						input.price_catalog_input(type="text" placeholder="до")
+
+				.filter_select_wrap
+					span.filter_span.sort_po
+					span.filter_span.razmer
+					span.filter_span.ves
+					span.filter_span.zhestkost
+					span.filter_span.visota
+					span.filter_span.pruzhblock
+					span.filter_span.brend
+					span.filter_span.zhest1stor
+					span.filter_span.zhest2stor
+				
+				ul.matrasses-model__list-items
+
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+				
+				.catalog__filter.button_wrap
+					button.button.catalog__filter_button Показать больше 
+							
+
+
+
