@@ -17,15 +17,15 @@
           <div class="container">
             <div class="top-line__links">
               <ul class="links">
-                <li class="link-item"><a href="#" class="link">Оплата</a></li>
-                <li class="link-item"><a href="#" class="link">Доставка</a></li>
-                <li class="link-item"><a href="#" class="link">О компании</a></li>
+                <li class="link-item"><a href="payment-page.html" class="link">Оплата</a></li>
+                <li class="link-item"><a href="payment-page.html" class="link">Доставка</a></li>
+                <li class="link-item"><a href="about-page.html" class="link">О компании</a></li>
               </ul>
             </div>
             <div class="top-line__call"><span class="call__number">
                  
                 +7 <span class="brackets">&#40;</span>495<span class="brackets">&#41;</span> 181-09-00</span><a href="" class="call__text">Заказать звонок</a></div>
-            <div class="top-line__office"><span class="office__icon"><img src="img/icon/icon-logo.png" alt=""/></span><a href="#" class="office__text">Личный кабинет</a></div>
+            <div class="top-line__office"><span class="office__icon"><img src="img/icon/icon-logo.png" alt=""/></span><a href="personal-office_page.html" class="office__text">Личный кабинет</a></div>
           </div>
         </div>
         <!-- middle-->
@@ -38,8 +38,8 @@
                 <li class="menu__item"><a href="#" class="item__link">Кредит</a></li>
                 <li class="menu__item"><a href="#" class="item__link">Пошив под заказ</a></li>
                 <li class="menu__item"><a href="#" class="item__link">Оптовикам</a></li>
-                <li class="menu__item"><a href="#" class="item__link">Новости</a></li>
-                <li class="menu__item"><a href="#" class="item__link">Контакты</a></li>
+                <li class="menu__item"><a href="news-1_page.html" class="item__link">Новости</a></li>
+                <li class="menu__item"><a href="contact.html" class="item__link">Контакты</a></li>
               </ul>
             </div>
             <div class="middle-line__amount-product">
@@ -59,7 +59,7 @@
                 <li class="menu__item"><a href="#" class="item__link">Наматрасники</a></li>
                 <li class="menu__item"><a href="#" class="item__link">Одеяла</a></li>
                 <li class="menu__item"><a href="#" class="item__link">Основания</a></li>
-                <li class="menu__item"><a href="#" class="item__link">Послельное белье</a></li>
+                <li class="menu__item"><a href="#" class="item__link">Постельное белье</a></li>
               </ul>
             </div>
             <div class="bottom-line__search">
@@ -73,8 +73,7 @@
       </header>
       <section class="bed-top-section">
         <div class="container">
-          <h1 class="bed-top-section__title">Матрасы</h1>
-          <p class="headwhitetext">Найдено 1025 товаров</p>
+          <h1 class="bed-top-section__title">Корзина</h1>
         </div>
       </section>
       <section class="breadcrumbs">
@@ -83,271 +82,99 @@
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">
                  
                 Главная</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link_active">Матрасы</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link_active">Корзина</a></li>
           </ul>
         </div>
       </section>
-      <section class="catalog__main-content">
-        <div class="catalog-wrap">
+      <section class="cart__main-content">
+        <div class="cart-wrap">
           <div class="container">
-            <div class="catalog-wrap__content">
-              <p class="catalog__sort_p">Сортировать : &#160;
-                <select id="sort_po" class="catalog__sort_po">
-                  <option value="nazv"> По названию</option>
-                  <option value="cena"> По цене</option>
-                </select>
-              </p>
-              <div class="catalog__select_wrap">
-                <div class="select_wrap">
-                  <select id="razmer" class="catalog__select">
-                    <option>Размер</option>
-                    <option value="1размер"> 1размер</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <select id="ves" class="catalog__select">
-                    <option> Вес спящих</option>
-                    <option value="1вес"> 1 вес</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <select id="zhestkost" class="catalog__select">
-                    <option> Жесткость</option>
-                    <option value="1 жестк"> 1 жестк</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <select id="visota" class="catalog__select">
-                    <option> Высота</option>
-                    <option value="1 высота"> 1 высота</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <select id="pruzhblock" class="catalog__select">
-                    <option> Пруж. блок</option>
-                    <option value="1 пруж блок"> 1 пруж блок</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <select id="brend" class="catalog__select">
-                    <option> Бренд</option>
-                    <option value="1 бренд"> 1 бренд</option>
-                  </select>
-                </div>
-              </div>
-              <div class="catalog__select_wrap">
-                <div class="select_wrap">
-                  <select id="zhest1stor" class="catalog__select_big">
-                    <option> Жетскость 1-й стороны</option>
-                    <option value="1 жесткость"> 2</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <select id="zhest2stor" class="catalog__select_big">
-                    <option> Жетскость 2-й стороны</option>
-                    <option value="2 жесткость">2</option>
-                  </select>
-                </div>
-                <div class="select_wrap">
-                  <input type="text" placeholder="от" class="price_catalog_input"/>
-                  <input id="newinp" type="range"/>
-                  <input type="text" placeholder="до" class="price_catalog_input"/>
-                </div>
-              </div>
-              <div class="filter_select_wrap"><span class="filter_span sort_po"></span><span class="filter_span razmer"></span><span class="filter_span ves"></span><span class="filter_span zhestkost"></span><span class="filter_span visota"></span><span class="filter_span pruzhblock"></span><span class="filter_span brend"></span><span class="filter_span zhest1stor"></span><span class="filter_span zhest2stor"></span></div>
-              <ul class="matrasses-model__list-items">
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="matrasses-model__item">
-                        <div class="matrasses-model__item-wrap">
-                          <div class="matrasses-model__item-new">Новинка</div>
-                          <div class="matrasses-model__item-pic"><img src="img/bed_1.png" alt="Матрасы"/></div>
-                          <h3 class="matrasses-model__title">Матрас: Eleonora valensia premium Multitouch</h3>
-                          <div class="matrasses-model__form">
-                            <form action="">
-                              <select data-placeholder="Размер" class="matrasses-model__select">
-                                <option></option>
-                                <option>Размер 1</option>
-                                <option>Размер 2</option>
-                                <option>Размер 3</option>
-                              </select><span class="matrasses-model__price">8 300 руб.</span>
-                              <div class="matrasses-model__button-wrap">
-                                <button class="matrasses-model__button-click">Купить в 1 клик</button>
-                                <button class="matrasses-model__button-basket">В корзину</button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </li>
+            <div class="cart-wrap__content">
+              <ul>
+                <li class="cart__list_tovar list_tovar_head">Товар</li>
+                <li class="cart__list_name list_name_head">Название</li>
+                <li class="cart__list_price list_price_head">Цена</li>
+                <li class="cart__list_quantity list_quantity_head">Количество</li>
+                <li class="cart__list_coast list_coast_head">Стоимость</li>
               </ul>
-              <div class="catalog__filter button_wrap">
-                <button class="button catalog__filter_button">Показать больше </button>
+              <ul>
+                <li class="cart__list_tovar"> <img src="img/bed_1.png" alt="matras"/></li>
+                <li class="cart__list_name"> 
+                  <p class="list_name_p_name">Матрас: Eleonora valensia premium Multitouch</p><br/>
+                  <p class="list_name_p_size">Размер: 220x160 см</p>
+                </li>
+                <li class="cart__list_price list_price_content">19 600 руб.</li>
+                <li class="cart__list_quantity product__form-count cart_count">
+                  <button class="form-count__minus">-</button>
+                  <input type="text" value="0" class="form-count__input cart-count_input"/>
+                  <button class="form-count__plus">+</button>
+                </li>
+                <li class="cart__list_coast list_coast_content">0 руб.</li>
+              </ul>
+              <ul>
+                <li class="cart__list_tovar"> <img src="img/bed_1.png" alt="matras"/></li>
+                <li class="cart__list_name"> 
+                  <p class="list_name_p_name">Матрас: Eleonora valensia premium Multitouch</p><br/>
+                  <p class="list_name_p_size">Размер: 220x160 см</p>
+                </li>
+                <li class="cart__list_price list_price_content">19 600 руб.</li>
+                <li class="cart__list_quantity product__form-count cart_count">
+                  <button class="form-count__minus">-</button>
+                  <input type="text" value="0" class="form-count__input cart-count_input"/>
+                  <button class="form-count__plus">+</button>
+                </li>
+                <li class="cart__list_coast list_coast_content">0 руб.</li>
+              </ul>
+              <ul>
+                <li class="cart__list_tovar"> <img src="img/bed_1.png" alt="matras"/></li>
+                <li class="cart__list_name"> 
+                  <p class="list_name_p_name">Матрас: Eleonora valensia premium Multitouch</p><br/>
+                  <p class="list_name_p_size">Размер: 220x160 см</p>
+                </li>
+                <li class="cart__list_price list_price_content">19 600 руб.</li>
+                <li class="cart__list_quantity product__form-count cart_count">
+                  <button class="form-count__minus">-</button>
+                  <input type="text" value="0" class="form-count__input cart-count_input"/>
+                  <button class="form-count__plus">+</button>
+                </li>
+                <li class="cart__list_coast list_coast_content">0 руб.</li>
+              </ul>
+              <ul>
+                <li class="cart__list_tovar"> <img src="img/bed_1.png" alt="matras"/></li>
+                <li class="cart__list_name"> 
+                  <p class="list_name_p_name">Матрас: Eleonora valensia premium Multitouch</p><br/>
+                  <p class="list_name_p_size">Размер: 220x160 см</p>
+                </li>
+                <li class="cart__list_price list_price_content">19 600 руб.</li>
+                <li class="cart__list_quantity product__form-count cart_count">
+                  <button class="form-count__minus">-</button>
+                  <input type="text" value="0" class="form-count__input cart-count_input"/>
+                  <button class="form-count__plus">+</button>
+                </li>
+                <li class="cart__list_coast list_coast_content">0 руб.</li>
+              </ul>
+              <ul>
+                <li class="cart__list_tovar"> <img src="img/bed_1.png" alt="matras"/></li>
+                <li class="cart__list_name"> 
+                  <p class="list_name_p_name">Матрас: Eleonora valensia premium Multitouch</p><br/>
+                  <p class="list_name_p_size">Размер: 220x160 см</p>
+                </li>
+                <li class="cart__list_price list_price_content">19 600 руб.</li>
+                <li class="cart__list_quantity product__form-count cart_count">
+                  <button class="form-count__minus">-</button>
+                  <input type="text" value="0" class="form-count__input cart-count_input"/>
+                  <button class="form-count__plus">+</button>
+                </li>
+                <li class="cart__list_coast list_coast_content">0 руб.</li>
+              </ul>
+              <div class="cart_oplata">
+                <div class="cart_oplata_section1"><a href="#" class="cart_prod_pok">Продолжить покупки</a></div>
+                <div class="cart_oplata_section2">
+                  <p class="itogo">Итого</p>
+                  <p class="cart_price_wrap"><span class="oplata_p">К ОПЛАТЕ : </span><span class="k_oplate"> 0 руб.</span></p>
+                  <button class="cart_button_credit">В кредит</button>
+                  <button class="cart_button_zakaz">Оформить заказ</button>
+                </div>
               </div>
             </div>
           </div>

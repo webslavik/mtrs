@@ -1,0 +1,41 @@
+/* 
+
+	ОПЛАТА И ДОСТАВКА
+
+*/
+
+
+.title-section__payment {
+	@include grid-col(12);
+
+}
+
+.payment-page__list {
+	margin-bottom: 60px;
+	padding: 0 20px;
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.payment-page__list-item {
+	margin-bottom: 38px;
+	font-size: em(18);
+	color: $black;
+	line-height: 24px;
+}
+
+.payment-page__list-item-orange {
+	color: $orange;
+
+	svg {
+		padding-top: 10px;
+		width: 18px;
+		height: 25px;
+
+		* {
+			fill: $orange;
+		}
+	}
+}

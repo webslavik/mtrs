@@ -107,7 +107,7 @@
   $('.form-count__minus').on('click', function() {
     var $input = $(this).parent().find('input');
     var count = parseInt($input.val()) - 1;
-    count = count < 1 ? 1 : count;
+    count = count < 1 ? 0 : count;
     $input.val(count);
     $input.change();
     return false;
@@ -161,6 +161,51 @@ $(function(){ // Добавление  категорий сортировки
 
     })
  });
+
+$(function(){ // калькулятор цен
+
+    var input = $(".cart-count_input");
+    
+    input.change(function(){
+        var et  = $(this);
+  
+        var roditel = et.parents('ul');
+  
+        var n_endprice = roditel.children(".list_coast_content");
+  
+        var n_price = roditel.children(".list_price_content").text();
+  
+        var n_rub = parseInt(n_price.replace(/\D+/g,""));
+
+        var n_input = roditel.children(".cart-count_input");
+   
+        var endcost = $(this).val() * n_rub ;
+
+        var x = abc(endcost);
+
+        function abc(cost){// пробел внутри числа
+          var c = (cost + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+          
+          return c;
+        }
+        var cost = n_endprice.html(x + " руб.");
+
+
+        var summ = 0;
+        $(".list_coast_content").each(function(){
+         summ += parseInt($(this).html().replace(/\D+/g,""));
+        })
+        var oplata = $(".k_oplate");
+        var y = abc(summ);
+        oplata.html(y + " руб.");
+
+    })
+      
+   
+    
+  });
+
+
 
 })();
 //ползунок 

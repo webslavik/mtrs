@@ -1,0 +1,134 @@
+.cart-wrap__content{
+	font-size: 0;
+	
+}
+.cart_content{
+	font-size: 14px;
+}
+.cart-wrap__content ul{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+}
+.cart-wrap__content li{
+	font-family: "FiraSans Light";
+	vertical-align: middle;
+	padding: 0 20px !important;
+	text-align: center;
+	font-size: 17px;
+	display: inline-block;
+	
+	// padding-left: 5%;
+	// padding-right: 5%;
+	// background-color: skyblue;
+}
+.cart__list_tovar{ // картинка матраса
+	width: 25%;
+}
+.cart__list_name{//название
+	width: 23%;
+	
+}
+.list_name_p_name{
+	text-align: left !important;
+}
+.list_name_p_size{ // размер матраса
+	font-size: 14px;
+	text-align: left !important;
+}
+.cart__list_price{// цена
+	width: 14%;
+	
+}
+
+.list_name_p_name, .list_price_content, .list_coast_content{
+	font-family: $font-bold !important;
+}
+.cart__list_quantity{ // количество
+	width: 17%;
+}
+.cart__list_coast{ // стоимость
+	width: 21%;
+}
+.cart_count{ // счетчик
+	margin-left: 0px;
+    margin-bottom: 0px;
+}
+.list_quantity_head, .list_price_head, .list_name_head, .list_tovar_head{
+	border-right: 1px solid #eee;
+} 
+.cart_oplata{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 200px;
+	font-size: 14px;
+}
+
+.itogo{
+	font-size: 20px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+}
+.oplata_p{
+	font-size: 14px;
+	float: left;
+	padding-top: 10px;
+}
+.k_oplate{
+	font-size: 30px;
+	font-family: $font-bold !important;
+	float: right;
+	padding-right: 7%;
+}
+.cart_button_credit{
+	border: none;
+	border: 1px solid #707070;
+	width: 170px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 7px;
+	margin-right: 30px;
+
+}
+.cart_button_zakaz{
+	background-color:#d57829;
+	color: #fff;
+	width: 280px;
+	height: 50px;
+	border: none;
+	border-radius: 7px;
+	margin-left: 30px;
+}
+.cart_oplata_section1{
+	width: 50%;
+	float: left;
+}
+.cart_oplata_section2{
+	width: 50%;
+	float: right;
+}
+.cart_price_wrap{
+	@include clearfix;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+.cart-wrap__content ul:nth-child(even) {
+    background: #f7f7f7; 
+   } 
+.cart_prod_pok{
+	position: relative;
+	padding-left: 40px;
+}
+.cart_prod_pok:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 10%;
+	width: 20px;
+	height: 20px;
+   	background-image: url(../img/icon/arrowr.png);
+   	background-repeat: no-repeat;
+   	content: "";
+}

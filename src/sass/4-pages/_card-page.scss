@@ -1,3 +1,9 @@
+/* 
+
+	ОПИСАНИЕ ОДНОГО ИТЕМА
+
+*/
+
 .card-pade__product-item {
 	margin-bottom: 77px;
 }
@@ -500,4 +506,31 @@
 	display: inline-block;
 	width: 49%;
 	color: $white_grey_2;
+}
+
+
+
+.card-page__description-section {
+	margin-bottom: 70px;
+}
+
+.card-page__header_card {
+	// background-color: red;
+	@include grid-col(2);
+}
+
+.description-section__definition {
+	font-family: 'Roboto';
+  line-height: 24px;
+}
+
+
+.card-page__matrasses-items {
+	margin-bottom: 63px;
+}
+
+
+
+.card-page__individual-section {
+	margin-bottom: 0;
 }
