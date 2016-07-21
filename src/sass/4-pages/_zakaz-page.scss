@@ -1,0 +1,323 @@
+/* 
+
+	--------------------------------------------------------
+	Оформление заказа
+	--------------------------------------------------------
+
+*/
+
+.zakaz-page__before-buying {
+	margin-bottom: 80px;
+	padding: 20px 0;
+	font-size: em(16);
+	background-color: #fafafa;
+	color: $grey_1;
+	text-align: center;
+
+}
+
+.before-buying__link {
+	color: $blue;
+}
+
+/* 
+
+	блок товаров которые купили
+
+ */
+
+.zakaz__user-buy {
+	max-width: 370px;
+}
+
+.user-buy__list {
+	width: 100%;
+	font-size: 0;
+}
+
+.user-buy__item {
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.user-buy__img {
+	display: inline-block;
+	width: 30%;
+	height: 100%;
+	position: relative;
+	padding: 20px 0 20px 30px;
+
+	img {
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+		// bottom: 0;
+		// max-width: 100%;
+		// max-height: 100%;
+
+	}
+}
+
+
+.user-buy__product-text {
+	font-size: 16px;
+	display: inline-block;
+	width: 50%;
+	min-height: 100%;
+
+}
+
+.user-buy__mtrs-name {
+
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 0;
+	}
+}
+
+// .user-buy__mtrs-price {
+// 	&:before {
+// 		content: '';
+// 		display: inline-block;
+// 		width: 100%;
+// 		height: 0;
+// 	}
+// }
+
+.user-buy__cross {
+	display: inline-block;
+	width: 20%;
+	background-color: brown
+}
+
+
+/* 
+	
+	стили для инпутов
+
+*/
+
+/* 
+
+	так как у .zakaz__form-block есть свойство float,
+	то пришлось сделать обертку двум средним блокам и задать ей clearfix
+
+*/
+
+.zakaz__middle-block {
+	position: relative;
+	@include clearfix;
+}
+
+.zakaz__form-block {
+	margin-bottom: 55px;
+
+	@include grid-col(51%,0);
+	@include grid-col-end();
+}
+
+.zakaz__form-title {
+	margin-bottom: 40px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	color: $black;
+	border-bottom: 2px solid $grey_2;
+}
+
+.zakaz__field-wrap {
+	padding-left: 20px;
+
+	@include clearfix;
+}
+
+.zakaz-field {
+	margin-bottom: 20px;
+
+	&.field-small {
+		width: 47%;
+		// float: left;
+	}
+
+	&.field-right {
+		float: right;
+	}
+	&.field-left {
+		float: left;
+	}
+
+}
+
+.zakaz-label,
+.zakaz-input {
+	display: block;
+}
+
+.zakaz-label {
+	margin-bottom: 8px;
+	font-size: em(16px);
+	color: $black;
+
+}
+
+.zakaz-label__star {
+	color: $orange;
+}
+
+.zakaz-input {
+	width: 100%;
+	margin-bottom: 6px;
+	padding: 12px 20px;
+	font-size: em(14);
+	border: 1px solid #b3b3b3;
+	border-radius: 5px;
+
+	@include placeholder {
+		color: $grey-1;
+	}
+}
+
+
+/* 
+	
+	стили для radio button
+
+*/
+
+.zakaz-check {
+	margin-bottom: 30px;
+	padding: 12px 20px;
+	font-family: $font-bold;
+	background-color: $blue;
+	color: $white;
+	border-radius: 2px;
+
+	input[type='radio'] {
+		display: none;
+	}
+
+	input[type='radio'] + label:before {
+		content: "\26AB";
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 15px;    
+    line-height: 16px;
+    // margin: -5px 5px 0 0;
+    margin-right: 15px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;
+    cursor: pointer;
+    // transition: font-size ease .3s;
+
+    background-color: #363636;
+		background-image: linear-gradient(to top, #fafafa 0%, #fafafa 100%);
+		border: 1px solid #b8c3c9;
+		box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+	}
+
+	input[type=radio]:checked + label:before {
+    font-size: 15px;
+    color: $black;
+	}
+
+}
+
+.zakaz__payment-wrap {
+	@include grid-row();
+}
+
+.zakaz__textarea-wrap {
+	position: relative;
+	top: 47px;
+	@include grid-col(49%);
+}
+
+.zakaz__textarea {
+	width: 100%;
+	height: 190px;
+	padding: 15px 20px;
+	border: 1px solid #b3b3b3;
+	border-radius: 5px;
+
+
+	@include placeholder {
+		color: $grey-1;
+	}
+}
+
+
+/* 
+
+	стили для блока соглашения
+
+*/
+.zakaz__agreement {
+	margin-bottom: 25px;
+	text-align: center;
+
+	input[type='checkbox'] {
+		display: none;
+	}
+	
+	input[type='checkbox'] + label:before {
+		content: "\2713";
+	  color: transparent;
+	  display: inline-block;
+	  border: 1px solid #7c7a7a;
+	  font-size: 14px;    
+	  line-height: 16px;
+	  margin: -5px 5px 0 0;
+	  height: 14px;
+	  width: 14px;
+	  text-align: center;
+	  vertical-align: middle;
+	  // transition: color ease .3s;
+
+	}
+
+	input[type='checkbox']:checked + label:before {
+    font-size: 14px;
+    color: $black;
+	}
+
+}
+
+.agreement__label {
+	font-family: $font-light;
+	font-size: em(12);
+	color: $black;
+}
+
+
+.agreement__link {
+	@extend .agreement__label;
+	color: #0277bd;
+}
+
+
+/* 
+
+	стили для блока кнопки заказа
+
+*/
+
+.zakaz__button-wrap {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.button__zakaz-button {
+	padding: 13px 25px;
+
+	background-color: #f07c00;
+
+	&:hover,
+	&:focus {
+		background-color: darken(#f07c00, 5%);
+	}
+}

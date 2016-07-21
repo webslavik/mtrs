@@ -75,6 +75,21 @@
     nextArrow: '.card-page__arrows-right'
   });
 
+  $('.optovik-page__brands-list').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 1000,
+    // autoplay: true,
+    // autoplaySpeed: 1000
+    prevArrow: '.optovik__brand-arrow-left',
+    nextArrow: '.optovik__brand-arrow-right'
+  });
+
+
+
+
 
 
 

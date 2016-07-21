@@ -1,0 +1,107 @@
+section.zakaz-page
+
+	.container
+
+		.zakaz-page__before-buying Вы уже покупали у нас ранее ? 
+			a(href="").before-buying__link Нажмите для входа в личный кабинет
+		
+		.zakaz__middle-block
+			
+			//- .zakaz__user-buy
+			//- 	ul.user-buy__list
+			//- 		li.user-buy__item
+			//- 			.user-buy__img
+			//- 				img(src="img/zakaz__img-item.png", alt="")
+			//- 			.user-buy__product-text
+			//- 				span.user-buy__mtrs-name Матрас: Eleonora
+			//- 				span.user-buy__mtrs-price 16 600 руб.
+
+			//- 			.user-buy__cross
+			//- 				a(href="#").user-buy__link
+			//- 					include ../_0-icon-svg/cancel.svg
+
+
+
+
+			.zakaz__form-block
+				h2.zakaz__form-title Контактные данные
+				
+				.zakaz__field-wrap
+					.zakaz-field.field-small.field-left
+						label(class='zakaz-label'  for="") Имя 
+							span.zakaz-label__star *
+						input(class='zakaz-input'  type="text" placeholder="Введите имя")
+
+					.zakaz-field.field-small.field-right
+						label(class='zakaz-label'  for="") Фамилия 
+							span.zakaz-label__star *
+						input(class='zakaz-input'  type="text" placeholder="Введите фамилию")
+
+					.zakaz-field
+						label(class='zakaz-label'  for="") Телефон 
+							span.zakaz-label__star *
+						input(class='zakaz-input'  type="text" placeholder="Введите номер")
+
+					.zakaz-field
+						label(class='zakaz-label'  for="") Email 
+							span.zakaz-label__star *
+						input(class='zakaz-input'  type="text" placeholder="Введите email")
+
+
+			.zakaz__form-block
+				h2.zakaz__form-title Способ доставки
+				
+				.zakaz__field-wrap
+					
+					.zakaz-check
+						input(type="radio" id='check1' name='dostavka-check')
+						label(for="check1") Курьекрская служба
+
+					.zakaz-field
+						label(class='zakaz-label'  for="") Город 
+							span.zakaz-label__star *
+						input(class='zakaz-input'  type="text" placeholder="Введите название города")
+
+					.zakaz-field
+						label(class='zakaz-label'  for="") Адрес
+							span.zakaz-label__star *
+						input(class='zakaz-input'  type="text" placeholder="Введите название улицы")
+						input(class='zakaz-input'  type="text" placeholder="Введите номер дома, квартиры")
+					
+					.zakaz-check
+						input(type="radio" id='check2' name='dostavka-check')
+						label(for="check2") Самовывоз
+
+		
+		.zakaz__payment-wrap
+			.zakaz__form-block
+				h2.zakaz__form-title Способ оплаты
+				
+				.zakaz__field-wrap
+					
+					.zakaz-check
+						input(type="radio" id='oplata-check1' name='oplata-check')
+						label(for="oplata-check1") Оплата банковской картой
+
+					.zakaz-check
+						input(type="radio" id='oplata-check2' name='oplata-check')
+						label(for="oplata-check2") Оплата наличными при получении
+
+					.zakaz-check
+						input(type="radio" id='oplata-check3' name='oplata-check')
+						label(for="oplata-check3") Безначлиный расчет (для юр. лиц)
+
+			.zakaz__textarea-wrap
+				label.zakaz-label Комментарий к заказу
+				textarea(class='zakaz__textarea' placeholder='Укажите, при необходимости, дополнительную информация об оплата или доставке.')
+
+
+		.zakaz__agreement
+			input(type="checkbox" id='agreement')
+			label(class='agreement__label' for="agreement") Я принимаю условия 
+			a(class='agreement__link' href="#") Пользовательского соглашения
+
+		.zakaz__button-wrap
+			button.button.button__zakaz-button Подтвердить заказ
+
+					
