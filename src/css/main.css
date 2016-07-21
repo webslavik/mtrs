@@ -3096,7 +3096,8 @@ ul {
 
 .cart-wrap__content ul {
   padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  position: relative; }
 
 .cart-wrap__content li {
   font-family: "FiraSans Light";
@@ -3121,6 +3122,24 @@ ul {
 
 .cart__list_price {
   width: 14%; }
+
+.cart_close {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  top: 43%;
+  right: 2%; }
+
+.cart_close:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon/closecart.png);
+  background-repeat: no-repeat;
+  cursor: pointer; }
 
 .list_name_p_name, .list_price_content, .list_coast_content {
   font-family: "FiraSans SemiBold" !important; }
@@ -3214,8 +3233,7 @@ ul {
   width: 20px;
   height: 20px;
   background-image: url(../img/icon/arrowr.png);
-  background-repeat: no-repeat;
-  content: ""; }
+  background-repeat: no-repeat; }
 
 /* 
 

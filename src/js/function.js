@@ -161,7 +161,6 @@ $(function(){ // Добавление  категорий сортировки
 
     })
  });
-
 $(function(){ // калькулятор цен
 
     var input = $(".cart-count_input");
@@ -199,12 +198,14 @@ $(function(){ // калькулятор цен
         var y = abc(summ);
         oplata.html(y + " руб.");
 
-    })
-      
-   
-    
+    }) 
   });
-
+$(function(){// удаление блока
+ $(".cart_close").click(function(e){
+    
+    $(this).parent().remove();
+ })
+});
 
 
 })();
