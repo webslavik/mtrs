@@ -224,11 +224,6 @@ ul {
   background-color: transparent;
   border: 1px solid #00acb8; }
 
-/* 
-
-  голубая кнопка с корзиной
-
-*/
 .product__btn-blue {
   padding: 12px 70px 12px 120px;
   font-family: "FiraSans UltraLight";
@@ -1172,6 +1167,10 @@ ul {
   font-size: 3rem;
   color: #ef791a;
   text-transform: uppercase; }
+
+.bed-top__descr {
+  font-size: 1.125em;
+  color: #ffffff; }
 
 /* 
 
@@ -3955,3 +3954,214 @@ ul {
   background-color: #f07c00; }
   .button__zakaz-button:hover, .button__zakaz-button:focus {
     background-color: #d76f00; }
+
+/* 
+
+	---------------------------------------------------------
+	СТРАНИЦА "ПОД ЗАКАЗ"
+	---------------------------------------------------------
+
+*/
+.pod-zakaz__breadcrumbs {
+  margin-bottom: 40px; }
+
+.pod-zakaz__title-wrap {
+  margin-bottom: 55px; }
+
+.pod-zakaz__title {
+  margin-bottom: 10px;
+  font-family: "FiraSans SemiBold";
+  font-size: 2.25em;
+  text-transform: uppercase;
+  text-align: center; }
+
+.pod-zakaz__descr {
+  text-align: center;
+  font-size: 1.125em;
+  color: #555; }
+
+.pod-zakaz__descr-orange {
+  color: #ef791a; }
+
+/* 
+	ооочень большие фото
+*/
+.pod-zakaz__big-img-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 50px; }
+  .pod-zakaz__big-img-wrap::before, .pod-zakaz__big-img-wrap::after {
+    content: ' ';
+    display: table; }
+  .pod-zakaz__big-img-wrap::after {
+    clear: both; }
+
+.pod-zakaz__img-block {
+  width: 25%;
+  float: left;
+  position: relative;
+  background-image: url(../img/pod-zakaz__img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .pod-zakaz__img-block:after {
+    content: '';
+    display: block;
+    padding-top: 105%; }
+
+.big-img-1 {
+  background-image: url(../img/pod-zakaz__img-1.png); }
+
+.big-img-2 {
+  background-image: url(../img/pod-zakaz__img-2.png); }
+
+.big-img-3 {
+  background-image: url(../img/pod-zakaz__img-3.png); }
+
+.big-img-4 {
+  background-image: url(../img/pod-zakaz__img-4.png); }
+
+.img-block__number {
+  font-family: "FiraSans SemiBold";
+  font-size: 4.6875em;
+  text-transform: uppercase;
+  color: #00acb8;
+  text-align: center;
+  position: absolute;
+  top: 43%;
+  left: 44%;
+  right: auto;
+  bottom: auto; }
+
+/* 
+	подписи под изображения
+*/
+.big-img__descr-list {
+  margin-bottom: 25px;
+  padding-left: 20px; }
+  .big-img__descr-list::before, .big-img__descr-list::after {
+    content: ' ';
+    display: table; }
+  .big-img__descr-list::after {
+    clear: both; }
+
+.big-img__descr-item {
+  width: 50%;
+  float: left;
+  margin-bottom: 24px;
+  font-size: 1.5em;
+  color: #00acb8; }
+
+/* 
+	большие иконки
+*/
+.pod-zakaz__icon-wrap {
+  margin-bottom: 160px; }
+
+.title-section__pod-zakaz {
+  margin-bottom: 50px; }
+
+.ts__pod-zakaz-header {
+  width: 100%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    .ts__pod-zakaz-header {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
+  .ts__pod-zakaz-header:last-child:not(:first-child) {
+    float: right; }
+
+.pod-zakaz__icon-item {
+  text-align: center;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    .pod-zakaz__icon-item {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
+  .pod-zakaz__icon-item:last-child:not(:first-child) {
+    float: right; }
+
+.pod-zakaz__icon {
+  margin-bottom: 45px;
+  text-align: center; }
+
+.pod-zakaz__icon-descr {
+  font-size: 1.875em;
+  line-height: 36px; }
+
+.icon-descr__bold {
+  font-family: "FiraSans SemiBold"; }
+
+/* 
+	форма
+*/
+.pz__form-title {
+  margin-bottom: 50px;
+  font-family: "FiraSans SemiBold";
+  font-size: 2.25em;
+  text-align: center;
+  color: #2c2c2c; }
+
+.pz__form-wrap {
+  margin-bottom: 90px;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  margin-left: 16.66667%; }
+  @media screen and (min-width: 40em) {
+    .pz__form-wrap {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
+  .pz__form-wrap:last-child:not(:first-child) {
+    float: right; }
+  .pz__form-wrap:last-child:last-child {
+    float: left; }
+
+.pz__input-wrap,
+.pz__textarea-wrap {
+  margin-bottom: 55px;
+  width: 50%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    .pz__input-wrap,
+    .pz__textarea-wrap {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
+  .pz__input-wrap:last-child:not(:first-child),
+  .pz__textarea-wrap:last-child:not(:first-child) {
+    float: right; }
+
+.pz__input,
+.pz__textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #555;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  font-size: 0.875em;
+  line-height: 20px; }
+
+.pz__input {
+  margin-bottom: 13px; }
+  .pz__input:last-child {
+    margin-bottom: 0; }
+
+.pz__textarea {
+  height: 164px; }
+
+/* 
+  кнопка
+*/
+.pz__button-wrap {
+  text-align: center; }
+
+.button__pz {
+  padding: 10px 40px; }

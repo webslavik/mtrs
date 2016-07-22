@@ -1,0 +1,209 @@
+/* 
+
+	---------------------------------------------------------
+	СТРАНИЦА "ПОД ЗАКАЗ"
+	---------------------------------------------------------
+
+*/
+.pod-zakaz__breadcrumbs {
+	margin-bottom: 40px;
+}
+
+
+.pod-zakaz__title-wrap {
+	margin-bottom: 55px;
+}
+
+.pod-zakaz__title {
+	margin-bottom: 10px;
+	font-family: $font-bold;
+	font-size: em(36);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.pod-zakaz__descr {
+	text-align: center;
+	font-size: em(18);
+	color: #555;
+}
+
+.pod-zakaz__descr-orange {
+	color: $orange;
+}
+
+/* 
+	ооочень большие фото
+*/
+
+.pod-zakaz__big-img-wrap  {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 50px;
+
+	@include clearfix;
+
+}
+
+.pod-zakaz__img-block {
+	width: 25%;
+	float: left;
+	position: relative;
+
+	background-image: url(../img/pod-zakaz__img1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 105%;
+	}
+}
+
+.big-img-1 {
+	background-image: url(../img/pod-zakaz__img-1.png);
+}
+.big-img-2 {
+	background-image: url(../img/pod-zakaz__img-2.png);
+}
+.big-img-3 {
+	background-image: url(../img/pod-zakaz__img-3.png);
+}
+.big-img-4 {
+	background-image: url(../img/pod-zakaz__img-4.png);
+}
+
+.img-block__number {
+	font-family: $font-bold;
+	font-size: em(75);
+	text-transform: uppercase;
+	color: $blue;
+
+	// background-color: tomato;
+	text-align: center;
+	// vertical-align: middle;
+
+	position: absolute;
+	top: 43%;
+	left: 44%;
+	right: auto;
+	bottom: auto;
+
+}
+
+
+/* 
+	подписи под изображения
+*/
+.big-img__descr-list {
+	margin-bottom: 25px;
+	padding-left: 20px;
+	@include clearfix;
+}
+
+.big-img__descr-item {
+	width: 50%;
+	float: left;
+	margin-bottom: 24px;
+	font-size: em(24);
+	color: $blue;
+}
+
+
+/* 
+	большие иконки
+*/
+.pod-zakaz__icon-wrap {
+	margin-bottom: 160px;
+}
+
+
+.title-section__pod-zakaz {
+	margin-bottom: 50px;
+}
+
+.ts__pod-zakaz-header  {
+	@include grid-col(12);
+}
+
+.pod-zakaz__icon-item {
+	text-align: center;
+
+	@include grid-col(4);
+	// background-color: tomato;
+}
+
+.pod-zakaz__icon {
+	margin-bottom: 45px;
+	text-align: center;
+	
+}
+
+.pod-zakaz__icon-descr {
+	font-size: em(30);
+	line-height: 36px;
+}
+.icon-descr__bold {
+	font-family: $font-bold
+}
+
+
+/* 
+	форма
+*/
+.pz__form-title {
+	margin-bottom: 50px;
+	font-family: $font-bold;
+	font-size: em(36);
+	text-align: center;
+	color: $black;
+}
+
+.pz__form-wrap {
+	margin-bottom: 90px;
+	@include grid-col(8);
+	@include grid-col-end();
+	@include grid-col-off(2);
+}
+
+
+.pz__input-wrap,
+.pz__textarea-wrap {
+	margin-bottom: 55px;
+	@include grid-col(6);
+}
+
+.pz__input,
+.pz__textarea {
+	width: 100%;
+	padding: 12px 20px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	font-size: em(14);
+	line-height: 20px;
+}
+
+.pz__input {
+	margin-bottom: 13px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.pz__textarea {
+	height: 164px;
+}
+
+/* 
+  кнопка
+*/
+.pz__button-wrap {
+	text-align: center;
+}
+
+.button__pz {
+	padding: 10px 40px;
+}
