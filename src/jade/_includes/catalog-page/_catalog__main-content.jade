@@ -75,9 +75,13 @@ section.catalog__main-content
 							option(value="2 жесткость") 2
 
 					.select_wrap
-						input.price_catalog_input(type="text" placeholder="от")
-						input#newinp(type="range")
-						input.price_catalog_input(type="text" placeholder="до")
+						p
+							.range_slider_wrap Стоимость :
+								input(type="text" class='amount-slider' id="amount" placeholder="От")
+							.range_slider_wrap.range_slider_w#slider-range
+							.range_slider_wrap
+								input(type="text" class='amount-slider' id="amount_2" placeholder="До")
+	
 
 				.filter_select_wrap
 					span.filter_span.sort_po
@@ -89,7 +93,7 @@ section.catalog__main-content
 					span.filter_span.brend
 					span.filter_span.zhest1stor
 					span.filter_span.zhest2stor
-				
+					span.closeX Очистить
 				ul.matrasses-model__list-items
 
 					+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')

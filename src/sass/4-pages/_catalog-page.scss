@@ -79,3 +79,25 @@
 	padding-top: 30px;
 	padding-bottom: 40px;
 }
+.closeX{
+
+	float: right;
+	font-size: 14px;
+	font-family: "FiraSans Light";
+	position: relative;
+	display: none;
+	color: #c8c6c6;
+
+}
+.closeX:before{
+	cursor: pointer;
+	position: absolute;
+	content: "";
+	background: url(../img/icon/closeX.png);
+	background-repeat: no-repeat;	
+	top: 4px;
+	left: -20px;
+	width: 20px;
+	height: 20px;
+	
+}

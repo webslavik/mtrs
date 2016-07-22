@@ -149,12 +149,18 @@
                   </select>
                 </div>
                 <div class="select_wrap">
-                  <input type="text" placeholder="от" class="price_catalog_input"/>
-                  <input id="newinp" type="range"/>
-                  <input type="text" placeholder="до" class="price_catalog_input"/>
+                  <p>
+                    <div class="range_slider_wrap">Стоимость :
+                      <input type="text" id="amount" placeholder="От" class="amount-slider"/>
+                    </div>
+                    <div id="slider-range" class="range_slider_wrap range_slider_w"></div>
+                    <div class="range_slider_wrap">
+                      <input type="text" id="amount_2" placeholder="До" class="amount-slider"/>
+                    </div>
+                  </p>
                 </div>
               </div>
-              <div class="filter_select_wrap"><span class="filter_span sort_po"></span><span class="filter_span razmer"></span><span class="filter_span ves"></span><span class="filter_span zhestkost"></span><span class="filter_span visota"></span><span class="filter_span pruzhblock"></span><span class="filter_span brend"></span><span class="filter_span zhest1stor"></span><span class="filter_span zhest2stor"></span></div>
+              <div class="filter_select_wrap"><span class="filter_span sort_po"></span><span class="filter_span razmer"></span><span class="filter_span ves"></span><span class="filter_span zhestkost"></span><span class="filter_span visota"></span><span class="filter_span pruzhblock"></span><span class="filter_span brend"></span><span class="filter_span zhest1stor"></span><span class="filter_span zhest2stor"></span><span class="closeX">Очистить</span></div>
               <ul class="matrasses-model__list-items">
                       <li class="matrasses-model__item">
                         <div class="matrasses-model__item-wrap">
@@ -427,9 +433,9 @@
       </div>
     </footer>
     <script src="js/jquery-2.1.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
     <script src="js/function.js"></script>
   </body>
 </html>
