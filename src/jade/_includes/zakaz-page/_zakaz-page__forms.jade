@@ -1,3 +1,15 @@
+//- mixin basket-item(mtrs_pic ,mtrs_name, mtrs_price)
+//- 	li.user-buy__item
+//- 		.user-buy__img
+//- 			img(src="img/#{mtrs_pic}", alt="")
+//- 		.user-buy__title-price
+//- 			.user-buy__mtrs-title #{mrts_name}
+//- 			.user-buy__mtrs-price #{mtrs_price}
+
+//- 		.user-buy__cross-button
+//- 			span.user-buy__button
+//- 				include ../_0-icon-svg/close-2.svg
+
 section.zakaz-page
 
 	.container
@@ -7,18 +19,64 @@ section.zakaz-page
 		
 		.zakaz__middle-block
 			
-			//- .zakaz__user-buy
-			//- 	ul.user-buy__list
-			//- 		li.user-buy__item
-			//- 			.user-buy__img
-			//- 				img(src="img/zakaz__img-item.png", alt="")
-			//- 			.user-buy__product-text
-			//- 				span.user-buy__mtrs-name Матрас: Eleonora
-			//- 				span.user-buy__mtrs-price 16 600 руб.
+			.user-buy__basket.zakaz-page__user-basket
+				ul.user-buy__list
+					li.user-buy__item
+						.user-buy__img
+							img(src="img/zakaz__img-item.png", alt="")
+						.user-buy__title-price
+							.user-buy__mtrs-title Матрас: Eleonora
+							.user-buy__mtrs-price 16 600 руб.
 
-			//- 			.user-buy__cross
-			//- 				a(href="#").user-buy__link
-			//- 					include ../_0-icon-svg/cancel.svg
+						.user-buy__cross-button
+							span.user-buy__button
+								include ../_0-icon-svg/close-2.svg
+
+					li.user-buy__item
+						.user-buy__img
+							img(src="img/zakaz__img-item.png", alt="")
+						.user-buy__title-price
+							.user-buy__mtrs-title Матрас: Eleonora
+							.user-buy__mtrs-price 16 600 руб.
+
+						.user-buy__cross-button
+							span.user-buy__button
+								include ../_0-icon-svg/close-2.svg
+
+					li.user-buy__item
+						.user-buy__img
+							img(src="img/zakaz__img-item.png", alt="")
+						.user-buy__title-price
+							.user-buy__mtrs-title Матрас: Eleonora
+							.user-buy__mtrs-price 16 600 руб.
+
+						.user-buy__cross-button
+							span.user-buy__button
+								include ../_0-icon-svg/close-2.svg
+
+					li.user-buy__item
+						.user-buy__img
+							img(src="img/zakaz__img-item.png", alt="")
+						.user-buy__title-price
+							.user-buy__mtrs-title Матрас: Eleonora
+							.user-buy__mtrs-price 16 600 руб.
+
+						.user-buy__cross-button
+							span.user-buy__button
+								include ../_0-icon-svg/close-2.svg
+
+				.user-buy__total
+					| итого: 
+					span.user-buy__total-sum 78 400 
+					| руб.
+
+				.user-buy__buttons
+					button.btn__blue-basket
+						span.btn__blue-bsk-icon
+						span.btn__blue-bsk-text В корзину
+
+					button.btn__zakaz-orange Оформить заказ
+
 
 
 
