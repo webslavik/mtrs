@@ -158,11 +158,11 @@ $('.catalog__select_big').select2({
 
 })
   
-  // Readmore js
-  //--------------------------------------------------
-  $('.description-section__definition').readmore({
-    maxHeight: 10,
-})
+  
+
+
+//// range slider //ползунок цен
+
 
 $(function(){ // Добавление  категорий сортировки 
     $("select").change(function(e){
@@ -172,6 +172,12 @@ $(function(){ // Добавление  категорий сортировки
         $("."+b).addClass("visible").removeClass('hiden');
         $(".sort_img").click(function(){
           $(this).parent().addClass('hiden').removeClass('visible');
+        })
+        $(".closeX").addClass("visible").removeClass('hiden');
+         $(".closeX").click(function(){
+           $(".filter_select_wrap span").addClass("hiden").removeClass("visible");
+            $('.catalog-wrap__content select').prop('selectedIndex',0);
+           
         })
 
     })
@@ -222,6 +228,60 @@ $(function(){// удаление блока
  })
 });
 
+
+
+// range slider  ползунок цен
+ $( "#slider-range" ).slider({
+        // orientation: 'vertical',
+        range: true,
+        min: 0,
+        max: 350000,
+        values: [ 30000, 120000 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val(ui.values[ 0 ] );
+          $( "#amount_2" ).val(ui.values[ 1 ] );
+        }
+      });
+
+  
+
+      // Изменение местоположения ползунка при вводиде данных в первый элемент input
+      $("input#amount").change(function(){
+        var value1 = $("input#amount").val();
+        var value2 = $("input#amount_2").val();
+          if(parseInt(value1) > parseInt(value2)){
+          value1 = value2;
+          $("input#amount").val(value1);
+        }
+        $("#slider-range").slider("values",0,value1); 
+      });
+
+      // Изменение местоположения ползунка при вводиде данных в второй элемент input  
+      $("input#amount_2").change(function(){
+        var value1=$("input#amount").val();
+        var value2=$("input#amount_2").val();
+
+        if(parseInt(value1) > parseInt(value2)){
+          value2 = value1;
+          $("input#amount_2").val(value2);
+        }
+        $("#slider-range").slider("values",1,value2);
+      });
+
+      // фильтрация ввода в поля
+      $('#amount, #amount_2').keypress(function(event){
+        var key, keyChar;
+        if(!event) var event = window.event;
+        
+        if (event.keyCode) key = event.keyCode;
+        else if(event.which) key = event.which;
+      
+        if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+        keyChar=String.fromCharCode(key);
+        
+        if(!/\d/.test(keyChar)) return false;
+      
+      });
 
 })();
 //ползунок 

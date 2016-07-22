@@ -1,0 +1,65 @@
+.p404-wrap__content{
+	@include clearfix;
+}
+.p404-section1_wrap{
+	width: 50%;
+	float: left;
+	position: relative;
+	// background-color: lightblue;
+}
+.p404-section2_wrap{
+	position: relative;
+	width: 50%;
+	float: right;
+	// background-color: skyblue;
+}
+.p404-section2_wrap img{
+	margin-top: 10%;
+	max-width: 380px;
+	margin-left: 30px;
+}
+.p404-section1{
+	margin-top: 15%;
+	margin-left: 10%;
+}
+
+.p404_error{
+	text-align: center;
+	font-size: 18px;
+	color: #464847;
+	font-family: $font-regular;
+}
+.p404_text{
+	font-size: 24px;
+	font-family: $font-regular;
+}
+.p404_404{
+	font-size: 180px;
+	font-family: $font-bold;
+	color: #ff7d00;
+	text-align: center;
+}
+.p404_comeback{
+	color: #ff7d00;
+	font-size: 18px;
+	font-family: $font-light;
+}
+
+.p404-section3_wrap{
+	width: 100%;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+.p404-section3_wrap li{
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;	
+}
+
+#p404_link1{
+	border-right: 1px solid #a5a6a6;
+}
+#p404_link2{
+	border-right: 1px solid #a5a6a6;
+}
