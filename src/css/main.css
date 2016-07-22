@@ -226,6 +226,37 @@ ul {
 
 /* 
 
+  голубая кнопка с корзиной
+
+*/
+.product__btn-blue {
+  padding: 12px 70px 12px 120px;
+  font-family: "FiraSans UltraLight";
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #00c4d2;
+  border: 1px solid #00acb8;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 180ms ease-in-out;
+  transition: all 180ms ease-in-out; }
+  .product__btn-blue:hover, .product__btn-blue:focus {
+    background-color: #00acb8; }
+
+.product__btn-blue-icon {
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+  padding: 10px 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 1px dashed #ffffff; }
+
+/* 
+
   СТИЛИ ДЛЯ SLICK SLIDER
 
 */
@@ -621,6 +652,162 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
+
+/* 
+
+	Корзина товаров, которые выбрал покупатель
+
+*/
+.user-buy__basket {
+  width: 370px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 7px rgba(2, 3, 3, 0.12);
+          box-shadow: 0 5px 7px rgba(2, 3, 3, 0.12); }
+
+.user-buy__list {
+  width: 100%;
+  font-size: 0; }
+
+.user-buy__item {
+  height: 110px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f4f4f4; }
+  .user-buy__item::before, .user-buy__item::after {
+    content: ' ';
+    display: table; }
+  .user-buy__item::after {
+    clear: both; }
+
+.user-buy__img {
+  float: left;
+  display: inline-block;
+  width: 30%;
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0 0px 30px; }
+  .user-buy__img img {
+    max-width: 100%; }
+
+.user-buy__title-price {
+  float: left;
+  font-size: 16px;
+  float: left;
+  width: 60%;
+  min-height: 100%;
+  padding-left: 8px;
+  position: relative; }
+
+.user-buy__mtrs-title {
+  font-family: "FiraSans SemiBold";
+  font-size: 1em;
+  line-height: 18px;
+  color: #2c2c2c;
+  position: absolute;
+  top: 0; }
+
+.user-buy__mtrs-price {
+  font-family: "FiraSans SemiBold";
+  font-size: 0.875em;
+  color: #00acb8;
+  position: absolute;
+  bottom: 0; }
+
+.user-buy__cross-button {
+  float: left;
+  width: 10%;
+  min-height: 100%;
+  cursor: pointer;
+  position: relative; }
+  .user-buy__cross-button:hover svg *, .user-buy__cross-button:focus svg * {
+    fill: #2c2c2c; }
+  .user-buy__cross-button svg {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+    .user-buy__cross-button svg * {
+      -webkit-transition: all 180ms ease-in-out;
+      transition: all 180ms ease-in-out;
+      fill: #c1c0ba; }
+
+.user-buy__total {
+  padding: 26px 30px 18px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875em;
+  font-family: "FiraSans ExtraBold";
+  color: #2c2c2c;
+  text-align: right; }
+
+.user-buy__total-sum {
+  font-size: 1.125em;
+  text-transform: uppercase; }
+
+.user-buy__buttons {
+  padding: 20px 0;
+  background-color: #363636;
+  text-align: center;
+  vertical-align: middle; }
+
+.btn__blue-basket {
+  margin-right: 10px;
+  font-family: "FiraSans UltraLight";
+  font-size: 0.75em;
+  color: #ffffff;
+  background-color: #61c2d0;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 180ms ease-in-out;
+  transition: all 180ms ease-in-out;
+  vertical-align: middle;
+  padding: 0; }
+  .btn__blue-basket:hover, .btn__blue-basket:focus {
+    background-color: #00acb8; }
+
+.btn__blue-bsk-icon {
+  display: inline-block;
+  border-right: 1px dotted #ffffff;
+  padding: 9px; }
+  .btn__blue-bsk-icon:after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 16px;
+    background-image: url(../img/icon/basket-button-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+
+.btn__blue-bsk-text {
+  display: inline-block;
+  padding: 0 35px; }
+
+/* 
+
+  оранжевая кнопка
+
+*/
+.btn__zakaz-orange {
+  padding: 12px 30px;
+  font-family: "FiraSans UltraLight";
+  font-size: 0.75em;
+  color: #ffffff;
+  background-color: #ef791a;
+  border: none;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: all 180ms ease-in-out;
+  transition: all 180ms ease-in-out;
+  vertical-align: middle; }
+  .btn__zakaz-orange:hover, .btn__zakaz-orange:focus {
+    background-color: #d6680f; }
 
 /* 
   
@@ -2212,32 +2399,6 @@ ul {
   .form-count__plus::selection {
     background-color: none; }
 
-.product__form-button {
-  padding: 12px 70px 12px 120px;
-  font-family: "FiraSans UltraLight";
-  font-size: 1.5rem;
-  color: #ffffff;
-  background-color: #00c4d2;
-  border: 1px solid #00acb8;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  -webkit-transition: all 180ms ease-in-out;
-  transition: all 180ms ease-in-out; }
-  .product__form-button:hover, .product__form-button:focus {
-    background-color: #00acb8; }
-
-.form-button__icon {
-  display: inline-block;
-  width: 60px;
-  height: 100%;
-  padding: 10px 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-right: 1px dashed #ffffff; }
-
 .product__timer {
   width: 40%;
   float: left;
@@ -3579,39 +3740,10 @@ ul {
 	блок товаров которые купили
 
  */
-.zakaz__user-buy {
-  max-width: 370px; }
-
-.user-buy__list {
-  width: 100%;
-  font-size: 0; }
-
-.user-buy__item {
-  border-bottom: 1px solid #f4f4f4; }
-
-.user-buy__img {
-  display: inline-block;
-  width: 30%;
-  height: 100%;
-  position: relative;
-  padding: 20px 0 20px 30px; }
-
-.user-buy__product-text {
-  font-size: 16px;
-  display: inline-block;
-  width: 50%;
-  min-height: 100%; }
-
-.user-buy__mtrs-name:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-  height: 0; }
-
-.user-buy__cross {
-  display: inline-block;
-  width: 20%;
-  background-color: brown; }
+.zakaz-page__user-basket {
+  position: absolute;
+  top: 10%;
+  right: 0; }
 
 /* 
 	
