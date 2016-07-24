@@ -284,7 +284,6 @@ $(function(){// удаление блока
       });
 
 })();
-//ползунок 
 
 
 // Пришлось вынести за пределы аннонимной функции 
@@ -303,7 +302,7 @@ function initMap() {
     center: coordinates,
     zoom: 18,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwhell: false
+    scrollwheel: false
   };
 
   map = new google.maps.Map(document.getElementById('main-map'), mapOption);

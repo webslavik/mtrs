@@ -14,6 +14,7 @@
 
 
 
+
 //----------------------------------
 // PAGINATION
 //----------------------------------
@@ -22,8 +23,6 @@
 
   .pagination-wrap {
     text-align: right;
-    @include grid-col(4, 0);
-    @include grid-col-off(8);
   }
 
   .pagination__control,
@@ -71,15 +70,7 @@
 
 
 .contact-section {
-  // padding: 60px 0 0 0;
 
-  // background-color: $white_grey_1;
-  // background: {
-  //  // image: url(../img/bg-contact-test.jpg);
-  //  size: cover;
-  //  repeat: no-repeat;
-  //  position: center top;
-  // }
 }
 
 
@@ -103,7 +94,7 @@
   margin-bottom: 40px;
 
   .contact__title {
-    @include grid-col(5);
+    @include grid-col(12);
 
     font-size: rem(30);
     color: $white;
@@ -188,8 +179,12 @@
 .contact-section__map {
   width: 100%;
   height: 300px;
-  background-color: orange;
   position: relative;
+
+  background-image: url(../img/main-page__map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   
   .google-maps {
@@ -197,7 +192,6 @@
     height: 100%;
     // width: 500px;
     // height: 200px;
-    background-color: yellow;
   }
 }
 

@@ -19,8 +19,7 @@
 }
 
 .fast-selection__content {
-  @include grid-col(4, 0);
-  @include grid-col-pos(1);
+  padding-left: 100px;
 }
 
 

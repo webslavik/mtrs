@@ -15,7 +15,7 @@
 	margin-bottom: 45px;
 
 	.news__title {
-		@include grid-col(5);
+		@include grid-col(9);
 
 		font-size: rem(30);
 		color: $grey_1;
@@ -27,7 +27,7 @@
 	.news__news-link {
 		text-align: right;
 		margin-top: 10px;
-		@include grid-col(15%);
+		@include grid-col(3);
 
 		.link {
 			display: inline-block;

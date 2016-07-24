@@ -8,32 +8,15 @@
 	margin-bottom: 65px;
 }
 
-// .clients-section__clients-top {
-// 	@include grid-row();
-// 	border-bottom: 3px solid $grey_2;
-// 	margin-bottom: 25px;
-
-// 	.clients__title {
-// 	@include grid-col(5);
-
-// 	font-size: rem(30);
-// 	color: $grey_2;
-// 	font-weight: 300;
-// 	text-transform: uppercase;
-// 	}
-
-// }
 
 .title-section__clients {
-	@include grid-col(5);
-	// background-color: tomato;
+	@include grid-col(9);
 }
 
 
 // Clients
 //--------------------------------
 .client-reviews {
-	// @include grid-row();
 
 	.reviews-item {
 		display: inline-block;
