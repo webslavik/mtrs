@@ -217,14 +217,18 @@ $(function(){ // калькулятор цен
         })
         var oplata = $(".k_oplate");
         var y = abc(summ);
-        oplata.html(y + " руб.");
-
+        var n = oplata.html(y + " руб.");
     }) 
+
   });
+
 $(function(){// удаление блока
- $(".cart_close").click(function(e){
-    
+  $(".cart-wrap__content").change(function(){
+    console.log(".k_oplate");
+  })
+ $(".cart_close").click(function(){  
     $(this).parent().remove();
+
  })
 });
 
