@@ -20,8 +20,7 @@
 
 
 .individual-section__content {
-	@include grid-col(8);
-	@include grid-col-pos(4);
+	padding-right: 20px;
 	text-align: right;
 }
 

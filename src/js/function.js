@@ -147,17 +147,40 @@
     minimumResultsForSearch: -1,
   });
 
-$('.catalog__select').select2({
-  minimumResultsForSearch: -1,
-  width: '160px',
+  $('.catalog__select').select2({
+    minimumResultsForSearch: -1,
+    width: '160px',
 
-})
-$('.catalog__select_big').select2({
-  minimumResultsForSearch: -1,
-  width: '220px',
+  });
 
-})
+  $('.catalog__select_big').select2({
+    minimumResultsForSearch: -1,
+    width: '220px',
+
+  });
+
+   $('.pop-up__select').select2({
+    minimumResultsForSearch: -1,
+  })
+
+
+
+  // pop up 
+  popUpToggle();
+
+  function popUpToggle() {
+    $('.pop-up__content').on('click', function(e) {
+      e.stopPropagation();
+    })
+
+
+    $('#request_call, .btn-pop-up__close, .pop-up').on('click', function(e) {
+      e.preventDefault();
+      $('.pop-up').toggleClass('pop-up__hide');
+    });
+  }
   
+    
   
 
 
@@ -288,7 +311,6 @@ $(function(){// удаление блока
       });
 
 })();
-//ползунок 
 
 
 // Пришлось вынести за пределы аннонимной функции 
@@ -307,7 +329,7 @@ function initMap() {
     center: coordinates,
     zoom: 18,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwhell: false
+    scrollwheel: false
   };
 
   map = new google.maps.Map(document.getElementById('main-map'), mapOption);

@@ -2,114 +2,124 @@
 footer.footer-main
 
 	.container
-
+		
+		// logo column
 		.footer-main__logo-column
-			.logo
-			p.logo-paragraph Первая фабрика бренда «Корпорация Сна» была открыта в 2009 году. в г. Ростов-на-Дону. Стремительное развитие
+			.footer__logo
+				img(src="img/logo-footer.png", alt="")
+			p.logo-col__paragraph Первая фабрика бренда «Корпорация Сна» была открыта в 2009 году. в г. Ростов-на-Дону. Стремительное развитие
 
-			p.logo-paragraph Компания получил за счет честности при работе с людьми, за счет цен ниже рынка, при отменном качестве, высочайшего европейского сервиса и расширенных гарантий
+			p.logo-col__paragraph Компания получил за счет честности при работе с людьми, за счет цен ниже рынка, при отменном качестве, высочайшего европейского сервиса и расширенных гарантий
 
-			.link-arrow
-				a(href="#").link
+			.logo-col__arrows
+				a(href="#").logo-col__arrows-link
 					include _0-icon-svg/arrow-right.svg
 					include _0-icon-svg/arrow-right.svg
+		// end logo column
+		// *********************************************
 
-
+		// clients column
 		.footer-main__clients-column
-			.clients-title.title Клиентам
-			ul.lists
-				li.list-item
+			.footer-col__title Клиентам
+			ul.footer-col__list
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Пользовательсоке соглашение
-				li.list-item
+					a(href="#").footer-col__link Пользовательсоке соглашение
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Гарантия
-				li.list-item
+					a(href="#").footer-col__link Гарантия
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Возврат
-				li.list-item
+					a(href="#").footer-col__link Возврат
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Поддежка
+					a(href="#").footer-col__link Поддежка
+		// end clients column
+		// *********************************************
 
-
+		// catalog column
 		.footer-main__catalog-column
-			.catalog-title.title Каталог
-			ul.lists
-				li.list-item
+			.footer-col__title Каталог
+			ul.footer-col__list
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Матрасы
-				li.list-item
+					a(href="#").footer-col__link Матрасы
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Подушки
-				li.list-item
+					a(href="#").footer-col__link Подушки
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Одеяла
-				li.list-item
+					a(href="#").footer-col__link Одеяла
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Кровати
-				li.list-item
+					a(href="#").footer-col__link Кровати
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Постельное белье
-				li.list-item
+					a(href="#").footer-col__link Постельное белье
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Основания
-				li.list-item
+					a(href="#").footer-col__link Основания
+				li.footer-col__list-item
 					include _0-icon-svg/arrow-right.svg
-					a(href="@").link Наматрасники
+					a(href="#").footer-col__link Наматрасники
+		// end catalog column
+		// *********************************************
 
-
+		// connect column
 		.footer-main__connect-column
-			.conntect__title Оставайтесь на связи
+			.footer-col__title Оставайтесь на связи
 			ul.conntect__lists
-				li.list-item
+				li.connect-list__item
 					include _0-icon-svg/location.svg
-					span.addres-text.text г.Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое Кольцо"
+					span.connect-list__text г.Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое Кольцо"
 
-				li.list-item
+				li.connect-list__item
 					include _0-icon-svg/phone.svg
-					span.phone__tex.text +7 (495) 181-09-00
+					span.connect-list__text +7 (495) 181-09-00
 
-				li.list-item
+				li.connect-list__item
 					include _0-icon-svg/email.svg
-					a(href="mailto:info@sitename.com").email__text.text info@sitename.com
+					a(href="mailto:info@sitename.com").connect-list__text.connect-list__email info@sitename.com
+		// end connect column
+		// *********************************************
 
-
-
+	// footer bottom line
 	.footer-main__bottom-line
 		.container
 
-			.bottom-line__copyright
+			.f-bottom-line__copyright
 				.copyright Copyright © 2016 Корпорация сна
 
-			.bottom-line__button-up
-				//- a(href="#").button-up
-				//- 	include _0-icon-svg/arrow-up.svg
-				span.button-up#button-up
+			.f-bottom-line__button-up
+				span.f-button-up#button-up
 					include _0-icon-svg/arrow-up.svg
 
-			.bottom-line__social-icon
-				ul.icon-list
-					li.list-item
-						a(href="").link
+			.f-bottom-line__social-icon
+				ul.f-social__list
+					li.f-social__item
+						a(href="").f-social__link.facebook
 							include _0-icon-svg/facebook-logo.svg
 
-					li.list-item
-						a(href="").link
+					li.f-social__item
+						a(href="").f-social__link
 							include _0-icon-svg/twitter-circular.svg
 					
-					li.list-item
-						a(href="").link
+					li.f-social__item
+						a(href="").f-social__link
 							include _0-icon-svg/google-plus.svg
 					
-					li.list-item
-						a(href="").link
+					li.f-social__item
+						a(href="").f-social__link
 							include _0-icon-svg/social-vimeo.svg
 					
-					li.list-item
-						a(href="").link
+					li.f-social__item
+						a(href="").f-social__link
 							include _0-icon-svg/pinterest-social.svg
-							
-							
+	// end footer bottom line
+	// *********************************************
+
+// end FOOTER
+// ###############################################################
 
 
 
