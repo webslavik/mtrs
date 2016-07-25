@@ -1,0 +1,33 @@
+// Pop Up window
+
+.pop-up.pop-up__hide
+	.pop-up__content
+		button.btn-pop-up__close
+			include ../_0-icon-svg/cancel.svg
+		h2.pop-up__title Заказать матрас 
+			br
+			span.pop-up__title-orange в 1 клик
+
+		.pop-up__form
+			form(action="")
+				input(type="text" placeholder='Имя*').pup-up__input
+				input(type="text" placeholder='Телефон*').pup-up__input
+				input(type="text" placeholder='Матрас: Матрас: Eleonora valensia premium...').pup-up__input
+
+				select(data-placeholder='Размер:').pop-up__select
+					option
+					option Размер 1
+					option Размер 2
+					option Размер 3
+
+				textarea(placeholder='Ваше сообщение (не обязательно к заполнению)').pop-up__textarea
+
+				.pop-up__price-wrap Цена: 
+					span.pop-up__price 99 9999
+
+				input(type="submit" value='Заказать').button.pop-up__btn
+
+
+
+// end Pop Up window
+// #####################################################

@@ -1709,6 +1709,105 @@ ul {
       right: -2px; }
 
 /* 
+
+	----------------------------------------------------
+		Стили для Pop Up окна
+	----------------------------------------------------
+
+*/
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.35);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out; }
+  .pop-up.pop-up__hide {
+    background-color: transparent;
+    pointer-events: none; }
+    .pop-up.pop-up__hide .pop-up__content {
+      opacity: 0; }
+
+.pop-up__content {
+  max-width: 470px;
+  margin: 0 auto;
+  padding: 55px 64px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 0 5px 21px rgba(81, 78, 78, 0.44);
+          box-shadow: 0 5px 21px rgba(81, 78, 78, 0.44);
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  position: relative;
+  top: 80px;
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 1; }
+
+.btn-pop-up__close {
+  border: none;
+  background: none;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer; }
+  .btn-pop-up__close svg {
+    width: 21px;
+    height: 21px; }
+
+.pop-up__title {
+  margin-bottom: 38px;
+  font-family: "FiraSans SemiBold";
+  font-size: 2.25em;
+  color: #2c2c2c;
+  line-height: 35px; }
+
+.pop-up__title-orange {
+  color: #ef791a; }
+
+.pup-up__input, .pop-up__textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  font-size: 0.875em;
+  color: #636363;
+  border: 1px solid #555;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+
+/* 
+ стилизуем Select2
+*/
+.pop-up__select + .select2 {
+  width: 100% !important;
+  margin-bottom: 15px;
+  text-align: left; }
+  .pop-up__select + .select2 .select2-selection {
+    border: 1px solid #555; }
+  .pop-up__select + .select2 .select2-selection__rendered {
+    padding-left: 20px; }
+  .pop-up__select + .select2 .select2-selection__placeholder {
+    color: #636363; }
+
+.pop-up__textarea {
+  height: 165px;
+  margin-bottom: 45px; }
+
+.pop-up__price-wrap {
+  margin-bottom: 45px;
+  font-family: "FiraSans SemiBold";
+  font-size: 1.5em;
+  text-align: center; }
+
+.pop-up__btn {
+  padding: 12px 50px; }
+
+/* 
 	
 	ФУТЕР
 

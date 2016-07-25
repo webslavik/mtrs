@@ -24,7 +24,7 @@
             </ul>
             <div class="h-top-line__call"><span class="h-top-line__call-number">
                  
-                +7 <span class="brackets">&#40;</span>495<span class="brackets">&#41;</span> 181-09-00</span><a href="" class="h-top-line__call-text">Заказать звонок</a></div>
+                +7 <span class="brackets">&#40;</span>495<span class="brackets">&#41;</span> 181-09-00</span><a href="" id="request_call" class="h-top-line__call-text">Заказать звонок</a></div>
             <div class="h-top-line__office"><span class="h-top-line__office-icon"><img src="img/icon/icon-logo.png" alt=""/></span><a href="personal-office_page.html" class="h-top-line__office-text">Личный кабинет</a></div>
           </div>
         </div>
@@ -405,6 +405,32 @@
     
     
     
+    <!-- Pop Up window-->
+    <div class="pop-up pop-up__hide">
+      <div class="pop-up__content">
+        <button class="btn-pop-up__close"><svg width="64" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64"><path fill="#1D1D1B" d="M28.94 31.786L.614 60.114a2.014 2.014 0 1 0 2.848 2.85L32.003 34.42l28.54 28.54c.395.395.91.59 1.425.59s1.03-.195 1.424-.59a2.014 2.014 0 0 0 0-2.848L35.065 31.786 63.41 3.438a2.014 2.014 0 0 0-2.848-2.85L32.002 29.15 3.443.59A2.015 2.015 0 0 0 .59 3.44l28.35 28.346z"/></svg>
+        </button>
+        <h2 class="pop-up__title">Заказать матрас <br/><span class="pop-up__title-orange">в 1 клик</span></h2>
+        <div class="pop-up__form">
+          <form action="">
+            <input type="text" placeholder="Имя*" class="pup-up__input"/>
+            <input type="text" placeholder="Телефон*" class="pup-up__input"/>
+            <input type="text" placeholder="Матрас: Матрас: Eleonora valensia premium..." class="pup-up__input"/>
+            <select data-placeholder="Размер:" class="pop-up__select">
+              <option></option>
+              <option>Размер 1</option>
+              <option>Размер 2</option>
+              <option>Размер 3</option>
+            </select>
+            <textarea placeholder="Ваше сообщение (не обязательно к заполнению)" class="pop-up__textarea"></textarea>
+            <div class="pop-up__price-wrap">Цена: <span class="pop-up__price">99 9999</span></div>
+            <input type="submit" value="Заказать" class="button pop-up__btn"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end Pop Up window-->
+    <!-- #####################################################-->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="js/slick.min.js"></script>

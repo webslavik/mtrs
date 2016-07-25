@@ -1,0 +1,135 @@
+/* 
+
+	----------------------------------------------------
+		Стили для Pop Up окна
+	----------------------------------------------------
+
+*/
+.pop-up {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+	pointer-events: auto; 
+
+	background-color: hsla(0,0%,0%,0.35);
+
+	transition: all 350ms ease-in-out;
+
+ 	&.pop-up__hide {
+		background-color: hsla(0,0%,0%,0);
+		pointer-events: none;
+
+		.pop-up__content {
+			opacity: 0;
+		}
+	}
+
+
+}
+
+.pop-up__content {
+	max-width: 470px;
+	margin: 0 auto;
+	padding: 55px 64px;
+	border-radius: 2px;
+	box-shadow: 0 5px 21px rgba(81, 78, 78, 0.44);
+	transition: all 350ms ease-in-out;
+
+	position: relative;
+	top: 80px;
+
+	text-align: center;
+
+	background-color: $white;
+	opacity: 1;
+}
+
+
+.btn-pop-up__close {
+	border: none;
+	background: none;
+	padding: 10px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+
+	svg {
+		width: 21px;
+		height: 21px;
+
+	}
+}
+
+.pop-up__title {
+	margin-bottom: 38px;
+	font-family: $font-bold;
+	font-size: em(36);
+	color: $black;
+	line-height: 35px;
+}
+
+.pop-up__title-orange {
+	color: $orange;
+}
+
+.pup-up__input {
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 12px 20px;
+	font-size: em(14);
+	color: #636363;
+	border: 1px solid #555;
+	border-radius: 5px;
+}
+
+/* 
+ стилизуем Select2
+*/
+.pop-up__select {
+	
+	& + .select2 {
+		width: 100% !important;
+		margin-bottom: 15px;
+		text-align: left;
+
+		
+
+		.select2-selection {
+			border: 1px solid #555;
+		}
+
+		.select2-selection__rendered {
+			padding-left: 20px;
+		}
+
+		.select2-selection__placeholder {
+			color: #636363;
+		}
+	}
+
+}
+
+
+
+
+.pop-up__textarea {
+	@extend .pup-up__input;
+	height: 165px;
+	margin-bottom: 45px;
+}
+
+.pop-up__price-wrap {
+	margin-bottom: 45px;
+	font-family: $font-bold;
+	font-size: em(24);
+	text-align: center;
+}
+
+
+.pop-up__btn {
+	padding: 12px 50px;
+}
