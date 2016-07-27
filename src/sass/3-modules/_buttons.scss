@@ -9,7 +9,7 @@
   font-family: $font-light;
   font-size: em(16);
   font-weight: 300;
-  padding: 10px 22px;
+  padding: 13px 20px;
   background-color: $blue;
   color: $white;
   border: none;
@@ -87,3 +87,6 @@
 }
 
 
+.button-form {
+  padding: 13px 43px;
+}

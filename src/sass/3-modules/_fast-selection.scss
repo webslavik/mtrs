@@ -28,6 +28,7 @@
   font-family: $font-extraBold;
   font-size: rem(30);
   color: $white;
+  text-transform: uppercase;
 
   margin-top: 0;
   font-weight: normal;
@@ -38,5 +39,6 @@
 }
 
 
-
-
+.fast-selection__button {
+  padding: 13px 19px;
+}

@@ -27,21 +27,30 @@
 }
 
 .big-slider__image {
-  @include grid-col(5,0);
+  @include grid-col(50%,0);
+  // position: relative;
+
+  img {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .big-slider__content {
   padding-top: 62px;
-  @include grid-col(5,0);
+  @include grid-col(45%, 0);
   @include grid-col-end();
-  @include grid-col-pos(1);
+  // @include grid-col-pos(1);
 }
 
 
 .big-slider__title {
   margin-bottom: 10px;
   font-family: $font-extraBold;
-  font-size: rem(60);
+  font-size: em(60);
   color: $blue;
   text-transform: uppercase;
 
@@ -51,7 +60,7 @@
   margin-bottom: 62px;
   padding-left: 10px;
   font-family: $font-book;
-  font-size: rem(16);
+  font-size: em(16);
   line-height: 22px;
   color: $grey_3;
 }
@@ -63,17 +72,106 @@
   margin-right: 60px;
   padding: 13px 23px;
   font-family: $font-light;
-  font-size: rem(16);
+  font-size: em(16);
   vertical-align: middle;
 }
 
 .big-slider__price {
   display: inline-block;
   font-family: $font-bold;
-  font-size: rem(48);
+  font-size: em(48);
   color: $grey_3 ;
   vertical-align: middle;
 }
 
 
 
+/* 
+ Большое слайдер медиа запросы
+*/
+/* 1110px */
+@include breakpoint(1100px down) {
+  .big-slider__title {
+    font-size: em(53);
+  }
+  .big-slider__price {
+    font-size: em(44);
+  }
+
+  .big-slider__button {
+    margin-right: 25px;
+  }
+}
+
+/* 1024 */
+@include breakpoint(1024px down) {
+  .big-slider__descr {
+    margin-bottom: 42px;
+  }
+
+  .big-slider__button {
+    margin-left: 25px;
+  }
+
+  .big-slider__descr {
+    font-size: em(15);
+  }
+
+}
+
+
+/* 1024 */
+@include breakpoint(1024px down) {
+  .big-slider__descr {
+    margin-bottom: 42px;
+  }
+
+  .big-slider__button {
+    margin-left: 25px;
+  }
+
+  .big-slider__descr {
+    font-size: em(15);
+  }
+
+}
+
+/* 992px */
+@include breakpoint(992px down) {
+  .big-slider__title {
+    font-size: em(44);
+  }
+
+  .big-slider__price {
+    font-size: em(38);
+  }
+
+  .big-slider__button {
+    font-size: em(15);
+  }
+}
+
+
+/* 895px */
+@include breakpoint(895px down) {
+  .big-slider__content {
+    padding-top: 45px;
+  }
+
+  .big-slider__title {
+    font-size: em(44);
+  }
+
+  .big-slider__price {
+    font-size: em(35);
+  }
+
+  .big-slider__descr {
+    font-size: em(14);
+  }
+
+  .big-slider__button {
+    margin-left: 10px;
+    font-size: em(14);
+  }
+}

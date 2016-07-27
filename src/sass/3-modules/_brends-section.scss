@@ -3,6 +3,9 @@
   БРЕНДЫ, ЛОГОТИПЫ
 
 */
+.brand-section {
+  margin-bottom: 40px;
+}
 
 .brand-section__list {
   @include grid-col(10);
