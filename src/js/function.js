@@ -1,6 +1,17 @@
 ﻿!(function() {
 
-  
+
+    $(window).resize(function() {
+          if ($(window).width() < '620'){
+        console.log("моб версия");
+    	} else if($(window).width() >= '620'){
+        console.log("норм версия");
+    	}
+    })
+
+
+
+
   // SLICK SLIDER 
   //-----------------------------
 
