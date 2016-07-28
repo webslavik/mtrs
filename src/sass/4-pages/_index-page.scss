@@ -13,16 +13,16 @@
   @include grid-col(25%)
 }
 
-.main-page__title-section-nav {
+.main-page__title-section-tab {
   @include grid-col(75%);
 
   // background-color: lightblue;
 }
 
-//  NAVIGATON
+//  tabIGATON
 //-------------------------------------
 
-.title-section__nav {
+.title-section__tab {
   height: 36px;
   padding-top: 11px;
 
@@ -34,7 +34,7 @@
 }
 
 
-.title-section__nav-item {
+.title-section__tab-item {
   display: inline-block;
   height: 100%;
 
@@ -49,13 +49,14 @@
 }
 
 
-.title-section__nav-link {
+.title-section__tab-link {
   height: 100%;
   display: inline-block;
   font-family: $font-light;
   font-weight: 300;
   padding-bottom: 3px;
   position: relative;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -84,11 +85,25 @@
   }
 }
 
+/* 
+  стили для табов
+
+  .main-page__tabs-item - отключаем отображение всех табов
+
+  .current - данный класс включает отображение нужного таба
+*/
+.main-page__tabs-item {
+  display: none;
+
+  &.current {
+    display: block;
+  }
+}
 
 
-//----------------------------------
-// PAGINATION
-//----------------------------------
+/* 
+  пагинация 
+*/
 .mattresses-models__pagination {
   @include grid-row();
 
@@ -343,7 +358,7 @@
 */
 
 @include breakpoint(1120 down) {
-  .title-section__nav-link {
+  .title-section__tab-link {
     font-size: em(14);
   }
 }

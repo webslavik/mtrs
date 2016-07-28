@@ -6,12 +6,12 @@
 
 
 .matrasses-model__list-items {
-  // margin-bottom: 45px;
   @include grid-row();
 
-  // :last-child {
-  //   @include grid-col-end();
-  // }
+  /* последний ребенок флоатиться вправо */
+  li:last-child {
+    @include grid-col-end();
+  }
 
 }
 

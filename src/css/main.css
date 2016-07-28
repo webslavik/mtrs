@@ -492,12 +492,15 @@ ul {
 .matrasses-model__list-items {
   max-width: 75rem;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  /* последний ребенок флоатиться вправо */ }
   .matrasses-model__list-items::before, .matrasses-model__list-items::after {
     content: ' ';
     display: table; }
   .matrasses-model__list-items::after {
     clear: both; }
+  .matrasses-model__list-items li:last-child:last-child:last-child {
+    float: left; }
 
 .matrasses-model__item {
   margin-bottom: 20px;
@@ -2415,28 +2418,28 @@ ul {
   .main-page__title-section:last-child:not(:first-child) {
     float: right; }
 
-.main-page__title-section-nav {
+.main-page__title-section-tab {
   width: 75%;
   float: left;
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
   @media screen and (min-width: 40em) {
-    .main-page__title-section-nav {
+    .main-page__title-section-tab {
       padding-left: 1.25rem;
       padding-right: 1.25rem; } }
-  .main-page__title-section-nav:last-child:not(:first-child) {
+  .main-page__title-section-tab:last-child:not(:first-child) {
     float: right; }
 
-.title-section__nav {
+.title-section__tab {
   height: 36px;
   padding-top: 11px; }
-  .title-section__nav :first-child:before, .title-section__nav .description-small__list:first-child:after {
+  .title-section__tab :first-child:before, .title-section__tab .description-small__list:first-child:after {
     display: none; }
 
-.title-section__nav-item {
+.title-section__tab-item {
   display: inline-block;
   height: 100%; }
-  .title-section__nav-item:before, .title-section__nav-item.description-small__list:after {
+  .title-section__tab-item:before, .title-section__tab-item.description-small__list:after {
     content: '';
     display: inline-block;
     width: 1px;
@@ -2444,16 +2447,17 @@ ul {
     margin: 0 25px;
     background-color: #505050; }
 
-.title-section__nav-link {
+.title-section__tab-link {
   height: 100%;
   display: inline-block;
   font-family: "FiraSans Light";
   font-weight: 300;
   padding-bottom: 3px;
-  position: relative; }
-  .title-section__nav-link:hover:after, .title-section__nav-link:focus:after {
+  position: relative;
+  cursor: pointer; }
+  .title-section__tab-link:hover:after, .title-section__tab-link:focus:after {
     opacity: 1; }
-  .title-section__nav-link:after {
+  .title-section__tab-link:after {
     content: '';
     display: block;
     width: 80%;
@@ -2469,6 +2473,21 @@ ul {
     bottom: -3px;
     left: 0; }
 
+/* 
+  стили для табов
+
+  .main-page__tabs-item - отключаем отображение всех табов
+
+  .current - данный класс включает отображение нужного таба
+*/
+.main-page__tabs-item {
+  display: none; }
+  .main-page__tabs-item.current {
+    display: block; }
+
+/* 
+  пагинация 
+*/
 .mattresses-models__pagination {
   max-width: 75rem;
   margin-left: auto;
@@ -2685,7 +2704,7 @@ ul {
   медиа запросы для основной страницы
 */
 @media screen and (max-width: 70em) {
-  .title-section__nav-link {
+  .title-section__tab-link {
     font-size: 0.875em; } }
 
 /* 

@@ -180,8 +180,28 @@
     });
   }
   
-    
-  
+
+
+  //-----------------------------------------------
+  // Табы на главной странице
+  //-----------------------------------------------
+  tabsToggle();
+
+  function tabsToggle() {
+    $('.title-section__tab li').on('click', function() {
+
+      var tab_id = $(this).data('tab');
+
+      $('.title-section__tab li').removeClass('current');
+      $('.main-page__tabs-item').removeClass('current');
+
+      $(this).addClass('current');
+      $('#' + tab_id).addClass('current');
+
+    });
+  }
+
+
 
 
 //// range slider //ползунок цен
