@@ -12,6 +12,7 @@
 	margin-bottom: 20px;
 	border-bottom: 2px solid #eee;
 	padding-bottom: 10px;
+	padding-right: 30px
 
 }
 .catalog__sort_po{
@@ -99,5 +100,94 @@
 	left: -20px;
 	width: 20px;
 	height: 20px;
+	
+}
+
+
+/**************media adaptive*****************/
+@media only screen and (max-width : 920px) {
+ .matrasses-model__item{
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width : 620px) {
+	#razmerselect{
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+	.filter_select_wrap{
+		display: none !important;
+	}
+	#razmer{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.breadcrumbs__list{
+		display: none;
+	}
+	.catalog__sort_p{
+		display: none;
+	}
+	.select_wrap{
+		display: none;
+	}
+	.matrasses-model__title{
+		font-family: "FiraSans SemiBold";
+
+	}
+	.matrasses-model__item{
+		width: 100%;
+	}
+	.matrasses-model__item-wrap{
+		background-color: #fff;
+	}
+	.matrasses-model__price{
+		width: 100%;
+		text-align: center;
+		color: #505050;
+		font-size: 18px;
+		position: relative;
+		display: inline-block;
+		bottom: 33px;
+	}
+	.matrasses-model__button-click{
+		position: relative;
+		bottom: 47px;
+		left: 40%;
+	}
+	.matrasses-model__select{
+		position: relative;
+		top: 68px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.matrasses-model__button-click{
+		position: relative;
+		bottom: 47px;
+		left: 34%;
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 340px) {
+ 	
+}
+
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 620px) {
 	
 }
