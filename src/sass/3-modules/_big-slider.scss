@@ -15,10 +15,6 @@
 
 }
 
-.slider-top__items-list {
-  padding-left: 50px;
-}
-
 
 .big-slider__item {
   margin-bottom: 50px;
@@ -88,6 +84,9 @@
 
 /* 
  Большое слайдер медиа запросы
+
+  Спасибо заказчику, который поскупился на макеты для Планшетов :)
+
 */
 /* 1110px */
 @include breakpoint(1100px down) {
@@ -138,6 +137,11 @@
 
 /* 992px */
 @include breakpoint(992px down) {
+  
+  .slider-top__items-list {
+    padding-left: 20px;
+  }
+
   .big-slider__title {
     font-size: em(44);
   }
@@ -149,11 +153,20 @@
   .big-slider__button {
     font-size: em(15);
   }
+
 }
 
 
 /* 895px */
 @include breakpoint(895px down) {
+  .big-slider-top {
+    padding-bottom: 70px;
+  }
+
+  .big-slider__item {
+    margin-bottom: 35px;
+  }
+
   .big-slider__content {
     padding-top: 45px;
   }
@@ -173,5 +186,129 @@
   .big-slider__button {
     margin-left: 10px;
     font-size: em(14);
+  }
+}
+
+
+
+/* 830px */
+@include breakpoint(830px down) { 
+
+  .big-slider__title {
+    font-size: em(40);
+  }
+
+  .big-slider__button {
+    padding: 10px 18px;
+  }
+
+  .big-slider__price {
+    font-size: em(31);
+  }
+}
+
+
+/* 765px */
+@include breakpoint(765px down) { 
+
+  .big-slider__content {
+    padding-top: 40px;
+  }
+
+  .big-slider-top {
+    padding-bottom: 50px;
+  }
+
+
+  .big-slider__item {
+    margin-bottom: 35px;
+  }
+
+  .big-slider__title {
+    font-size: em(36);
+  }
+
+
+  .big-slider__descr {
+    font-size: em(13);
+    margin-bottom: 35px;
+  }
+
+   .big-slider__button {
+    font-size: em(12);
+    padding: 9px 17px;
+  }
+}
+
+
+/* 730px */
+@include breakpoint(730px down) { 
+  
+  .big-slider__price {
+    font-size: em(27);
+  }
+}
+
+/* 690px */
+@include breakpoint(690px down) { 
+
+  .big-slider__content {
+    padding-top: 35px;
+  }
+  
+  .big-slider__title {
+    font-size: em(33);
+  }
+
+  .big-slider__descr {
+    font-size: em(13);
+    margin-bottom: 24px;
+  }
+
+  .big-slider__button {
+    font-size: em(12);
+    padding: 7px 15px;
+  }
+
+  .big-slider__price {
+    font-size: em(27);
+  }
+}
+
+
+/* 660px */
+@include breakpoint(660px down) { 
+  
+  .big-slider-top {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .big-slider__item {
+    margin-bottom: 28px;
+  }
+
+
+  .big-slider__content {
+    padding-top: 30px;
+  }
+
+
+  .big-slider__title {
+    font-size: em(31);
+    margin-bottom: 8px;
+  }
+
+  .big-slider__descr {
+    font-size: em(13);
+    margin-bottom: 18px;
+  }
+
+  .big-slider__button {
+    margin-left: 0;
+  }
+
+  .big-slider__price {
+    font-size: em(24);
   }
 }

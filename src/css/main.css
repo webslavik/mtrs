@@ -1191,9 +1191,6 @@ ul {
   padding-bottom: 82px;
   position: relative; }
 
-.slider-top__items-list {
-  padding-left: 50px; }
-
 .big-slider__item {
   margin-bottom: 50px;
   display: inline-block;
@@ -1252,6 +1249,9 @@ ul {
 
 /* 
  Большое слайдер медиа запросы
+
+  Спасибо заказчику, который поскупился на макеты для Планшетов :)
+
 */
 /* 1110px */
 @media screen and (max-width: 68.75em) {
@@ -1282,6 +1282,8 @@ ul {
 
 /* 992px */
 @media screen and (max-width: 62em) {
+  .slider-top__items-list {
+    padding-left: 20px; }
   .big-slider__title {
     font-size: 2.75em; }
   .big-slider__price {
@@ -1291,6 +1293,10 @@ ul {
 
 /* 895px */
 @media screen and (max-width: 55.9375em) {
+  .big-slider-top {
+    padding-bottom: 70px; }
+  .big-slider__item {
+    margin-bottom: 35px; }
   .big-slider__content {
     padding-top: 45px; }
   .big-slider__title {
@@ -1302,6 +1308,72 @@ ul {
   .big-slider__button {
     margin-left: 10px;
     font-size: 0.875em; } }
+
+/* 830px */
+@media screen and (max-width: 51.875em) {
+  .big-slider__title {
+    font-size: 2.5em; }
+  .big-slider__button {
+    padding: 10px 18px; }
+  .big-slider__price {
+    font-size: 1.9375em; } }
+
+/* 765px */
+@media screen and (max-width: 47.8125em) {
+  .big-slider__content {
+    padding-top: 40px; }
+  .big-slider-top {
+    padding-bottom: 50px; }
+  .big-slider__item {
+    margin-bottom: 35px; }
+  .big-slider__title {
+    font-size: 2.25em; }
+  .big-slider__descr {
+    font-size: 0.8125em;
+    margin-bottom: 35px; }
+  .big-slider__button {
+    font-size: 0.75em;
+    padding: 9px 17px; } }
+
+/* 730px */
+@media screen and (max-width: 45.625em) {
+  .big-slider__price {
+    font-size: 1.6875em; } }
+
+/* 690px */
+@media screen and (max-width: 43.125em) {
+  .big-slider__content {
+    padding-top: 35px; }
+  .big-slider__title {
+    font-size: 2.0625em; }
+  .big-slider__descr {
+    font-size: 0.8125em;
+    margin-bottom: 24px; }
+  .big-slider__button {
+    font-size: 0.75em;
+    padding: 7px 15px; }
+  .big-slider__price {
+    font-size: 1.6875em; } }
+
+/* 660px */
+@media screen and (max-width: 41.25em) {
+  .big-slider-top {
+    padding-top: 20px;
+    padding-bottom: 40px; }
+  .big-slider__item {
+    margin-bottom: 28px; }
+  .big-slider__content {
+    padding-top: 30px; }
+  .big-slider__title {
+    font-size: 1.9375em;
+    margin-bottom: 8px; }
+  .big-slider__descr {
+    font-size: 0.8125em;
+    margin-bottom: 18px; }
+  .big-slider__button {
+    margin-left: 0; }
+  .big-slider__price {
+    font-size: 1.5em; } }
 
 /* 
 
