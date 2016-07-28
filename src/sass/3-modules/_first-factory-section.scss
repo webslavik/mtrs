@@ -7,30 +7,37 @@
 .first-factory__content {
 	font-size: em(14);
 	padding: 46px 0 65px;
-
 	@include grid-col(10);
 	@include grid-col-off(1);
 
-	.content__paragraph {
-		font-family: $font-roboto;
-		position: relative;
-		padding-right: 30px;
-		text-align: center;
-		border-right: 1px solid $grey_2;
-		line-height: 24px;
+}
 
+.first-factory__paragraph {
+	font-family: $font-roboto;
+	position: relative;
+	text-align: center;
+	color: #6a6a6a;
+	line-height: 24px;
+}
 
-		&:after {
-			content: '';
-			display: inline-block;
-			width: 3px;
-			height: 80px;
-			background-color: $blue;
+.first-factory__wrap {
+	position: relative;
+}
 
-			position: absolute;
-			top: 10px;
-			right: -2px;
-		}
-	}
+.ff__grey-line {
+	position: absolute;
+	top: 0;
+	right: -30px;
+	width: 1px;
+	height: 100%;
+	background-color: $grey_2;
+}
 
+.ff__blue-line {
+	position: absolute;
+	top: 10%;
+	right: -31px;
+	width: 3px;
+	height: 80%;
+	background-color: $blue;
 }

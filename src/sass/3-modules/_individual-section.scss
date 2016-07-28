@@ -47,9 +47,60 @@
 	li {
 		display: inline-block;
 		font-family: $font-light;
+		font-size: em(18);
 		margin-left: 20px;
 		color: $white;
 	}
 }
 
 
+/* 860px */
+@include breakpoint(860px down) {
+
+	.individual-section__title {
+		font-size: rem(26);
+	}
+
+	.individual-section__title-custom {
+		font-size: rem(44);
+	}
+
+	.individual-section__list {
+		li {
+			font-size: em(16);
+		}
+	}
+
+}
+
+/* 740px */
+@include breakpoint(740px down) {
+
+
+	.individual-section__list {
+		li {
+			font-size: em(15);
+		}
+	}
+
+}
+
+/* 690px */
+@include breakpoint(690px down) {
+
+	.individual-section__title {
+		font-size: rem(22);
+	}
+
+	.individual-section__title-custom {
+		font-size: rem(40);
+	}
+
+
+	.individual-section__list {
+		li {
+			font-size: em(14);
+		}
+	}
+
+}
