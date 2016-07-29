@@ -32,7 +32,7 @@
 
 .footer-main__logo-column {
 	
-	:nth-child(3) {
+	p:nth-child(3) {
 		margin-bottom: 12px;
 	}
 
@@ -120,6 +120,7 @@
 	margin-bottom: 8px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid $bg-footer-color;
+	text-align: justify;
 
 	&:hover,
 	&:focus {
@@ -146,12 +147,14 @@
 
 
 .footer-col__link {
+	width: 93%;
 	display: inline-block;
 	padding-left: 15px;
 	font-family: $font-light;
 	font-size: em(14);
 	color: $bg-footer-color;
 	transition: all 185ms ease-in-out;
+	vertical-align: middle;
 }
 
 
@@ -195,7 +198,7 @@
 }
 
 .connect-list__text {
-	width: 90%;
+	width: 88%;
 	display: inline-block;
 	padding-left: 17px;
 	line-height: 18px;
@@ -236,7 +239,7 @@
 
 	font-size: em(13);
 
-	@include grid-col(3);
+	@include grid-col(5);
 }
 
 
@@ -245,7 +248,7 @@
 */
 .f-bottom-line__button-up {
 	@include grid-col(1, 0);	
-	@include grid-col-off(3);
+	@include grid-col-off(6%);
 }
 
 .f-button-up {
@@ -318,3 +321,57 @@
 }
 
 
+/* 
+	медиа для футера
+*/
+
+
+/* 992px */
+@include breakpoint(992px down) {
+	.footer-col__title {
+		font-size: em(18);
+	}
+
+	.footer__logo {
+		height: 65px;
+	}
+
+
+}
+
+
+/* 768px */
+@include breakpoint(768px down) {
+
+	.footer-col__title {
+		font-size: em(18);
+	}
+
+
+	.footer-main__logo-column {
+	
+		p:nth-child(2) {
+			margin-bottom: 15px;
+		}
+	}
+
+	.logo-col__paragraph {
+		font-size: em(12);
+	}
+
+	.footer__logo {
+		height: 50px;
+		margin-bottom: 10px;
+	}
+
+	.footer-col__link {
+		padding-left: 5px;
+		font-size: em(12);
+	}
+
+	.connect-list__text {
+		font-size: em(12);
+	}
+
+
+}

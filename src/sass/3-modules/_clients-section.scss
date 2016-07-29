@@ -101,3 +101,32 @@
 	
 
 
+/*  
+  для планшетов
+*/
+
+/* 992px */
+@include breakpoint(992px down) {
+  .title-section__clients {
+    font-size: em(26);
+  }
+
+  .clients-section {
+  	margin-bottom: 45px;
+  }
+
+ 
+}
+
+/* 768px */
+@include breakpoint(768px down) {
+  .title-section__clients {
+    padding-top: 5px;
+    font-size: em(22);
+  }
+
+  .cl__product-text {
+  	font-size: em(14);
+  }
+
+}

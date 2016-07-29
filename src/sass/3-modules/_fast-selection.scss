@@ -42,3 +42,67 @@
 .fast-selection__button {
   padding: 13px 19px;
 }
+
+
+/* 992px */
+@include breakpoint(992px down) {
+
+  .fast-selection__content {
+    padding-left: 60px;
+  }
+  
+  .fast-selection {
+    padding: 60px 0 50px;
+  }
+  
+  .fast-selection__title {
+    margin-bottom: 20px;
+    font-size: rem(26);
+  }
+
+
+  .fase-selection__title-custom {
+    font-size: rem(44);
+  }
+
+}
+
+/* 768px */
+@include breakpoint(768px down) {
+
+  .fast-selection {
+    margin-bottom: 40px;
+    padding: 55px 0 45px;
+  }
+  
+  .fast-selection__content {
+    padding-left: 40px;
+  }
+  
+
+  .fast-selection__button {
+    font-size: em(14);
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include breakpoint(992px down) {
+
+
+}

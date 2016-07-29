@@ -17,28 +17,14 @@
 	}
 }
 
-// .why_we-section__top {
-// 	@include grid-row();
-// 	border-bottom: 3px solid $white;
-// 	margin-bottom: 25px;
-
-// 	.why_we__title {
-// 	@include grid-col(5);
-
-// 	font-size: rem(30);
-// 	font-weight: 300;
-// 	color: $white;
-// 	text-transform: uppercase;
-// 	}
-// }
 
 .title-section__why-we {
 	border-color: $white;
 }
 
 .title-section__why-we-header {
-	@include grid-col(5);
 	color: $white;
+	width: grid-column(100%);
 }
 
 
@@ -156,5 +142,31 @@
 		word-spacing: 1px;
 	}
 
+
+}
+
+
+
+
+
+/*  
+  для планшетов
+*/
+
+/* 992px */
+@include breakpoint(992px down) {
+  .title-section__why-we-header {
+    font-size: em(26);
+  }
+
+ 
+}
+
+/* 768px */
+@include breakpoint(768px down) {
+  .title-section__why-we-header {
+    padding-top: 5px;
+    font-size: em(22);
+  }
 
 }

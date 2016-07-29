@@ -25,10 +25,18 @@
     slidesToScroll: 1,
     dots: false,
     speed: 1000,
-    // autoplay: true,
-    // autoplaySpeed: 1000
     prevArrow: '.brand-arrow-left',
-    nextArrow: '.brand-arrow-right'
+    nextArrow: '.brand-arrow-right',
+    // responsive: [
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 2,
+
+    //     }
+    //   }
+    // ]
   });
 
   // main page clients

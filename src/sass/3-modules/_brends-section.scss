@@ -14,17 +14,17 @@
 }
 
 .brand-section__list-item {
-  @include grid-col(4);
-  height: 120px;
-  // background-color: tomato;
   display: inline-block;
+  height: 120px;
+  margin: 0 10px;
   outline: none;
   opacity: .5;
   transition: all 180ms ease-in;
   cursor: pointer;
   margin-bottom: 20px;
-
   position: relative;
+
+  @include grid-col(4);
 
   &:hover {
     opacity: 1;
@@ -40,4 +40,53 @@
     max-width: 100%;
     max-height: 100%;
   }
+}
+
+
+.brand-section__list-item {
+  // margin: 0 30px;
+}
+
+/*  
+  для планшетов
+*/
+
+/* 992px */
+@include breakpoint(992px down) {
+
+    .brand-section__list-item {
+    height: 105px;
+  }
+
+
+  .brand-section {
+    margin-bottom: 20px;
+  }
+  
+  .brend-section__title-section {
+    font-size: em(26);
+  }
+
+  .brand-section__list-item {
+    margin-bottom: 0px;
+  }
+
+}
+
+/* 768px */
+@include breakpoint(768px down) {
+
+  .brand-section__list-item {
+    height: 90px;
+  }
+
+  .brand-section {
+    margin-bottom: 0;
+  }
+  
+  .brend-section__title-section {
+    padding-top: 5px;
+    font-size: em(22);
+  }
+
 }

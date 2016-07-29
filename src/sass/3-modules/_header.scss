@@ -435,6 +435,19 @@
 
 /* 786px */
 @include breakpoint(786px down) {
+  
+  .h-top-line__links-list {
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+
+  .h-top-line__item {
+  
+    &:before {
+      margin: 0 10px;
+    }
+  }
+
   .h-middle-line__main-logo {
     padding-right: 0;
   }

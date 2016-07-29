@@ -1,6 +1,6 @@
 /* 
 
-  СТИЛИ ДЛЯ ОДНОГО ИТЕМА
+  СТИЛИ ДЛЯ БЛОКА ОДНОГО ИЗДЕЛИЯ
 
 */
 
@@ -23,7 +23,16 @@
 
 .matrasses-model__item-wrap {
   padding: 18px 20px 10px;
-  background-color: $bg-modell-item;
+
+  background: rgba(247,251,253,1);
+  background: -moz-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(247,251,253,1)), color-stop(57%, rgba(255,255,255,1)), color-stop(74%, rgba(255,255,255,1)), color-stop(100%, rgba(247,251,253,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+  background: linear-gradient(135deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfd', endColorstr='#f7fbfd', GradientType=1 );
+
 }
 
 .matrasses-model__item-new {
@@ -143,3 +152,111 @@
 
 }
 
+
+
+/*  
+  для планшетов
+*/
+
+/* 992px */
+@include breakpoint(992px down) {
+
+  .matrasses-model__item-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .matrasses-model__item-new {
+    margin-bottom: 0;
+  }
+
+  .matrasses-model__item-pic {
+    height: 135px;
+  }
+
+  .matrasses-model__title {
+    font-size: em(18);
+  }
+
+  .matrasses-model__price {
+    font-size: em(22);
+  }
+
+  .matrasses-model__button-wrap {
+    padding: 0;
+  }
+
+}
+
+
+/* 768px */
+@include breakpoint(768px down) {
+
+  .matrasses-model__item-wrap {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+
+  .matrasses-model__item-pic {
+    height: 115px;
+  }
+
+  .matrasses-model__title {
+    margin-bottom: 15px;
+    font-size: em(16);
+  }
+
+  .matrasses-model__price {
+    font-size: em(20);
+  }
+
+  .matrasses-model__button-wrap {
+    margin-top: 15px;
+    padding: 0;
+  }
+
+  .matrasses-model__button-click,
+  .matrasses-model__button-basket {
+    font-size: em(12);
+  }
+
+}
+
+/* 670px */
+@include breakpoint(760px down) {
+
+  .matrasses-model__item-new {
+    margin-bottom: 10px;
+  }
+
+  
+  .matrasses-model__item-pic {
+    height: 90px;
+    margin-bottom: 15px;
+  }
+
+  .matrasses-model__title {
+    font-size: em(15);
+  }
+
+  .matrasses-model__price {
+    font-size: em(18);
+  }
+
+  .matrasses-model__button-wrap {
+    margin-top: 15px;
+    padding: 0;
+  }
+
+  .matrasses-model__button-click,
+  .matrasses-model__button-basket {
+    font-size: em(12);
+  }
+
+  .matrasses-model__button-basket {
+    padding-right: 10px;
+    padding-left: 30px;
+  }
+
+}

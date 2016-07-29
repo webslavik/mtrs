@@ -14,9 +14,15 @@
 }
 
 .main-page__title-section-tab {
+  text-align: justify;
   @include grid-col(75%);
 
-  // background-color: lightblue;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+  }
 }
 
 //  tabIGATON
@@ -176,95 +182,164 @@
   }
 }
 
-.contact-section__top {
-  @include grid-row();
+.contact__title-s {
   border-bottom: 3px solid $white;
   margin-bottom: 40px;
+}
 
-  .contact__title {
-    @include grid-col(12);
+.contact-title__title-s {
+  font-size: em(30);
+  color: $white;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: $font-light;
 
-    font-size: rem(30);
-    color: $white;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-family: $font-light;
-  }
 }
 
 
-// FORM AND PHONE
+
+
 .contact__info {
   margin-bottom: 65px;
   @include grid-row();
 
-  
-  // LEFT 
-  .info__text-info {
-    @include grid-col(4, 10);
-    padding-left: 20px;
-    color: $white;
-    font-family: $font-light;
+}
 
+/*
+  номера телефонов и адрес 
+*/
+.info__text-info {
+  @include grid-col(4, 10);
+  padding-left: 20px;
+  color: $white;
+  font-family: $font-light;
 
-    .text {
-      margin-bottom: 30px;
-      font-size: em(16);
-      font-weight: 300;
-    }
-
-    .address {
-      margin-bottom: 15px;
-
-      svg {
-        display: inline-block;
-        margin-right: 15px;
-        width: 16px;
-        vertical-align: top;
-
-        * {
-        fill: $white;
-        }
-      }
-
-      .addres__text {
-        display: inline-block;
-        width: 90%;
-        font-size: em(14);
-        line-height: 21px;
-      }
-    } // end Address
-
-    .phone {
-      margin-bottom: 33px;
-
-      svg {
-        display: inline-block;
-        margin-right: 10px;
-        width: 16px;
-        vertical-align: top;
-
-        * {
-        fill: $white;
-        }
-      }
-
-      .phone__number {
-        font-weight: 300;
-        display: inline-block;
-        width: 85%;
-        font-size: em(20);
-
-      }
-
-    }
-
-  } // end left column forms
 }
 
 
-// CONTACT MAP
-//----------------------------------------
+.info__text {
+  margin-bottom: 30px;
+  font-size: em(16);
+  font-weight: 300;
+}
+
+.info__address {
+  margin-bottom: 15px;
+
+  svg {
+    
+    display: inline-block;
+    margin-right: 15px;
+    width: 16px;
+    vertical-align: top;
+
+    * {
+    fill: $white;
+    }
+  }
+}
+
+.info__icon-wrap {
+  display: inline-block;
+  width: 8%;
+  vertical-align: top;
+}
+
+.info__addres-text {
+
+  display: inline-block;
+  width: 85%;
+  font-size: em(14);
+  line-height: 21px;
+}
+
+
+.info__phone {
+  margin-bottom: 33px;
+
+  svg {
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    vertical-align: top;
+
+    * {
+    fill: $white;
+    }
+  }
+}
+
+.info__phone-number {
+  font-weight: 300;
+  display: inline-block;
+  width: 85%;
+  font-size: em(20);
+}
+
+
+
+/* 
+  форма в контактах
+*/
+.main-page__contact-form {
+  @include grid-col(8);
+  @include clearfix;
+}
+
+
+.mp__form-inputs,
+.mp__form-area {
+  @include grid-col(6);
+}
+
+
+// FORM LEFT
+.form-inputs__input {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  padding: 14px 20px;
+  font-family: $font-light;
+  font-size: em(14);
+  color: rgba($white, 0.4);
+  
+
+  background-color: $forms-brown;
+  border: none;
+  border-left: 1px solid $white;
+  border-radius: 3px;
+  outline: none;
+
+  transition: all 185ms ease-in;
+
+  &:hover,
+  &:focus {
+    color: rgba($white, 1);
+  }
+}
+
+.input__email {
+  margin-bottom: 35px;
+}
+
+
+.form__area {
+  @extend .form-inputs__input;
+  height: 164px;
+  margin-bottom: 0;
+}
+  
+
+.mp-contact__buttons-wrap {
+  @include clearfix;
+  background-color: tomato;
+
+}
+
+
+/* 
+  карта
+*/
 .contact-section__map {
   width: 100%;
   height: 300px;
@@ -286,8 +361,9 @@
 
 
 
-// BG BOTTOM LINE
-//----------------------------------------
+/* 
+  нижняя линия bg
+*/
 .contact-section__bottom-line {
   width: 100%;
   height: 80px;
@@ -302,63 +378,314 @@
 
 
 
-// CONTACT FORM - MAIN PAGE
-//------------------------------------
-.main-page__contact-form {
-  @include grid-col(8);
-  @include clearfix;
-
-  .forms__left,
-  .forms__right {
-    @include grid-col(6);
-  }
-
-
-  // FORM LEFT
-  .left__input {
-    width: 100%;
-    display: block;
-    margin-bottom: 15px;
-    padding: 14px 20px;
-    font-family: $font-light;
-    font-size: em(14);
-    color: rgba($white, 0.4);
-    
-
-    background-color: $forms-brown;
-    border: none;
-    border-left: 1px solid $white;
-    border-radius: 3px;
-    outline: none;
-
-    transition: all 185ms ease-in;
-
-    &:hover,
-    &:focus {
-      color: rgba($white, 1);
-    }
-  }
-
-  .input-email {
-    margin-bottom: 35px;
-  }
-
-  // FORM RIGHT
-  .area {
-    @extend .left__input;
-    height: 164px;
-    margin-bottom: 0;
-  }
-    
-}
 
 
 /* 
   медиа запросы для основной страницы
 */
 
-@include breakpoint(1120 down) {
+
+/* 
+  эти медиа запросы для планшетных версий
+*/
+ /* 1155px */
+@include breakpoint(1155px down) {
+
+  .main-page__title-section {
+    font-size: em(28);
+  }
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 20px;
+    }
+  }
+
+  .title-section__tab-link {
+    font-size: em(15);
+
+    &:after {
+    height: 3px;
+    bottom: -2px;
+    }
+  }
+
+}
+
+
+
+/* 1024px */
+@include breakpoint(1024px down) { 
+
+  .main-page__title-section-tab {
+    // padding-right: 0;
+    text-align: justify;
+    
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 0;
+    }
+  }
+  
+  .title-section__tab-item {
+    &:before {
+      margin: 0 18px;
+    }
+  }
+
   .title-section__tab-link {
     font-size: em(14);
+
+    &:after {
+      height: 3px;
+      bottom: 0px;
+    }
+  }
+}
+
+/* 990px */
+@include breakpoint(990px down) { 
+  
+  .main-page__mattresses-models {
+    margin-bottom: 45px;
+  }
+
+  .main-page__title-section {
+    padding-top: 5px;
+    padding-right: 0;
+    font-size: em(24);
+
+  }
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 15px;
+    }
+  }
+
+  .title-section__tab-link {
+    font-size: em(13);
+  }
+
+  .pagination-wrap {
+    padding-top: 20px;
+  }
+}
+
+/* 870px */
+@include breakpoint(870px down) { 
+  .main-page__title-section {
+    font-size: em(22);
+  }
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 13px;
+    }
+  }
+
+}
+
+/* 835px */
+@include breakpoint(835px down) { 
+
+  .main-page__title-section {
+    font-size: em(20);
+  }
+
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 10px;
+    }
+  }
+
+}
+
+/* 780px */
+@include breakpoint(780px down) { 
+
+  .contact-section__top-bg {
+    padding-top: 45px;
+  }
+
+  .main-page__title-section {
+    padding-top: 9px;
+    font-size: em(18);
+  }
+
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 10px;
+    }
+  }
+
+  .title-section__tab-link {
+    font-size: em(12);
+
+    &:after {
+      height: 3px;
+      bottom: 1px;
+    }
+  }
+
+}
+
+/* 740px */
+@include breakpoint(740px down) { 
+
+  .main-page__title-section-tab {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 7px;
+    }
+  }
+
+}
+
+/* 655px */
+@include breakpoint(655px down) { 
+
+  .main-page__title-section-tab {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  .title-section__tab-item {
+    &:before {
+      margin: 0 5px;
+    }
+  }
+
+}
+
+
+
+
+/*  
+  для секции КОНТАКТОВ
+*/
+
+/* 1020px */
+@include breakpoint(1020px down) {
+  .input__email {
+    margin-bottom: 55px;
+  }
+}
+
+/* 992px */
+@include breakpoint(992px down) {
+  
+  .contact-title__title-s {
+    font-size: em(26);
+  }
+
+  .info__text {
+    font-size: em(14);
+  }
+
+  .info__addres-text {
+
+  }
+
+  .info__phone-number {
+    font-size: em(18);
+  }
+
+  .main-page__contact-form,
+  .mp__form-inputs,
+  .mp__form-area {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+
+}
+
+/* 890px */
+@include breakpoint(890px down) {
+  .input__email {
+    margin-bottom: 68px;
+  }
+}
+
+
+/* 773px */
+@include breakpoint(773px down) {
+  .input__email {
+    margin-bottom: 52px;
+  }
+}
+
+
+/* 768px */
+@include breakpoint(768px down) {
+
+ .contact-title__title-s {
+   font-size: em(22);
+ }
+  
+  .info__text-info {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+
+  .info__text {
+    margin-bottom: 15px;
+    font-size: em(13);
+  }
+
+
+  .info__phone-number {
+    font-size: em(16);
+  }
+  
+  .mp__form-area,
+  .main-page__contact-form {
+    padding-left: 0;
+  }
+  
+  .main-page__contact-form {
+    padding-right: 5px;
+  }
+
+
+  .form-inputs__input {
+    padding: 10px 16px;
+  }
+
+  .form__area {
+    height: 140px;
+  }
+
+  .info__address {
+    margin-bottom: 10px;
+  }
+
+  .info__phone {
+    margin-bottom: 20px;
+  }
+
+}
+
+
+/* 675px */
+@include breakpoint(675px down) {
+  .input__email {
+    margin-bottom: 70px;
+  }
+}
+
+/* 666px */
+@include breakpoint(666px down) {
+  .input__email {
+    margin-bottom: 87px;
   }
 }

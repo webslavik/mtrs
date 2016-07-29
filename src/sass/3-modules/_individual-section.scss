@@ -53,9 +53,17 @@
 	}
 }
 
+/*  
+	для планшетов
+*/
 
 /* 860px */
 @include breakpoint(860px down) {
+
+	.individual-section {
+		padding: 55px 0 40px;
+		margin-bottom: 45px;
+	}
 
 	.individual-section__title {
 		font-size: rem(26);
@@ -83,6 +91,10 @@
 		}
 	}
 
+	.btn__individual-section {
+		font-size: em(14);
+	}
+
 }
 
 /* 690px */
@@ -93,12 +105,13 @@
 	}
 
 	.individual-section__title-custom {
-		font-size: rem(40);
+		font-size: rem(36);
 	}
 
 
 	.individual-section__list {
 		li {
+			margin-left: 10px;
 			font-size: em(14);
 		}
 	}
