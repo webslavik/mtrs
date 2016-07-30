@@ -14,8 +14,37 @@
     // autoplay: true,
     // autoplaySpeed: 1000
     prevArrow: '.slider-top__left-arrow',
-    nextArrow: '.slider-top__right-arrow'
+    nextArrow: '.slider-top__right-arrow',
+    responsive: [
+      {
+        breakpoint: 620,
+        settings: {
+          dots: false
+        }
+      }
+    ]
   });
+
+  // main page new models
+  // $('.matrasses-model__list-items').slick({
+  //   // autoplay: true,
+  //   // autoplaySpeed: 1000
+  //   // prevArrow: '.slider-top__left-arrow',
+  //   // nextArrow: '.slider-top__right-arrow'
+  //   responsive: [
+  //     {
+  //       breakpoint: 620,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //             infinite: true,
+  //             dots: false,
+  //             speed: 1000
+
+  //       }
+  //     }
+  //   ]
+  // });
 
 
   // main page logos
@@ -27,16 +56,24 @@
     speed: 1000,
     prevArrow: '.brand-arrow-left',
     nextArrow: '.brand-arrow-right',
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
 
-    //     }
-    //   }
-    // ]
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+        }
+      }
+    ]
   });
 
   // main page clients

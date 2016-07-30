@@ -9,7 +9,6 @@
 }
 
 .main-page__title-section {
-  // background-color: green;
   @include grid-col(25%)
 }
 
@@ -25,7 +24,7 @@
   }
 }
 
-//  tabIGATON
+//  TAB
 //-------------------------------------
 
 .title-section__tab {
@@ -155,6 +154,39 @@
 }
 
 
+//  PAGINATION ARROW
+// 
+.pagination__control-left {
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 20px;
+  
+
+  &:hover,
+    &:focus {
+      svg * {
+        fill: $blue;
+      }
+  }
+
+  svg {
+    width: 10px;
+    height: 14px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.pagination__control-right {
+  @extend .pagination__control-left;
+  margin-right: 10px;
+  margin-left: 28px;
+}
+
 
 /* 
 
@@ -188,6 +220,7 @@
 }
 
 .contact-title__title-s {
+  width: grid-column(100%);
   font-size: em(30);
   color: $white;
   font-weight: 300;
@@ -687,5 +720,126 @@
 @include breakpoint(666px down) {
   .input__email {
     margin-bottom: 87px;
+  }
+}
+
+
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+  
+  /* новые модели  */
+
+  .main-page__mattresses-models {
+    margin-bottom: 0;
+    padding: 20px;
+  }
+
+  .mp__title-s {
+    margin-bottom: 15px;
+  }
+
+  .main-page__title-section {
+    width: grid-column(100%);
+    font-size: em(30);
+    padding-left: 30px;
+  }
+
+  .title-section__tab,
+  .mattresses-models__pagination {
+    display: none;
+  }
+
+
+
+  /* контакты  */
+
+  .contact-section__top-bg {
+    padding: 20px;
+    background-image: url(../img/bg-contact__mobile.jpg);
+  }
+
+  .contact__info {
+    margin-bottom: 0px;
+  }
+
+  .contact__title-s {
+    margin-bottom: 20px;
+  }
+
+  .contact-title__title-s {
+    padding-left: 30px;
+    font-family: $font-ultraLight;
+    font-size: em(30);
+  }
+  
+  .contact-section__bottom-line,
+  .contact-section__map,
+  .main-page__contact-form {
+    display: none;
+  }
+
+  .info__text-info {
+    @include grid-col(12);
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  .info__address,
+  .info__phone {
+    margin-bottom: 25px;
+  }
+
+  .info__text,
+  .info__addres-text {
+    font-family: $font-ultraLight;
+    font-size: em(18);
+  }
+
+  .info__icon-wrap {
+    width: 6%;
+  }
+
+  .info__text {
+    margin-bottom: 20px;
+  }
+
+  .info__phone-number {
+    font-size: em(20);
+  }
+
+  .button-contact {
+    font-family: $font-bold;
+    font-size: em(20);
+    background-color: $blue;
+  }
+
+
+}
+
+/* 480px */
+@include breakpoint(480px down) {
+
+    /* новые модели  */
+
+  .main-page__title-section {
+    font-size: em(26);
+    padding-left: 20px;
+  }
+  
+
+   /* контакты  */
+  .contact-section__top-bg {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contact-title__title-s {
+    padding-left: 20px;
+    font-size: em(26);
   }
 }

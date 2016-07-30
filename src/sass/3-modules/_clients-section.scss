@@ -101,6 +101,44 @@
 	
 
 
+.clients__arrow {
+  text-align: right;
+  @include grid-col(3, 0);
+
+}
+.clients-arrow-left {
+  display: inline-block;
+  padding: 10px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    svg * {
+      fill: $orange;
+    }
+  }
+
+  svg {
+    width: 10px;
+    height: 14px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.clients-arrow-right {
+  @extend .clients-arrow-left;
+  margin-left: 35px;
+}
+
+
+
+
+
 /*  
   для планшетов
 */
@@ -129,4 +167,96 @@
   	font-size: em(14);
   }
 
+}
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+	.clients-section {
+		margin-bottom: 0;
+		padding: 20px;
+		position: relative;
+	}
+
+	.title-section__clients {
+		font-size: em(28);
+		width: grid-col(100%);
+		padding-left: 30px;
+	}
+
+	.cl__item-wrap {
+		margin-bottom: 50px;
+		padding: 15px 5px;
+	}
+
+	.cl__item-title {
+		margin-bottom: 15px;
+	}
+
+	.cl__product-text {
+		font-size: em(18);
+	}
+
+	.triangle {
+    left: 7px;
+	}
+
+
+
+	.cl__clients-data {
+		margin-left: 0;
+		padding-left: 20px;
+	}
+
+	.cl__clients-name {
+		font-family: $font-light;
+	}
+
+
+	.clients-arrow-left {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		// background-color: lightblue;
+		z-index: 10;
+
+		svg {
+			width: 25px;
+			height: 50px;
+		}
+
+	}
+
+	.clients-arrow-right {
+		margin-left: 0;
+		right: 0;
+		left: auto;
+	}
+}
+
+/* 480px */
+@include breakpoint(480px down) {
+
+	.clients-section {
+		padding: 10px;
+	}
+
+
+	.title-section__clients {
+		font-size: em(26);
+		padding-left: 20px;
+	}
+
+	.clients-arrow-left {
+		left: -5px;
+
+	}
+
+	.clients-arrow-right {
+		right: -5px;
+		left: auto;
+	}
 }

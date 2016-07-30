@@ -170,3 +170,15 @@
   }
 
 }
+
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+	.why_we-section {
+		display: none;
+	}
+}

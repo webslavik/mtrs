@@ -1,6 +1,8 @@
 /* 
-
+  
+  ------------------------------------------------------
   БЫСТРЫЙ ПОДБОР МАТРАСА
+  ------------------------------------------------------
 
 */
 
@@ -88,21 +90,92 @@
 }
 
 
+/* 
+  мобильная версия  
+*/
+
+/* 620px */
+@include breakpoint(620px down) {
+
+  .fast-selection {
+    padding: 56px 20px 44px;
+  }
+
+  .fast-selection__content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .fast-selection__title {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: rem(24);
+
+  }
+  .fase-selection__title-custom {
+    font-size: rem(38);
+  }
+
+  .fast-selection__button {
+    float: right;
+    margin-top: 15px;
+    font-family: $font-bold;
+    font-size: em(24);
+    vertical-align: middle;
+  }
+
+}
 
 
+/* 565px */
+@include breakpoint(565px down) {
+
+  .fast-selection {
+    padding: 56px 10px 44px;
+  }
 
 
+  .fast-selection__content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+
+  .fast-selection__title {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: rem(20);
+
+  }
+  .fase-selection__title-custom {
+    font-size: rem(34);
+  }
+
+  .fast-selection__button {
+    font-size: em(20);
+  }
+
+}
 
 
+/* 480px */
+@include breakpoint(480px down) {
+  
+  .fast-selection__content {
+    text-align: center;
+  }
 
+  .fast-selection__title {
+    font-size: rem(24);
 
+  }
+  .fase-selection__title-custom {
+    font-size: rem(38);
+  }
 
-
-
-
-
-
-@include breakpoint(992px down) {
-
+  .fast-selection__button {
+    float: none;
+    font-size: em(24);
+  }
 
 }

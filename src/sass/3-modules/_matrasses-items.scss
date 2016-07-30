@@ -260,3 +260,124 @@
   }
 
 }
+
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+
+  .matrasses-model__list-items {
+    li:nth-child(1n+1) {
+      display: none;
+    }
+    
+    li:first-child {
+      display: block;
+    }
+
+  }
+  
+  .matrasses-model__item {
+    @include grid-col(12);
+  }
+
+  .matrasses-model__item-new {
+    display: none;
+  }
+
+  .matrasses-model__item-wrap {
+    padding: 0 20px;
+    background: none;
+  }
+
+  .matrasses-model__item-pic {
+    width: 90%;
+    height: 312px;
+    margin: 0 auto 20px;
+  
+
+    background: rgba(247,251,253,1);
+    background: -moz-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(247,251,253,1)), color-stop(57%, rgba(255,255,255,1)), color-stop(74%, rgba(255,255,255,1)), color-stop(100%, rgba(247,251,253,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+    background: linear-gradient(135deg, rgba(247,251,253,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 74%, rgba(247,251,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfd', endColorstr='#f7fbfd', GradientType=1 );
+
+    img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // margin: auto;
+
+    max-width: 100%;
+    // max-height: 100%;
+    }
+  }
+
+  .matrasses-model__title {
+    font-family: $font-bold;
+    font-size: em(34);
+  }
+
+  .matrasses-model__price {
+    font-size: em(24);
+    font-family: $font-bold;
+    color: #505050;
+
+  }
+
+  .matrasses-model__select {
+    // float: left;
+  }
+
+  .matrasses-model__button-click {
+    font-size: em(20);
+  }
+
+  .matrasses-model__button-basket {
+    font-size: em(20);
+  }
+  
+}
+
+
+/* 480px */
+@include breakpoint(480px down) {
+  
+  .main-page__mattresses-models {
+    padding: 20px 10px;
+  }
+
+  .matrasses-model__item-wrap {
+    padding: 0 10px;
+  }
+
+  .matrasses-model__title {
+    font-size: em(28);
+  }
+
+}
+
+/* 380px */
+@include breakpoint(380px down) {
+  .matrasses-model__button-click {
+    display: block;
+    float: none;
+    width: 60%;
+    margin: 0 auto 25px;
+  }
+
+  .matrasses-model__button-basket {
+    display: block;
+    width: 60%;
+    margin: 0 auto 15px;
+    float: none;
+  }
+}

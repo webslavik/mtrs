@@ -41,3 +41,28 @@
 	height: 80%;
 	background-color: $blue;
 }
+
+
+
+/* 
+  мобильная версия  
+*/
+@include breakpoint(620px down) {
+	
+	.first-factory__content {
+		padding: 33px 0 28px;
+		@include grid-col(12);
+		@include grid-col-off(0);
+	}
+
+	.first-factory__paragraph {
+		font-size: em(18);
+		line-height: 24px;
+	}
+
+
+	.ff__blue-line,
+	.ff__grey-line {
+		display: none;
+	}
+}
