@@ -1,11 +1,11 @@
 mixin cards-item(number, text, padding_class)
-	.cards__item
-		.number #{number}
-		.item
-			.item-text(class='#{padding_class}') #{text}
-			span.line-small.top
-			span.line-small.bottom
-			span.line-big
+	.ww__cards-item
+		.ww__card-number #{number}
+		.ww__item-wrap
+			.ww__item-text(class='#{padding_class}') #{text}
+			span.ww__line-small.top
+			span.ww__line-small.bottom
+			span.ww__line-big
 
 
 // WHY WE SECTION
@@ -17,11 +17,60 @@ section.why_we-section
 			h2.title-section__header.title-section__why-we-header  Почему  с нами выгодно
 
 		.why_we__cards
-			+cards-item('3750', 'Отзывов от благодарных покупателей')
-			+cards-item('7 лет', '7 лет работы', 'item-2')
-			+cards-item('12', 'До 12 лет гарантии на матрасы', 'item-3')
-			+cards-item('70%', 'Постоянных покупателей рекомендуют нас своим знакомым ')
-			+cards-item('2', '2 Собственных завода с итальянским оборудованием', 'item-5')
+
+			.ww__cards-item.ww__first-card-item
+				.ww__card-number.ww__first-item-number 3750
+				.ww__item-wrap.ww__first-item-wrap
+					.ww__item-text.ww__first-item-text Отзывов от <br> благодарных <br> покупателей
+					span.ww__line-small.top
+					span.ww__line-small.bottom
+					span.ww__line-big
+
+			.ww__cards-item.ww__second-card-item
+				.ww__card-number.ww__second-item-number 7 лет
+				.ww__item-wrap.ww__second-item-wrap
+					.ww__item-text.ww__second-item-text 7 лет работы
+					span.ww__line-small.top
+					span.ww__line-small.bottom
+					span.ww__line-big
+
+
+			.ww__cards-item.ww__third-card-item
+				.ww__card-number.ww__third-item-number 12
+				.ww__item-wrap.ww__third-item-wrap
+					.ww__item-text.ww__third-item-text До 12 лет <br> гарантии на <br> матрасы
+					span.ww__line-small.top
+					span.ww__line-small.bottom
+					span.ww__line-big.ww__third-big-line
+
+
+
+			.ww__cards-item.ww__fourth-card-item
+				.ww__card-number.ww__fourth-item-number 70%
+				.ww__item-wrap.ww__fourth-item-wrap
+					.ww__item-text.ww__fourth-item-text Постоянных <br> покупателей <br> рекомендуют <br> нас своим знакомым
+					span.ww__line-small.top
+					span.ww__line-small.bottom
+					span.ww__line-big.ww__fourth-big-line
+
+
+			.ww__cards-item.ww__fifth-card-item
+				.ww__card-number.ww__fifth-item-number 2
+				.ww__item-wrap.ww__fifth-item-wrap
+					.ww__item-text.ww__fifth-item-text 2 Собственных завода <br> с итальянским <br> оборудованием
+					span.ww__line-small.top
+					span.ww__line-small.bottom
+					span.ww__line-big.ww__fifth-big-line
+
+
+
+
+
+			//- +cards-item('3750', 'Отзывов от благодарных покупателей')
+			//- +cards-item('7 лет', '7 лет работы', 'item-2')
+			//- +cards-item('12', 'До 12 лет гарантии на матрасы', 'item-3')
+			//- +cards-item('70%', 'Постоянных покупателей рекомендуют нас своим знакомым ')
+			//- +cards-item('2', '2 Собственных завода с итальянским оборудованием', 'item-5')
 
 // end WHY WE SECTION
 // ######################################################################
