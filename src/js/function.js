@@ -26,8 +26,37 @@
     // autoplay: true,
     // autoplaySpeed: 1000
     prevArrow: '.slider-top__left-arrow',
-    nextArrow: '.slider-top__right-arrow'
+    nextArrow: '.slider-top__right-arrow',
+    responsive: [
+      {
+        breakpoint: 620,
+        settings: {
+          dots: false
+        }
+      }
+    ]
   });
+
+  // main page new models
+  // $('.matrasses-model__list-items').slick({
+  //   // autoplay: true,
+  //   // autoplaySpeed: 1000
+  //   // prevArrow: '.slider-top__left-arrow',
+  //   // nextArrow: '.slider-top__right-arrow'
+  //   responsive: [
+  //     {
+  //       breakpoint: 620,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //             infinite: true,
+  //             dots: false,
+  //             speed: 1000
+
+  //       }
+  //     }
+  //   ]
+  // });
 
 
   // main page logos
@@ -37,10 +66,26 @@
     slidesToScroll: 1,
     dots: false,
     speed: 1000,
-    // autoplay: true,
-    // autoplaySpeed: 1000
     prevArrow: '.brand-arrow-left',
-    nextArrow: '.brand-arrow-right'
+    nextArrow: '.brand-arrow-right',
+    responsive: [
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+        }
+      }
+    ]
   });
 
   // main page clients
@@ -110,11 +155,11 @@
 
   // Scroll 
   //--------------------------------------------------------
-  $("body").on('click', '[href*="#"]', function(e){
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
-    e.preventDefault();
-  });
+  // $("body").on('click', '[href*="#"]', function(e){
+  //   var fixed_offset = 100;
+  //   $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+  //   e.preventDefault();
+  // });
 
 
 
@@ -186,14 +231,34 @@
     })
 
 
-    $('#request_call, .btn-pop-up__close, .pop-up').on('click', function(e) {
+    $('.request_call, .btn-pop-up__close, .pop-up').on('click', function(e) {
       e.preventDefault();
       $('.pop-up').toggleClass('pop-up__hide');
     });
   }
   
-    
-  
+
+
+  //-----------------------------------------------
+  // Табы на главной странице
+  //-----------------------------------------------
+  tabsToggle();
+
+  function tabsToggle() {
+    $('.title-section__tab li').on('click', function() {
+
+      var tab_id = $(this).data('tab');
+
+      $('.title-section__tab li').removeClass('current');
+      $('.main-page__tabs-item').removeClass('current');
+
+      $(this).addClass('current');
+      $('#' + tab_id).addClass('current');
+
+    });
+  }
+
+
 
 
 //// range slider //ползунок цен

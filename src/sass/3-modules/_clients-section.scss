@@ -16,70 +16,247 @@
 
 // Clients
 //--------------------------------
-.client-reviews {
+.clients-section__reviews-list {
 
-	.reviews-item {
-		display: inline-block;
-		padding: 0 20px;
-		outline: none;
+}
+
+.client-reviews__item {
+	display: inline-block;
+	padding: 0 20px;
+	outline: none;
+	cursor: pointer;
+}
+
+.cl__item-wrap {
+	margin-bottom: 20px;
+	padding: 30px 25px 15px;
+	border: 1px solid $white_grey_2;
+	border-radius: 10px;
+	position: relative;
+}
+
+.cl__item-title {
+	font-family: $font-light;
+	margin-bottom: 19px;
+	font-size: em(14);
+	color: $white_grey_2;
+}
+
+.cl__product-name {
+	display: inline-block;
+	padding-left: 5px;
+	color: $blue;
+}
+
+.cl__product-text {
+	font-size: em(16);
+	font-family: $font-light;
+	color: $white_grey_3;
+}
+
+.triangle {
+	width: 37px;
+	height: 40px;
+
+	// background-color: tomato;
+	background-image: url(../img/icon/icon-answer.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+	position: absolute;
+	left: 35px;
+	bottom: -31px;
+}
+
+
+.cl__clients-data {
+	margin-left: 80px;
+
+}
+
+.cl__clients-foto,
+.cl__clients-name {
+	display: inline-block;
+}
+
+.cl__clients-foto {
+	vertical-align: middle;
+	width: 60px;
+	height: 60px;
+	background: {
+		size: cover;
+		position: center;
+		repeat: no-repeat;
+	}
+	border-radius: 50%;
+}
+
+.cl__clients-name {
+	margin-left: 12px;
+	font-size: rem(14);
+	color: $orange;
+	font-weight: 300;
+}
+	
+
+
+.clients__arrow {
+  text-align: right;
+  @include grid-col(3, 0);
+
+}
+.clients-arrow-left {
+  display: inline-block;
+  padding: 10px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    svg * {
+      fill: $orange;
+    }
+  }
+
+  svg {
+    width: 10px;
+    height: 14px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.clients-arrow-right {
+  @extend .clients-arrow-left;
+  margin-left: 35px;
+}
+
+
+
+
+
+/*  
+  для планшетов
+*/
+
+/* 992px */
+@include breakpoint(992px down) {
+  .title-section__clients {
+    font-size: em(26);
+  }
+
+  .clients-section {
+  	margin-bottom: 45px;
+  }
+
+ 
+}
+
+/* 768px */
+@include breakpoint(768px down) {
+  .title-section__clients {
+    padding-top: 5px;
+    font-size: em(22);
+  }
+
+  .cl__product-text {
+  	font-size: em(14);
+  }
+
+}
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+	.clients-section {
+		margin-bottom: 0;
+		padding: 20px;
+		position: relative;
 	}
 
-	.product-wrap {
-		margin-bottom: 20px;
-		padding: 30px 25px 15px;
-		border: 1px solid $white_grey_2;
-		border-radius: 10px;
+	.title-section__clients {
+		font-size: em(28);
+		width: grid-col(100%);
+		padding-left: 30px;
+	}
 
-		.product {
-			font-family: $font-light;
-			margin-bottom: 19px;
-			font-size: rem(14);
-			color: $white_grey_2;
-		}
+	.cl__item-wrap {
+		margin-bottom: 50px;
+		padding: 15px 5px;
+	}
 
-		.product__name {
-			display: inline-block;
-			padding-left: 5px;
-			color: $blue;
-		}
+	.cl__item-title {
+		margin-bottom: 15px;
+	}
 
-		.text {
-			font-family: $font-light;
-			color: $white_grey_3;
-		}
+	.cl__product-text {
+		font-size: em(18);
+	}
 
-		.triangle {
-			@include triangle(12px, gray, down);
+	.triangle {
+    left: 7px;
+	}
+
+
+
+	.cl__clients-data {
+		margin-left: 0;
+		padding-left: 20px;
+	}
+
+	.cl__clients-name {
+		font-family: $font-light;
+	}
+
+
+	.clients-arrow-left {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		// background-color: lightblue;
+		z-index: 10;
+
+		svg {
+			width: 25px;
+			height: 50px;
 		}
 
 	}
 
-	.clients-data {
-		margin-left: 80px;
-
-		.foto,
-		.name {
-			display: inline-block;
-		}
-
-		.foto {
-			vertical-align: middle;
-			width: 60px;
-			height: 60px;
-			background: {
-				size: cover;
-				position: center;
-				repeat: no-repeat;
-			}
-			border-radius: 50%;
-		}
-
-		.name {
-			margin-left: 12px;
-			font-size: rem(14);
-			color: $orange;
-			font-weight: 300;
-		}
+	.clients-arrow-right {
+		margin-left: 0;
+		right: 0;
+		left: auto;
 	}
 }
 
+/* 480px */
+@include breakpoint(480px down) {
+
+	.clients-section {
+		padding: 10px;
+	}
+
+
+	.title-section__clients {
+		font-size: em(26);
+		padding-left: 20px;
+	}
+
+	.clients-arrow-left {
+		left: -5px;
+
+	}
+
+	.clients-arrow-right {
+		right: -5px;
+		left: auto;
+	}
+}

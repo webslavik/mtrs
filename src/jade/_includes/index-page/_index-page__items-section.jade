@@ -24,38 +24,80 @@ section.main-page__mattresses-models
 	.container
 		
 		// HEADER ITEM
-		.title-section
-			h2.title-section__header Новые модели
+		.title-section.mp__title-s
+			h2.title-section__header.main-page__title-section Новые модели
 
-			ul.title-section__nav.main-page__title-section-nav
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Эконом
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Беспружинные
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Basic
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Comfort
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Comform Plus
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Premium
-				li.title-section__nav-item
-					a(href="#").title-section__nav-link Детские
+			ul.title-section__tab.main-page__title-section-tab
+				li(data-tab='tab-1').title-section__tab-item.current
+					span.title-section__tab-link Эконом 
+				li(data-tab='tab-2').title-section__tab-item
+					span.title-section__tab-link Беспружинные
+				li(data-tab='tab-3').title-section__tab-item
+					span.title-section__tab-link Basic
+				li(data-tab='tab-4').title-section__tab-item
+					span.title-section__tab-link Comfort
+				li(data-tab='tab-5').title-section__tab-item
+					span.title-section__tab-link Comform Plus
+				li(data-tab='tab-6').title-section__tab-item
+					span.title-section__tab-link Premium
+				li(data-tab='tab-7').title-section__tab-item
+					span.title-section__tab-link Детские
 			// end HEADER ITEM
 
 
-		// items
-		ul.matrasses-model__list-items
+		// TABS
+		// tabs 1
+		ul.matrasses-model__list-items.main-page__tabs-item.current#tab-1
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
 
+		// tabs 2
+		ul.matrasses-model__list-items.main-page__tabs-item#tab-2
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+
+		// tabs 3
+		ul.matrasses-model__list-items.main-page__tabs-item#tab-3
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			
+		// tabs 4
+		ul.matrasses-model__list-items.main-page__tabs-item#tab-4
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			
+		// tabs 5
+		ul.matrasses-model__list-items.main-page__tabs-item#tab-5
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+
+		// tabs 6
+		ul.matrasses-model__list-items.main-page__tabs-item#tab-6
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+
+
+		// tabs 7
+		ul.matrasses-model__list-items.main-page__tabs-item#tab-7
 			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
 			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
 			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
 			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
 			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
 			+matrasses-item('Новинка', 'bed_1.png' ,'Матрас: Eleonora valensia premium Multitouch', '8 300 руб.')
+			
+			
 		
-		// end ITEMS
+		// end TABS ITEMS
 
 
 		// pagination

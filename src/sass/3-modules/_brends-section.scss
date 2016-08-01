@@ -3,6 +3,10 @@
   БРЕНДЫ, ЛОГОТИПЫ
 
 */
+.brand-section {
+  margin-bottom: 40px;
+  position: relative;
+}
 
 .brand-section__list {
   @include grid-col(10);
@@ -11,17 +15,17 @@
 }
 
 .brand-section__list-item {
-  @include grid-col(4);
-  height: 120px;
-  // background-color: tomato;
   display: inline-block;
+  height: 120px;
+  margin: 0 10px;
   outline: none;
   opacity: .5;
   transition: all 180ms ease-in;
   cursor: pointer;
   margin-bottom: 20px;
-
   position: relative;
+
+  @include grid-col(4);
 
   &:hover {
     opacity: 1;
@@ -37,4 +41,139 @@
     max-width: 100%;
     max-height: 100%;
   }
+}
+
+
+//  BRANDS AND CLIENTS ARROWS
+.brand__arrow {
+  text-align: right;
+  @include grid-col(3, 0);
+
+}
+
+.brand-arrow-left {
+  display: inline-block;
+  padding: 10px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    svg * {
+      fill: $orange;
+    }
+  }
+
+  svg {
+    width: 10px;
+    height: 14px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.brand-arrow-right {
+  @extend .brand-arrow-left;
+  margin-left: 35px;
+}
+
+
+/*  
+  для планшетов
+*/
+
+/* 992px */
+@include breakpoint(992px down) {
+
+    .brand-section__list-item {
+    height: 105px;
+  }
+
+
+  .brand-section {
+    margin-bottom: 20px;
+  }
+  
+  .brend-section__title-section {
+    font-size: em(26);
+  }
+
+  .brand-section__list-item {
+    margin-bottom: 0px;
+  }
+
+}
+
+/* 768px */
+@include breakpoint(768px down) {
+
+  .brand-section__list-item {
+    height: 90px;
+  }
+
+  .brand-section {
+    margin-bottom: 0;
+  }
+  
+  .brend-section__title-section {
+    padding-top: 5px;
+    font-size: em(22);
+  }
+
+}
+
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+
+  .brand-section {
+    padding: 0 20px;
+  }
+
+  .brend-section__title-section {
+    padding-left: 30px;
+  }
+  
+  .brend__title-section {
+    margin-bottom: 0;
+  }
+
+  .brand-section__list {
+    padding: 50px 0;
+  }
+
+  .brand-arrow-left {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    z-index: 10;
+
+    svg {
+      width: 25px;
+      height: 50px;
+    }
+
+  }
+
+  .brand-arrow-right {
+    margin-left: 0;
+    right: 0;
+    left: auto;
+  }
+}
+
+/* 480px */
+@include breakpoint(480px down) {
+
+  .brend-section__title-section {
+    padding-left: 20px;
+  }
+
 }

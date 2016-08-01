@@ -1,11 +1,12 @@
 /* 
 
+	-----------------------------------------------------
 	ПОЧЕМУ МЫ
-
+	-----------------------------------------------------
 */
 
 .why_we-section {
-	padding: 70px 0 20px;
+	padding: 70px 0 70px;
 	margin-bottom: 65px;
 
 	background-color: $white_grey_1;
@@ -17,144 +18,701 @@
 	}
 }
 
-// .why_we-section__top {
-// 	@include grid-row();
-// 	border-bottom: 3px solid $white;
-// 	margin-bottom: 25px;
-
-// 	.why_we__title {
-// 	@include grid-col(5);
-
-// 	font-size: rem(30);
-// 	font-weight: 300;
-// 	color: $white;
-// 	text-transform: uppercase;
-// 	}
-// }
 
 .title-section__why-we {
 	border-color: $white;
 }
 
 .title-section__why-we-header {
-	@include grid-col(5);
 	color: $white;
+	width: grid-column(100%);
 }
 
 
 .why_we__cards {
 	@include grid-row();
 
-	.cards__item {
-		@include grid-col(4);
-		position: relative;
-		text-align: right;
-	}
+}
+
+
+/* items */
+.ww__cards-item {
+	position: relative;
+	text-align: right;
+	margin-bottom: 55px;
+	@include grid-col(4);
+}
+
+
+.ww__first-card-item {
+	padding-right: 60px ;
+}
+
+.ww__second-card-item {
+	padding-right: 60px;
+}
+
+.ww__third-card-item {
+	padding-right: 60px;
+}
+
+
+.ww__fourth-card-item {
+	margin-bottom: 0;
+	@include grid-col-off(10%);
+}
+
+.ww__fifth-card-item {
+	margin-bottom: 0;
+	@include grid-col-end();
+	@include grid-col-off(8%);
+}
+
 	
-	:last-child {
-		@include grid-col-end();
-		@include grid-col-off(1);
-		margin-bottom: 0
-	}
 
-	:nth-child(4) {
-		@include grid-col-off(1);
-		margin-bottom: 0;
-	}
+/* большие числа */
+.ww__card-number {
+	// background-color: green;
+	font-family: $font-light;
+	font-size: 56px;
+	color: $white;
+	position: absolute;
+	top: 23px;
+	left: -10px;
+
+	width: 140px;
+	text-align: center;
+	// letter-spacing: 5px;
+	word-spacing: 1px;
+}
+
+.ww__first-item-number {
+	left: 23px;
+}
+
+.ww__second-item-number {
+	left: 20px;
+}
+
+.ww__third-item-number {
+	left: 23px;
+}
+
+.ww__fourth-item-number {
+	left: 5px;
+}
+
+.ww__fifth-item-number {
+	left: 3px;
+}
 
 
-	// Item style
-	//-----------------
-	.item {
-		// background-color: orange;
 
-		position: relative;
-		display: inline-block;
-		width: 85%;
-		// width: 220px;
-		height: 115px;
-		margin-bottom: 50px;
-		// padding: 15px 15px;
-		padding-left: 100px;
-		border-top: 2px solid $blue;
-		border-right: 2px solid $blue;
-		border-bottom: 2px solid $blue;
 
-		text-align: center;
-		vertical-align: middle;
+/* текст и линии */
+.ww__item-wrap {
+	// background-color: orange;
 
-		.item-text {
-			// background-color: tomato;
-			height: 100%;
-			padding-top: 15px;
-			padding-left: 40px;
+	position: relative;
+	display: inline-block;
+	height: 115px;
+	padding-left: 85px;
+	border-top: 2px solid $blue;
+	border-right: 2px solid $blue;
+	border-bottom: 2px solid $blue;
 
-			color: $white;
-			font-size: 15px;
-			text-align: left;
-			font-weight: 300;
+	text-align: center;
+	vertical-align: middle;
 
-			line-height: 22px;
+}
 
-			// Выравниваем текст в блоке задавая каждому индивидуальный класс
-			&.item-2 {
-				padding-top: 40px;
-			}
+.ww__first-item-wrap {
+	width: 248px;
+	padding-left: 70px;
+}
 
-			&.item-3 {
-				padding-top: 35px;
-			}
+.ww__second-item-wrap {
+	width: 248px;
+	padding-left: 70px;
+}
 
-			&.item-5 {
-				padding-top: 24px;
-			}
+.ww__third-item-wrap {
+	width: 248px;
+	padding-left: 70px;
+}
 
-		}
+.ww__fourth-item-wrap {
+	width: 310px;
+	padding-left: 80px;
+}
 
-		.line-small {
-			width: 2px;
-			height: 15px;
-			background-color: $blue;
 
-			&.top {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
+.ww__fifth-item-wrap {
+	width: 310px;
+	padding-left: 70px;
+}
 
-			&.bottom {
-				@extend .top;
-				top: auto;
-				bottom: 0;
-			}
-		} // end small line
 
-		.line-big {
-			width: 2px;
-			height: 100%;
-			background-color: $blue;
 
-			position: absolute;
-			top: 0;
-			left: 80px;
-		}
 
-	} // end .item
-	
-	.number {
-		// background-color: green;
-		font-size: 50px;
-		color: $white;
-		font-weight: 300;
+
+
+
+/* текс в ячейке */
+
+.ww__item-text {
+	height: 100%;
+	padding-top: 15px;
+	padding-left: 40px;
+	font-family: $font-light;
+	font-size: 16px;
+
+	color: $white;
+	text-align: left;
+
+	line-height: 22px;
+}
+
+.ww__first-item-text {
+	padding-top: 20px;
+}
+
+.ww__second-item-text {
+	padding-top: 45px;
+}
+
+.ww__third-item-text {
+	padding-top: 20px;
+}
+
+.ww__fourth-item-text {
+	padding-top: 12px;
+}
+
+.ww__fifth-item-text {
+	padding-top: 22px;
+}
+
+
+
+
+.ww__line-small {
+	width: 2px;
+	height: 15px;
+	background-color: $blue;
+
+	&.top {
 		position: absolute;
-		top: 23px;
-		left: -10px;
+		top: 0;
+		left: 0;
+	}
 
-		width: 120px;
-		text-align: center;
-		// letter-spacing: 5px;
-		word-spacing: 1px;
+	&.bottom {
+		@extend .top;
+		top: auto;
+		bottom: 0;
+	}
+}
+
+
+/*  вертикальные линии */
+.ww__line-big {
+	width: 2px;
+	height: 100%;
+	background-color: $blue;
+
+	position: absolute;
+	top: 0;
+	left: 85px;
+}
+
+.ww__third-big-line {
+	left: 75px;
+}
+
+.ww__fifth-big-line {
+	left: 75px;
+}
+
+
+
+
+
+
+
+
+/*  
+  для планшетов
+*/
+
+/* 1200px */
+@include breakpoint(1200px down) {
+
+  .ww__first-card-item {
+		padding-right: 40px ;
+	}
+
+	.ww__second-card-item {
+		padding-right: 40px;
+	}
+
+	.ww__third-card-item {
+		padding-right: 40px;
+	}
+
+}
+
+/* 1175px */
+@include breakpoint(1175px down) {
+	.ww__fifth-item-number {
+		left: -10px;
+	}
+}
+
+/* 1140px */
+@include breakpoint(1140px down) {
+	.ww__fifth-item-number {
+		left: -20px;
+	}
+
+	.ww__fourth-item-number {
+		left: -17px;
+	}
+}
+
+
+/* 1100px */
+@include breakpoint(1100px down) {
+
+  .ww__first-card-item {
+		padding-right: 20px ;
+	}
+
+	.ww__second-card-item {
+		padding-right: 20px;
+	}
+
+	.ww__third-card-item {
+		padding-right: 20px;
+	}
+
+	.ww__fifth-item-number {
+		left: -35px;
+	}
+
+	.ww__fourth-item-number {
+		left: -32px;
+	}
+
+}
+
+/* 1040px */
+@include breakpoint(1040px down) {
+
+  .ww__first-card-item {
+		padding-right: 10px ;
+	}
+
+	.ww__second-card-item {
+		padding-right: 10px;
+	}
+
+	.ww__third-card-item {
+		padding-right: 20px;
+	}
+
+	.ww__card-number {
+		font-size: 52px;
+	}
+
+	.ww__item-text {
+		font-size: 14px;
+	}
+
+	.ww__third-item-number {
+		left: 0px;
+	}
+
+	.ww__fifth-item-number {
+		left: -50px;
+	}
+
+	.ww__fourth-item-number {
+		left: -50px;
 	}
 
 
+}
+
+
+
+/* 992px */
+@include breakpoint(992px down) {
+  .title-section__why-we-header {
+    font-size: em(26);
+  }
+
+	.ww__card-number {
+		font-size: 46px;
+	}
+
+	.ww__first-item-number {
+		left: 25px;
+	}
+
+	.ww__second-item-number {
+		left: 25px;
+	}
+
+	.ww__third-item-number {
+		left: 18px;
+	}
+
+	.ww__fourth-item-number {
+		left: -43px;
+	}
+
+
+	.ww__fifth-item-number {
+		left: -44px;
+	}
+
+
+	.ww__item-wrap {
+		height: 105px;
+	}
+
+	.ww__first-item-wrap {
+		width: 218px;
+		padding-left: 70px;
+	}
+
+	.ww__second-item-wrap {
+		width: 218px;
+		padding-left: 70px;
+	}
+
+	.ww__third-item-wrap {
+		width: 218px;
+		padding-left: 70px;
+	}
+
+	.ww__fourth-item-wrap {
+		width: 280px;
+		padding-left: 80px;
+	}
+
+
+	.ww__fifth-item-wrap {
+		width: 280px;
+		padding-left: 70px;
+	}
+
+
+	.ww__item-text {
+		line-height: 20px;
+	}
+
+
+	.ww__first-item-text {
+		padding-top: 15px;
+	}
+
+	.ww__second-item-text {
+		padding-top: 35px;
+	}
+
+	.ww__third-item-text {
+		padding-top: 15px;
+	}
+
+	.ww__fourth-item-text {
+		padding-top: 8px;
+	}
+
+	.ww__fifth-item-text {
+		padding-top: 17px;
+	}
+
+
+
+}
+
+/* 955px */
+@include breakpoint(955px down) {
+
+	.ww__first-item-number {
+		left: 10px;
+	}
+
+	.ww__second-item-number {
+		left: 10px;
+	}
+
+	.ww__third-item-number {
+		left: 7px;
+	}
+
+	.ww__fourth-item-number {
+		left: -56px;
+	}
+
+
+	.ww__fifth-item-number {
+		left: -55px;
+	}
+}
+
+
+/* 895px */
+@include breakpoint(895px down) {
+
+	.ww__first-item-number {
+		left: 0px;
+	}
+
+	.ww__second-item-number {
+		left: 0px;
+	}
+
+	.ww__third-item-number {
+		left: -18px;
+	}
+
+	.ww__fourth-item-number {
+		left: -60px;
+	}
+
+
+	.ww__fifth-item-number {
+		left: -55px;
+	}
+}
+
+
+/* 895px */
+@include breakpoint(895px down) {
+	.ww__card-number {
+		font-size: 40px;
+		top: 30px;
+	}
+}
+
+/* 860px */
+@include breakpoint(860px down) {
+	.ww__first-item-number {
+		left: -15px;
+	}
+
+	.ww__second-item-number {
+		left: -10px;
+	}
+
+	.ww__third-item-number {
+		left: -24px;
+	}
+
+	.ww__fourth-item-number {
+		left: -60px;
+	}
+
+
+	.ww__fifth-item-number {
+		left: -55px;
+	}
+}
+
+
+
+
+/* 768px */
+@include breakpoint(768px down) {
+
+	.why_we-section {
+		margin-bottom: 45px;
+		padding: 50px 0 20px;
+	}
+
+	.ww__cards-item {
+		margin-bottom: 40px;
+	}
+
+
+  .title-section__why-we-header {
+    padding-top: 5px;
+    font-size: em(22);
+  }
+
+
+	/* число */
+  .ww__card-number {
+  	font-size: 34px;
+		width: 100px;
+		top: 22px;
+
+  	// background-color: green;
+  }
+
+	.ww__first-item-number {
+		left: 10px;
+	}
+
+	.ww__second-item-number {
+		left: 10px;
+	}
+
+	.ww__third-item-number {
+		left: 0px;
+	}
+
+	.ww__fourth-item-number {
+		left: -34px;
+	}
+
+
+	.ww__fifth-item-number {
+		left: -35px;
+	}
+
+
+	/* обертка */
+  .ww__item-wrap {
+	// background-color: orange;
+		height: 90px;
+	}
+
+  .ww__first-item-wrap {
+		width: 175px;
+		padding-left: 70px;
+	}
+
+	.ww__second-item-wrap {
+		width: 175px;
+		padding-left: 70px;
+	}
+
+	.ww__third-item-wrap {
+		width: 175px;
+		padding-left: 70px;
+	}
+
+	.ww__fourth-item-wrap {
+		width: 245px;
+		padding-left: 80px;
+	}
+
+
+	.ww__fifth-item-wrap {
+		width: 245px;
+		padding-left: 70px;
+	}
+
+
+
+	.ww__item-text {
+		font-size: 12px;
+		padding-left: 10px;
+		line-height: 16px;
+	}
+
+	.ww__first-item-text {
+		padding-top: 15px;
+	}
+
+	.ww__second-item-text {
+		padding-top: 35px;
+	}
+
+	.ww__third-item-text {
+		padding-top: 15px;
+	}
+
+	.ww__fourth-item-text {
+		padding-top: 8px;
+	}
+
+	.ww__fifth-item-text {
+		padding-top: 15px;
+	}
+
+
+
+		/* большая линия */
+	.ww__line-big {
+		left: 65px;
+	}
+
+	.ww__third-big-line {
+		left: 55px;
+	}
+
+	.ww__fifth-big-line {
+		left: 55px;
+	}
+
+}
+
+/* 690px */
+@include breakpoint(690px down) {
+
+	// .ww__fourth-card-item {
+	// 	@include grid-col-off(10%);
+	// }
+
+	// .ww__fifth-card-item {
+	// 	@include grid-col-end();
+	// 	@include grid-col-off(10%);
+	// }
+
+	.ww__card-number {
+  	font-size: 32px;
+		width: 100px;
+		top: 25px;
+  }
+
+	.ww__fourth-item-wrap {
+		width: 220px;
+		padding-left: 80px;
+	}
+
+
+	.ww__fifth-item-wrap {
+		width: 220px;
+		padding-left: 70px;
+	}
+
+
+
+	.ww__first-item-number {
+		left: -8px;
+	}
+
+	.ww__second-item-number {
+		left: -8px;
+	}
+
+	.ww__third-item-number {
+		left: -20px;
+	}
+
+	.ww__fourth-item-number {
+		left: -34px;
+	}
+
+
+	.ww__fifth-item-number {
+		left: -35px;
+	}
+}
+
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+	.why_we-section {
+		display: none;
+	}
 }

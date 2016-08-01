@@ -5,34 +5,38 @@ section.contact-section
 
 		.container
 
-			.contact-section__top
-				h2.contact__title Свяжитесь с нами
-
+			.title-section.contact__title-s
+				h2.title-section__header.contact-title__title-s Свяжитесь с нами
 
 			.contact__info
 				.info__text-info
-					p.text Наш специалист проконсультирует Вас по выбору матраса, а так же скинет полный каталог и расскажет о текущих акциях
-					.address
-						include ../_0-icon-svg/location.svg
-						span.addres__text г. Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое Кольцо"
+					p.info__text Наш специалист проконсультирует Вас по выбору матраса, а так же скинет полный каталог и расскажет о текущих акциях
+					.info__address
+						.info__icon-wrap
+							include ../_0-icon-svg/location.svg
+						.info__addres-text г. Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое Кольцо"
 
-					.phone
-						include ../_0-icon-svg/phone.svg
-						.phone__number +7 (495) 181-09-00
+					.info__phone
+						.info__icon-wrap
+							include ../_0-icon-svg/phone.svg
+						.info__phone-number +7 (495) 181-09-00
 
 					button.button.button-contact Заказать звонок
 
 				.main-page__contact-form
 					form(action="").forms
-						.forms__left
-							input(type="text" placeholder='Имя').left__input.input-name
-							input(type="text" placeholder='Телефон').left__input.input-phone
-							input(type="text" placeholder='Email').left__input.input-email
+						.mp__form-inputs
+							input(type="text" placeholder='Имя').form-inputs__input
+							input(type="text" placeholder='Телефон').form-inputs__input
+							input(type="text" placeholder='Email').form-inputs__input.input__email
 							input(type="button" value='Отправить').button.button-form
 
-						.forms__right
-							textarea(name="" placeholder="Ваше сообщение").area
+						.mp__form-area
+							textarea(name="" placeholder="Ваше сообщение").form__area
 
+				//- .mp-contact__buttons-wrap
+				//- 	button.button Заказать звонок
+				//- 	button(type="submit").button Отправить
 
 	.contact-section__map
 		.google-maps#main-map

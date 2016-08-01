@@ -28,7 +28,7 @@
 	font-family: $font-extraBold;
 	font-size: rem(30);
 	color: $white;
-
+	text-transform: uppercase;
 	font-weight: normal;
 	margin-top: 0;
 
@@ -37,7 +37,7 @@
 .individual-section__title-custom {
 	font-size: rem(48);
 	color: $orange;
-	text-transform: uppercase;
+
 }
 
 
@@ -47,9 +47,142 @@
 	li {
 		display: inline-block;
 		font-family: $font-light;
+		font-size: em(18);
 		margin-left: 20px;
 		color: $white;
 	}
 }
 
+/*  
+	для планшетов
+*/
 
+/* 860px */
+@include breakpoint(860px down) {
+
+	.individual-section {
+		padding: 55px 0 40px;
+		margin-bottom: 45px;
+	}
+
+	.individual-section__title {
+		font-size: rem(26);
+	}
+
+	.individual-section__title-custom {
+		font-size: rem(44);
+	}
+
+	.individual-section__list {
+		li {
+			font-size: em(16);
+		}
+	}
+
+}
+
+/* 740px */
+@include breakpoint(740px down) {
+
+
+	.individual-section__list {
+		li {
+			font-size: em(15);
+		}
+	}
+
+	.btn__individual-section {
+		font-size: em(14);
+	}
+
+}
+
+/* 690px */
+@include breakpoint(690px down) {
+
+	.individual-section__title {
+		font-size: rem(22);
+	}
+
+	.individual-section__title-custom {
+		font-size: rem(36);
+	}
+
+
+	.individual-section__list {
+		li {
+			margin-left: 10px;
+			font-size: em(14);
+		}
+	}
+
+}
+
+
+/* 
+  мобильная версия  
+*/
+/* 620px */
+@include breakpoint(620px down) {
+
+	.individual-section {
+		margin-bottom: 0;
+		padding: 20px 20px;
+	}
+	
+	.individual-section__content {
+		padding: 0 20px;
+		text-align: left;
+	}
+
+	.individual-section__title {
+		margin-bottom: 20px;
+		font-size: rem(20);
+	}
+
+	.individual-section__title-custom {
+		font-size: rem(40);
+	}
+
+	.individual-section__list {
+		display: inline-block;
+		width: 50%;
+		margin-bottom: 0;
+		vertical-align: bottom;
+
+		li {
+			margin: 0;
+			font-size: em(16);
+		}
+	}
+
+	.btn__individual-section {
+		font-family: $font-bold;
+		font-size: em(18);
+		vertical-align: top;
+
+	}
+
+}
+
+
+/* 480px */
+@include breakpoint(480px down) {
+	.individual-section {
+		padding: 20px 10px;
+	}
+
+	.individual-section__title {
+		margin-bottom: 10px;
+		font-size: rem(20);
+	}
+
+	.individual-section__title-custom {
+		font-size: rem(30);
+	}
+
+	.individual-section__list {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
