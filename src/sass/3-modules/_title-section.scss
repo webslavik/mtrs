@@ -1,7 +1,7 @@
 /* 
-
+  ---------------------------------------------
   СТИЛИ ДЛЯ ЗАГОЛОВКОВ СЕКЦИЙ
-
+  ---------------------------------------------
 */
 
 .title-section {
@@ -22,3 +22,83 @@
   @include grid-col(3);
 }
 
+
+/* табы */
+
+.title-section__tab {
+  height: 36px;
+  padding-top: 11px;
+
+  :first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+
+.title-section__tab-item {
+  display: inline-block;
+  height: 100%;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 25px;
+    background-color: $grey_1;
+  }
+}
+
+
+.title-section__tab-link {
+  height: 100%;
+  display: inline-block;
+  font-family: $font-light;
+  font-weight: 300;
+  padding-bottom: 3px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+
+    &:after {
+      opacity: 1;
+    }
+
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: $blue;
+    margin: 0 auto;
+    transition: all 220ms ease-in-out;
+    opacity: 0;
+
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+  }
+}
+
+/* 
+  стили для табов
+
+  .main-page__tabs-item - отключаем отображение всех табов
+
+  .current - данный класс включает отображение нужного таба
+*/
+.main-page__tabs-item {
+  display: none;
+
+  &.current {
+    display: block;
+  }
+}

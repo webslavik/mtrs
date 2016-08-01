@@ -35,6 +35,7 @@
 }
 
 .individual-section__title-custom {
+	padding-right: 7px;
 	font-size: rem(48);
 	color: $orange;
 
@@ -43,6 +44,7 @@
 
 .individual-section__list {
 	margin-bottom: 30px;
+	padding-right: 6px;
 
 	li {
 		display: inline-block;
@@ -97,8 +99,8 @@
 
 }
 
-/* 690px */
-@include breakpoint(690px down) {
+/* 704px */
+@include breakpoint(704px down) {
 
 	.individual-section__title {
 		font-size: rem(22);

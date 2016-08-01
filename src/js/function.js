@@ -1,17 +1,6 @@
 ﻿!(function() {
 
 
-    $(window).resize(function() {
-          if ($(document).width() < '620'){
-       			
-    	} else if($(document).width() >= '620'){
-        	
-    	}
-    	console.log($(document).width());
-    })
-
-
-
 
   // SLICK SLIDER 
   //-----------------------------
@@ -102,12 +91,13 @@
   });
 
   // card page 
+  //------------------------------------------
   $('.slideshow__display').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    // arrows: false,
+    arrows: false,
     fade: true,
-    asNavFor: '.slideshow__thumbs',
+    asNavFor: '.slideshow__thumbs'
   });
 
   $('.slideshow__thumbs').slick({
@@ -116,9 +106,11 @@
     prevArrow: '.slideshow__thumbs-left-arrow',
     nextArrow: '.slideshow__thumbs-right-arrow',
     asNavFor: '.slideshow__display',
-    canterMode: true,
+    centerMode: true,
     focusOnSelect: true
   });
+
+
 
   $('.card-page__items').slick({
     infinite: true,

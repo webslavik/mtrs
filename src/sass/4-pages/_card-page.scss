@@ -1,7 +1,7 @@
 /* 
-
+	----------------------------------------------------
 	ОПИСАНИЕ ОДНОГО ИТЕМА
-
+	----------------------------------------------------
 */
 
 .card-pade__product-item {
@@ -474,14 +474,18 @@
 }
 
 
-
+/* описание */
 .card-page__description-section {
 	margin-bottom: 70px;
 }
 
 .card-page__header_card {
-	// background-color: red;
-	@include grid-col(2);
+	width: 17%;
+}
+
+.card-page__tab-section {
+	width: 70%;
+	float: left;
 }
 
 .description-section__definition {
@@ -490,12 +494,21 @@
 }
 
 
+/* слайдер */
 .card-page__matrasses-items {
 	margin-bottom: 63px;
 }
 
+.card-page__title-section {
+	width: grid-column(70%);
+}
+
+.card-page__arrows {
+	width: grid-column(30%);
+}
 
 
+/* индивидуальная секция */
 .card-page__individual-section {
 	margin-bottom: 0;
 }
