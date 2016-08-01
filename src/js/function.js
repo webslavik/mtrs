@@ -1,6 +1,18 @@
 ﻿!(function() {
 
-  
+
+    $(window).resize(function() {
+          if ($(document).width() < '620'){
+       			
+    	} else if($(document).width() >= '620'){
+        	
+    	}
+    	console.log($(document).width());
+    })
+
+
+
+
   // SLICK SLIDER 
   //-----------------------------
 
@@ -183,30 +195,30 @@
 
   // Select2
   //-------------------------------------------------
-  $('.matrasses-model__select').select2({
-    minimumResultsForSearch: -1,
-    width: '47%'
-  });
+  // $('.matrasses-model__select').select2({
+  //   minimumResultsForSearch: -1,
+  //   width: '47%'
+  // });
 
-  $('.product__form-select').select2({
-    minimumResultsForSearch: -1,
-  });
+  // $('.product__form-select').select2({
+  //   minimumResultsForSearch: -1,
+  // });
 
-  $('.catalog__select').select2({
-    minimumResultsForSearch: -1,
-    width: '160px',
+  // $('.catalog__select').select2({
+  //   minimumResultsForSearch: -1,
+  //   width: '160px',
 
-  });
+  // });
 
-  $('.catalog__select_big').select2({
-    minimumResultsForSearch: -1,
-    width: '220px',
+  // $('.catalog__select_big').select2({
+  //   minimumResultsForSearch: -1,
+  //   width: '220px',
 
-  });
+  // });
 
-   $('.pop-up__select').select2({
-    minimumResultsForSearch: -1,
-  })
+  //  $('.pop-up__select').select2({
+  //   minimumResultsForSearch: -1,
+  // })
 
 
 

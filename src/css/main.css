@@ -445,7 +445,11 @@ ul {
   font-weight: normal; }
 
 .matrasses-model__select {
-  width: 50%; }
+  width: 50%;
+  height: 30px;
+  border: 1px solid #cfd0d0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
 
 .matrasses-model__price {
   display: inline-block;
@@ -5441,7 +5445,8 @@ ul {
   text-align: right;
   margin-bottom: 20px;
   border-bottom: 2px solid #eee;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-right: 30px; }
 
 .catalog__sort_po {
   font-family: "FiraSans Light";
@@ -5459,6 +5464,20 @@ ul {
 .catalog__sort_po option {
   padding-left: 10px;
   padding-right: 10px; }
+
+.catalog__select {
+  border: 1px dotted #61c2d0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 30px;
+  padding: 0 15px; }
+
+.catalog__select_big {
+  border: 1px dotted #61c2d0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 30px;
+  padding: 0 15px; }
 
 .catalog__select_wrap {
   text-align: center;
@@ -5523,6 +5542,59 @@ ul {
   width: 20px;
   height: 20px; }
 
+/**************media adaptive*****************/
+@media only screen and (max-width: 920px) {
+  .matrasses-model__item {
+    width: 50%; } }
+
+@media only screen and (max-width: 620px) {
+  #razmerselect {
+    display: block;
+    width: 100%;
+    margin-left: 0; }
+  .filter_select_wrap {
+    display: none !important; }
+  #razmer {
+    width: 90%;
+    margin: 0 auto; }
+  .breadcrumbs__list {
+    display: none; }
+  .catalog__sort_p {
+    display: none; }
+  .select_wrap {
+    display: none; }
+  .matrasses-model__title {
+    font-family: "FiraSans SemiBold"; }
+  .matrasses-model__item {
+    width: 100%; }
+  .matrasses-model__item-wrap {
+    background-color: #fff; }
+  .matrasses-model__price {
+    width: 100%;
+    text-align: center;
+    color: #505050;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    bottom: 33px; }
+  .matrasses-model__button-click {
+    position: relative;
+    bottom: 47px;
+    left: 40%; }
+  .matrasses-model__select {
+    position: relative;
+    top: 68px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .matrasses-model__button-click {
+    position: relative;
+    bottom: 47px;
+    left: 34%; } }
+
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
 /* 
 
 	О НАС 
@@ -5886,6 +5958,188 @@ ul {
 
 #p404_link2 {
   border-right: 1px solid #a5a6a6; }
+
+.credit-section1 {
+  padding-top: 20px;
+  padding-top: 20px;
+  width: 65%;
+  margin: 0 auto; }
+  .credit-section1::before, .credit-section1::after {
+    content: ' ';
+    display: table; }
+  .credit-section1::after {
+    clear: both; }
+
+.cs_block1 {
+  float: left;
+  width: 45%; }
+
+.cs_block2 {
+  float: right;
+  width: 55%;
+  padding-top: 3%;
+  padding-left: 3%; }
+
+.credit-section2 {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 300px;
+  background-color: #f6f7f8;
+  -webkit-box-shadow: inset 0px 0px 68px 20px rgba(210, 215, 222, 0.85);
+  box-shadow: inset 0px 0px 68px 20px rgba(210, 215, 222, 0.85); }
+
+.cs2_head_p {
+  padding-top: 20px;
+  font-size: 22px;
+  text-align: center; }
+
+.cs2__block_wrap {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center; }
+
+.cs2_block {
+  display: inline-block;
+  padding-top: 40px;
+  text-align: center;
+  vertical-align: middle; }
+
+.cs2_block_arrow {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  top: -20px; }
+
+.cs2_block p {
+  text-align: center;
+  width: 125px;
+  padding-top: 10px; }
+
+.cs2_block img {
+  padding-bottom: 20px; }
+
+.cs2_block3 {
+  padding-top: 15px; }
+
+.cs2_block3 img {
+  padding-bottom: 10px; }
+
+.cs2_block4 img {
+  padding-left: 14px; }
+
+.cs2_block.cs2_block3 p {
+  margin: 0;
+  padding: 0; }
+
+.credit-section3 {
+  padding: 30px 10px; }
+  .credit-section3::before, .credit-section3::after {
+    content: ' ';
+    display: table; }
+  .credit-section3::after {
+    clear: both; }
+
+.cs3_block1 {
+  width: 60%;
+  float: left;
+  font-size: 16px;
+  padding-left: 8%; }
+
+.cs3_block2 {
+  width: 40%;
+  float: right;
+  padding-top: 27px; }
+
+.cs3_block1_content {
+  width: 55%;
+  margin: 0 auto; }
+
+.cs3_block1_headtext {
+  font-size: 22px;
+  margin-bottom: 30px;
+  margin-left: -22px; }
+
+.cs3_block1_text {
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+
+.cs3_block1_text:before, .cs3_block1_text.description-small__list:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: -20px;
+  background-image: url(../img/icon/chech.png);
+  background-repeat: no-repeat; }
+
+.cs3_block2_content {
+  width: 40%; }
+
+.cs3_block2_text {
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+
+.csb_text1:before, .csb_text1.description-small__list:after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 7px;
+  left: -30%;
+  background-image: url(../img/icon/kreslo.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.csb_text2:before, .csb_text2.description-small__list:after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 1px;
+  left: -30%;
+  background-image: url(../img/icon/clock.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.csb_text3:before, .csb_text3.description-small__list:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 5px;
+  left: -28%;
+  background-image: url(../img/icon/percent.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.csb_text4:before, .csb_text4.description-small__list:after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 4px;
+  left: -30%;
+  background-image: url(../img/icon/smap.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.credit-section4 {
+  text-align: center;
+  padding: 60px 10px;
+  line-height: 1.5; }
+
+.cs_text_zvonok {
+  color: #bdc1c6; }
+
+.cs_text_numper {
+  font-size: 20px; }
+
+.cs4_buttton {
+  margin-top: 50px; }
 
 /* 
 
