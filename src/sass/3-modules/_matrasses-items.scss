@@ -294,9 +294,9 @@
   }
 
   .matrasses-model__item-pic {
-    width: 90%;
-    height: 312px;
-    margin: 0 auto 20px;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
   
 
     background: rgba(247,251,253,1);
@@ -363,6 +363,10 @@
     font-size: em(28);
   }
 
+
+  .matrasses-model__item-pic {
+    height: 210px;
+  }
 }
 
 /* 380px */
@@ -379,5 +383,10 @@
     width: 60%;
     margin: 0 auto 15px;
     float: none;
+  }
+
+
+  .matrasses-model__item-pic {
+    height: 180px;
   }
 }

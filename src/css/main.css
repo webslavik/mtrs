@@ -590,9 +590,9 @@ ul {
     padding: 0 20px;
     background: none; }
   .matrasses-model__item-pic {
-    width: 90%;
-    height: 312px;
-    margin: 0 auto 20px;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
     background: #f7fbfd;
     background: -webkit-gradient(left top, right bottom, color-stop(0%, #f7fbfd), color-stop(57%, white), color-stop(74%, white), color-stop(100%, #f7fbfd));
     background: -webkit-linear-gradient(-45deg, #f7fbfd 0%, white 57%, white 74%, #f7fbfd 100%);
@@ -625,7 +625,9 @@ ul {
   .matrasses-model__item-wrap {
     padding: 0 10px; }
   .matrasses-model__title {
-    font-size: 1.75em; } }
+    font-size: 1.75em; }
+  .matrasses-model__item-pic {
+    height: 210px; } }
 
 /* 380px */
 @media screen and (max-width: 23.75em) {
@@ -638,7 +640,9 @@ ul {
     display: block;
     width: 60%;
     margin: 0 auto 15px;
-    float: none; } }
+    float: none; }
+  .matrasses-model__item-pic {
+    height: 180px; } }
 
 /* 
 
@@ -803,7 +807,8 @@ ul {
  */
 /* для мобильное версии */
 .header-for-mobile,
-.h__menu-for-mobile {
+.h__menu-for-mobile-wrap,
+.h-mobile__cross-wrap {
   display: none; }
 
 /* 
@@ -1348,15 +1353,48 @@ ul {
   .h-bottom-line__search-submit {
     width: 30px;
     height: 30px; }
-  .h__menu-for-mobile {
-    width: 100%;
-    display: block;
+  /* меню */
+  .h__menu-for-mobile-wrap {
     display: none;
+    width: 100%;
+    padding: 60px 120px 15px;
+    background-color: rgba(111, 117, 125, 0.95);
     position: absolute;
-    background-color: rgba(67, 74, 84, 0.75);
-    z-index: 9999px; }
+    z-index: 100; }
+    .h__menu-for-mobile-wrap.active {
+      display: block; }
+  .h__menu-for-mobile {
+    width: 100%; }
+  .menu-for-mobile__item {
+    margin-bottom: 40px; }
   .menu-for-mobile__link {
-    color: red; } }
+    font-size: 1.875em;
+    color: #ffffff; }
+    .menu-for-mobile__link::before, .menu-for-mobile__link::after {
+      content: ' ';
+      display: table; }
+    .menu-for-mobile__link::after {
+      clear: both; }
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/icon/icon-mobile__menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  .h-mobile__cross-wrap {
+    display: block;
+    text-align: center; }
+  .mobile__cross-btn {
+    border: none;
+    background: none; }
+    .mobile__cross-btn svg {
+      width: 40px;
+      height: 40px; }
+      .mobile__cross-btn svg * {
+        fill: #ffffff; } }
 
 /* 550px */
 @media screen and (max-width: 34.375em) {
@@ -1373,7 +1411,16 @@ ul {
 
 @media screen and (max-width: 34.375em) {
     .h__mobile-wrap:last-child:not(:first-child) {
-      float: right; } }
+      float: right; }
+  .h__menu-for-mobile-wrap {
+    padding: 60px 100px 15px; }
+  .menu-for-mobile__link {
+    font-size: 1.75em; }
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 32px;
+    height: 32px; } }
 
 /* 510px */
 @media screen and (max-width: 31.875em) {
@@ -1405,7 +1452,16 @@ ul {
   .h-bottom-line__search-input {
     width: 87%;
     padding: 7px 10px;
-    font-size: 1em; } }
+    font-size: 1em; }
+  .h__menu-for-mobile-wrap {
+    padding: 50px 75px 15px; }
+  .menu-for-mobile__link {
+    font-size: 1.625em; }
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 30px;
+    height: 30px; } }
 
 /* 440px */
 @media screen and (max-width: 27.5em) {
@@ -1450,7 +1506,9 @@ ul {
     left: -6px;
     line-height: 18px; }
   .h__mobile-phone {
-    font-size: 1.25em; } }
+    font-size: 1.25em; }
+  .h__menu-for-mobile-wrap {
+    padding: 40px 45px 15px; } }
 
 /* 400px */
 @media screen and (max-width: 25em) {
@@ -1468,13 +1526,24 @@ ul {
     .h__basket-mobile img {
       max-height: 25px; }
   .h__basket-circle {
-    top: 5px; } }
+    top: 5px; }
+  .h__menu-for-mobile-wrap {
+    padding: 40px 50px 15px; }
+  .menu-for-mobile__link {
+    font-size: 1.375em; }
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 26px;
+    height: 26px; } }
 
 /* 360px */
 @media screen and (max-width: 22.5em) {
   .h-middle-line__logo {
     max-width: 170px;
-    margin-right: 20px; } }
+    margin-right: 20px; }
+  .h__menu-for-mobile-wrap {
+    padding: 40px 30px 15px; } }
 
 /* 
 
@@ -3924,6 +3993,10 @@ ul {
   .main-page__tabs-item.current {
     display: block; }
 
+/* селект скрываем на больших разрешениях */
+.test-select-wrap {
+  display: none; }
+
 /* 
   пагинация 
 */
@@ -4345,6 +4418,20 @@ ul {
 */
 /* 620px */
 @media screen and (max-width: 38.75em) {
+  /* селект */
+  .mp__matrasses-select {
+    display: block; }
+    .mp__matrasses-select select {
+      width: 100%;
+      padding: 10px 30px;
+      border: 1px solid #c3c3c3;
+      -webkit-border-radius: 12px;
+              border-radius: 12px;
+      font-size: 20px;
+      font-family: "FiraSans Light";
+      color: #707070; }
+    .mp__matrasses-select option {
+      font-size: 18px; }
   /* новые модели  */
   .main-page__mattresses-models {
     margin-bottom: 0;

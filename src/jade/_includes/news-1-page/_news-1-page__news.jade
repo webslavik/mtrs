@@ -1,15 +1,17 @@
 mixin news-item(image, title, date, text)
-	li.news-item.news-1-page__news-item
-		img(src="img/#{image}", alt="картинка").item__pic
-		.news__content-wrap
-			h3.news-title Новая серия матрасов «Твин» на двойных пружинах
-			.news-date 25.09.2015
-			p.news-text Технология двойных пружин используется уже продолжительное время, но именно сейчас она становится наиболее актуальной.
+	li.news__item
+		.news__gradient-wrap
+			.news__pic
+				img(src="img/#{image}", alt="картинка")
+			.news__item-content-wrap
+				h3.news__item-title Новая серия матрасов «Твин» на двойных пружинах
+				.news__item-date 25.09.2015
+				p.news__item-text Технология двойных пружин используется уже продолжительное время, но именно сейчас она становится наиболее актуальной.
 
-		.news__arrow-wrap
-			a(href="#").news__arrow
-				include ../_0-icon-svg/arrow-right.svg
-				include ../_0-icon-svg/arrow-right.svg
+			.news__item-arrow-wrap
+				a(href="#").news__item-arrow
+					include ../_0-icon-svg/arrow-right.svg
+					include ../_0-icon-svg/arrow-right.svg
 
 
 

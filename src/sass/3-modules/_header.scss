@@ -8,7 +8,8 @@
 
 /* для мобильное версии */
 .header-for-mobile,
-.h__menu-for-mobile {
+.h__menu-for-mobile-wrap,
+.h-mobile__cross-wrap {
   display: none;
 }
 
@@ -687,18 +688,69 @@
     height: 30px;
   }
 
+  /* меню */ 
+  .h__menu-for-mobile-wrap {
+    display: none;
+    width: 100%;
+    padding: 60px 120px 15px;
+    background-color: rgba(#6f757d, 0.95);
+
+
+    position: absolute;
+    z-index: 100;
+    
+    &.active {
+      display: block;
+    }
+
+  }
+
   .h__menu-for-mobile {
     width: 100%;
-    display: block;
-    display: none;
-    position: absolute;
-    background-color: rgba(#434a54, 0.75);
-    z-index: 9999px;
+  }
+  .menu-for-mobile__item {
+    margin-bottom: 40px;
   }
 
   .menu-for-mobile__link {
-    color: red;
+    font-size: em(30);
+    color: $white;
+    @include clearfix;
   }
+
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    
+    background-image: url(../img/icon/icon-mobile__menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .h-mobile__cross-wrap  {
+    display: block;
+    text-align: center;
+
+  }
+
+  .mobile__cross-btn {
+    border: none;
+    background: none;
+
+    svg {
+      width: 40px;
+      height: 40px;
+
+      * {
+        fill: $white;
+      }
+    }
+  }
+
+  
 
 }
 
@@ -709,6 +761,23 @@
     padding-right: 20px;
     @include grid-col(84%);
   }
+
+  .h__menu-for-mobile-wrap {
+    padding: 60px 100px 15px;
+  }
+
+  .menu-for-mobile__link {
+    font-size: em(28);
+  }
+
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+  }
+
+
 
 }
 
@@ -744,6 +813,21 @@
     width: 87%;
     padding: 7px 10px;
     font-size: em(16);
+  }
+
+  .h__menu-for-mobile-wrap {
+    padding: 50px 75px 15px;
+  }
+
+  .menu-for-mobile__link {
+    font-size: em(26);
+  }
+
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -803,6 +887,11 @@
     font-size: em(20);
   }
 
+   .h__menu-for-mobile-wrap {
+    padding: 40px 45px 15px;
+  }
+
+
 }
 
 
@@ -834,6 +923,23 @@
     top: 5px;
   }
 
+
+  .h__menu-for-mobile-wrap {
+    padding: 40px 50px 15px;
+  }
+
+  .menu-for-mobile__link {
+    font-size: em(22);
+  }
+
+  .mobile-menu__icon {
+    float: right;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+  }
+
+
 }
 
 /* 360px */
@@ -842,6 +948,10 @@
   .h-middle-line__logo {
     max-width: 170px;
     margin-right: 20px;
+  }
+
+    .h__menu-for-mobile-wrap {
+    padding: 40px 30px 15px;
   }
 
 }

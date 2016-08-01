@@ -224,7 +224,18 @@
       $('.pop-up').toggleClass('pop-up__hide');
     });
   }
-  
+
+  //-----------------------------------------------
+  // Хэдер для мобильной версии
+  //-----------------------------------------------
+  $('#nav-toggle, .mobile__cross-btn').on('click', function() {
+
+    var mobileNav = $('.h__menu-for-mobile-wrap');
+
+    mobileNav.slideToggle();
+    $('#nav-toggle').toggleClass('active');
+    
+  });
 
 
   //-----------------------------------------------

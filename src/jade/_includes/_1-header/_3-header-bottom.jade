@@ -25,20 +25,32 @@
         input(type="text" placeholder="Пример: матрас retro").h-bottom-line__search-input
         input(type="submit", value="").h-bottom-line__search-submit
 
-  ul.h__menu-for-mobile
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Матрасы
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Кровати
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Подушки
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Наматрасники
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Одеяла
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Основания
-    li.menu-for-mobile__item
-      a(href="catalog.html").menu-for-mobile__link Постельное белье
+  .h__menu-for-mobile-wrap
+    ul.h__menu-for-mobile
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Матрасы
+          span.mobile-menu__icon
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Кровати
+          span.mobile-menu__icon
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Подушки
+          span.mobile-menu__icon
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Наматрасники
+          span.mobile-menu__icon
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Одеяла
+          span.mobile-menu__icon
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Основания
+          span.mobile-menu__icon
+      li.menu-for-mobile__item
+        a(href="catalog.html").menu-for-mobile__link Постельное белье
+          span.mobile-menu__icon
+
+    .h-mobile__cross-wrap
+      button.mobile__cross-btn
+        include ../_0-icon-svg/cancel.svg
 
 // end header bottom line

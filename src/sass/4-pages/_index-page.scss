@@ -105,6 +105,10 @@
   }
 }
 
+/* селект скрываем на больших разрешениях */
+.test-select-wrap {
+  display: none;
+}
 
 /* 
   пагинация 
@@ -731,6 +735,27 @@
 */
 /* 620px */
 @include breakpoint(620px down) {
+
+
+  /* селект */
+  .mp__matrasses-select {
+    display: block;
+
+    select {
+      width: 100%;
+      padding: 10px 30px;
+      border: 1px solid #c3c3c3;
+      border-radius: 12px;
+      font-size: 20px;
+      font-family: $font-light;
+      color: #707070;
+    }
+
+    option {
+      font-size: 18px;
+    }
+  }
+
   
   /* новые модели  */
 
