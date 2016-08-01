@@ -32,7 +32,18 @@
 	padding-left:10px;
 	padding-right: 10px;
 }
-
+.catalog__select{
+	border: 1px dotted #61c2d0;
+	border-radius: 5px;
+	height: 30px;
+	padding: 0 15px;
+}
+.catalog__select_big{
+	border: 1px dotted #61c2d0;
+	border-radius: 5px;
+	height: 30px;
+	padding: 0 15px;
+}
 
 .catalog__select_wrap{
 	text-align: center;

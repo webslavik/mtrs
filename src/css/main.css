@@ -445,7 +445,11 @@ ul {
   font-weight: normal; }
 
 .matrasses-model__select {
-  width: 50%; }
+  width: 50%;
+  height: 30px;
+  border: 1px solid #cfd0d0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
 
 .matrasses-model__price {
   display: inline-block;
@@ -5373,6 +5377,20 @@ ul {
 .catalog__sort_po option {
   padding-left: 10px;
   padding-right: 10px; }
+
+.catalog__select {
+  border: 1px dotted #61c2d0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 30px;
+  padding: 0 15px; }
+
+.catalog__select_big {
+  border: 1px dotted #61c2d0;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 30px;
+  padding: 0 15px; }
 
 .catalog__select_wrap {
   text-align: center;
