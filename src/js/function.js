@@ -108,7 +108,17 @@
     nextArrow: '.slideshow__thumbs-right-arrow',
     asNavFor: '.slideshow__display',
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+     responsive: [
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+
+        }
+      }
+    ]
   });
 
 
