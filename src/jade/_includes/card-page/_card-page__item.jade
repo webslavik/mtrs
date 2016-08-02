@@ -2,6 +2,10 @@ section.card-pade__product-item
 	.container
 
 		.product__slideshow
+			.slideshow__mobile-wrap
+				h2.slideshow__mobile-title Матрас: Eleonora valensia premium Multitouch
+				.slideshow__mobile-article Артикул: 3235XDl
+
 			.slideshow__top-item
 				.slideshow__action Акция
 				.slideshow__compare
@@ -10,7 +14,20 @@ section.card-pade__product-item
 					.compare__text Сравнить
 
 			.slideshow__display
-				img(src="img/bed-big.png", alt="")
+				.slideshow__display-item
+					img(src="img/bed_1.png", alt="")
+				.slideshow__display-item
+					img(src="img/thumb-pic-2.png", alt="")
+				.slideshow__display-item
+					img(src="img/thumb-pic-3.png", alt="")
+				.slideshow__display-item
+					img(src="img/bed_1.png", alt="")
+				.slideshow__display-item
+					img(src="img/thumb-pic-1.png", alt="")
+				.slideshow__display-item
+					img(src="img/thumb-pic-2.png", alt="")
+
+
 
 			.slideshow__thumbs-wrap
 				.slideshow__thumbs-left-arrow
@@ -18,7 +35,7 @@ section.card-pade__product-item
 				ul.slideshow__thumbs
 					li.slideshow__thumbs-item
 						.slideshow__thumbs-link
-							img(src="img/thumb-pic-1.png", alt="")
+							img(src="img/bed_1.png", alt="")
 					li.slideshow__thumbs-item
 						.slideshow__thumbs-link
 							img(src="img/thumb-pic-2.png", alt="")
@@ -71,27 +88,25 @@ section.card-pade__product-item
 					img(src="img/logo_3.png", alt="")
 
 			.product__price-wrap
-				.price-wrap__old-price 29 070 руб.
 				.price-wrap__new-price 19 600 руб.
+				.price-wrap__old-price 29 070 руб.
 			
-			.product__form-timer__wrap
-				.product__form
-					form(action="")
-						select(name="" data-placeholder='Размер').product__form-select
-							option(value="")
-							option(value="1") 1
-							option(value="2") 2
-							option(value="3") 3
-						
-						.product__form-count
-							button.form-count__minus -
-							input(class='form-count__input' type="text" value='0')
-							button.form-count__plus +
-						
-						button(type='submit').product__btn-blue
-							span.product__btn-blue-icon
-								img(src="img/icon/basket-button-icon.png", alt="")
-							| В корзину
+			.product__select-count-wrap
+				select.product__select.prduct-select__card-page
+					option(value="") Размер
+					option(value="1") 1
+					option(value="2") 2
+					option(value="3") 3
+
+				.product__form-count
+					button.form-count__minus -
+					input(class='form-count__input' type="text" value='0')
+					button.form-count__plus +
+
+			.product__basket-timer-wrap
+				button(type='submit').product__btn-blue.card-page__blue-btn
+					span.product__btn-blue-icon.card-page__blue-btn-icon
+					| В корзину
 
 				.product__timer
 					.product__timer-text До завершения акции:
@@ -106,20 +121,20 @@ section.card-pade__product-item
 					.description-small__item-left Производитель: 
 					.description-small__item-right Askona
 				li.description-small__item
-					.description-small__item-left Производитель: 
-					.description-small__item-right Askona
+					.description-small__item-left Максимальная нагрузка:
+					.description-small__item-right 180 кг.
 				li.description-small__item
-					.description-small__item-left Производитель: 
-					.description-small__item-right Askona
+					.description-small__item-left Жесткость:  
+					.description-small__item-right Средняя
 				li.description-small__item
-					.description-small__item-left Производитель: 
-					.description-small__item-right Askona
+					.description-small__item-left Пружинный блок:  
+					.description-small__item-right Зависимый (боннель)
 				li.description-small__item
-					.description-small__item-left Производитель: 
-					.description-small__item-right Askona
+					.description-small__item-left Высота:  
+					.description-small__item-right 15 см
 				li.description-small__item
-					.description-small__item-left Производитель: 
-					.description-small__item-right Askona
+					.description-small__item-left Материалы: 
+					.description-small__item-right Жаккард стеганный, Термовойлок
 
 
 

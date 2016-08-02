@@ -101,7 +101,8 @@
   });
 
   $('.slideshow__thumbs').slick({
-    slidesToShow: 4,
+    slidesToShow: 2,
+    slidesToScroll: 1,
     dots: false,
     prevArrow: '.slideshow__thumbs-left-arrow',
     nextArrow: '.slideshow__thumbs-right-arrow',
