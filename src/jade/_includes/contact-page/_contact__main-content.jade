@@ -1,42 +1,47 @@
-section.contact__main-content
+section.contact-page
 
 	.contact-section__map.contact_map
 
 		#main-map.google-maps
 		
-		.contact-section__contact_wrap
+		.contact-page__contact-wrap
 
 			.container
 
-				.contact-section__contact_block 
+				.contact-wrap__contact-block 
 
-					p.contact-section__contact_block__text_head  ЦЕНТРАЛЬНЫЙ ОФИС И ШОУ-РУМ:
-					p.contact-section__contact_block__text_adrs г. Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое
-					p.contact-section__contact_block__text_email info@sleepcorp.ru
-					p.contact-section__contact_block__text_phone +7 (495) 181-09-00
+					.contact-block__text-head  ЦЕНТРАЛЬНЫЙ ОФИС И ШОУ-РУМ:
+					.contact-block__text-adrs г. Москва, ул Южнопортовая 5, строение 1-6, офис 328 "БЦ Золотое
+					.contact-block__text-email info@sleepcorp.ru
+					.contact-block__text-phone +7 (495) 181-09-00
 
-					p.contact-section__contact_block__text_head ЦЕНТРАЛЬНЫЙ ОФИС И ШОУ-РУМ В РОСТОВСКОЙ ОБЛАСТИ
-					p.contact-section__contact_block__text_adrs г. Шахты, ул.Ленина, 178  
-					p.contact-section__contact_block__text_email info@sleepcorp.ru  
-					p.contact-section__contact_block__text_phone +7 (928) 111-11-42
+					.contact-block__text-head ЦЕНТРАЛЬНЫЙ ОФИС И ШОУ-РУМ В РОСТОВСКОЙ ОБЛАСТИ
+					.contact-block__text-adrs г. Шахты, ул.Ленина, 178  
+					.contact-block__text-email info@sleepcorp.ru  
+					.contact-block__text-phone +7 (928) 111-11-42
 
-					p.contact-section__contact_block__text_head АДРЕСА ЗАВОДОВ
-					p.contact-section__contact_block__text_adrs Московская обл., Солнечногорский р-н, Андреевка, ул. Алабушевск
-					p.contact-section__contact_block__text_adrs Ростовская область, Красный Сулин. пос. Горный, улица Центральная, 1
+					.contact-block__text-head АДРЕСА ЗАВОДОВ
+					.contact-block__text-adrs Московская обл., Солнечногорский р-н, Андреевка, ул. Алабушевск
+					.contact-block__text-adrs Ростовская область, Красный Сулин, <br> пос. Горный, улица Центральная, 1
 
-	.contact-section__contact_forms
+	.contact-page__contact-form
 		.container
-			h1 Обратная связь
+			h1.contact-page__form-title Обратная связь
 			form(action="")
-				.contact-section__contact_forms_inputs
-					ul
-						li: input(type="text" required placeholder="Имя")
-						li: input(type="phone" required placeholder="Телефон")
-						li: input(type="email" required placeholder="Email")
+				ul.contact-page__form-inputs
+					li 
+						input(type="text" required placeholder="Имя")
+
+					li 
+						input(type="phone" required placeholder="Телефон")
+
+					li 
+						input(type="email" required placeholder="Email")
 					
-				.contact-section__contact_forms_textarea
+				.contact-page__form-textarea
 					textarea(name="" placeholder="Введите сообщение...")
-				.contact-section__contact_forms_button
-					button.button#contact-section__contact_button Отправить
+
+				.contact-page__button-wrap
+					button.button.contact-page__btn Отправить
 
 

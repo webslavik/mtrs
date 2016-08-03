@@ -1,0 +1,164 @@
+/* 
+
+	-------------------------------------------------
+	СЕКЦИЯ "СЕРИЯ ЭКОНО"
+	-------------------------------------------------
+*/
+
+.econom-section {
+	padding: 70px 0 75px;
+
+	background-color: $white_grey_1;
+	background: {
+		image: url(../img/bg__econom-section.jpg);
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+	}
+
+}
+
+
+.econom-section__content {
+	padding-right: 10px;
+	text-align: right;
+}
+
+.econom-section__title {
+	margin-bottom: 20px;
+	font-family: $font-extraBold;
+	font-size: rem(30);
+	color: $white;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top: 0;
+
+}
+
+.econom-section__title-custom {
+	padding-right: 7px;
+	font-size: rem(48);
+	color: $orange;
+
+}
+
+.btn__econom-s {
+	padding-left: 28px;
+	padding-right: 28px;
+}
+
+
+/*  
+	для планшетов
+*/
+
+/* 860px */
+@include breakpoint(860px down) {
+
+	.econom-section {
+		padding: 55px 0 40px;
+		margin-bottom: 45px;
+	}
+
+	.econom-section__title {
+		font-size: rem(26);
+	}
+
+	.econom-section__title-custom {
+		font-size: rem(44);
+	}
+
+
+}
+
+/* 740px */
+@include breakpoint(740px down) {
+
+	.btn__econom-s {
+		font-size: em(14);
+	}
+
+}
+
+/* 704px */
+@include breakpoint(704px down) {
+
+	.econom-section__title {
+		font-size: rem(22);
+	}
+
+	.econom-section__title-custom {
+		font-size: rem(36);
+	}
+
+
+}
+
+
+// /* 
+//   мобильная версия  
+// */
+// /* 620px */
+// @include breakpoint(620px down) {
+
+// 	.individual-section {
+// 		margin-bottom: 0;
+// 		padding: 20px 20px;
+// 	}
+	
+// 	.individual-section__content {
+// 		padding: 0 20px;
+// 		text-align: left;
+// 	}
+
+// 	.individual-section__title {
+// 		margin-bottom: 20px;
+// 		font-size: rem(20);
+// 	}
+
+// 	.individual-section__title-custom {
+// 		font-size: rem(40);
+// 	}
+
+// 	.individual-section__list {
+// 		display: inline-block;
+// 		width: 50%;
+// 		margin-bottom: 0;
+// 		vertical-align: bottom;
+
+// 		li {
+// 			margin: 0;
+// 			font-size: em(16);
+// 		}
+// 	}
+
+// 	.btn__individual-section {
+// 		font-family: $font-bold;
+// 		font-size: em(18);
+// 		vertical-align: top;
+
+// 	}
+
+// }
+
+
+// /* 480px */
+// @include breakpoint(480px down) {
+// 	.individual-section {
+// 		padding: 20px 10px;
+// 	}
+
+// 	.individual-section__title {
+// 		margin-bottom: 10px;
+// 		font-size: rem(20);
+// 	}
+
+// 	.individual-section__title-custom {
+// 		font-size: rem(30);
+// 	}
+
+// 	.individual-section__list {
+// 		width: 100%;
+// 		margin-bottom: 15px;
+// 	}
+// }

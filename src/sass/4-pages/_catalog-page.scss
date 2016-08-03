@@ -1,11 +1,27 @@
 /* 
-
+	-----------------------------------------------
 	СТРАНИЦА КАТАЛОГА
-
+	-----------------------------------------------
 */
+
+.catalog__filter {
+	margin-bottom: 60px;
+}
+
 .headwhitetext{
 	color: #fff;
 }
+
+
+/* слайдер цены */
+.range_slider_wrap {
+	font-family: $font-light;
+	font-size: em(14);
+	color: #707070;
+}
+
+
+
 .catalog__sort_p{
 	font-family: "FiraSans Light";
 	text-align: right;
@@ -27,20 +43,29 @@
 	background-image: url(/img/icon/arrdown.png);
   	background-position: right center;
  	background-repeat: no-repeat;
+ 	position: relative;
+
+
 }
 .catalog__sort_po option{
 	padding-left:10px;
 	padding-right: 10px;
 }
 .catalog__select{
+	font-family: $font-light;
+	font-size: em(14);
+	color: #707070;
 	border: 1px dotted #61c2d0;
-	border-radius: 5px;
+	border-radius: 3px;;
 	height: 30px;
 	padding: 0 15px;
 }
 .catalog__select_big{
+	font-family: $font-light;
+	font-size: em(14);
+	color: #707070;
+	border-radius: 3px;;
 	border: 1px dotted #61c2d0;
-	border-radius: 5px;
 	height: 30px;
 	padding: 0 15px;
 }
@@ -89,7 +114,6 @@
 .catalog__filter.button_wrap{
 	text-align: center;
 	padding-top: 30px;
-	padding-bottom: 40px;
 }
 .closeX{
 
@@ -183,3 +207,14 @@
 // 	}
 // }
 
+/* 
+	Для мобильных
+*/
+
+/* 620px */
+@include breakpoint(620px down) {
+	.catalog-page__econom-section,
+	.catalog-page__first-factory {
+		display: none;
+	}
+}

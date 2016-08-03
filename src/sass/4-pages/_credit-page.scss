@@ -15,13 +15,14 @@
 	width: 55%;
 	padding-top: 3%;
 	padding-left: 3%;
+	font-family: $helvetica-roman;
 }
 .credit-section2{
 	
-
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	height: 300px;
 	background-color: #f6f7f8;
 	-webkit-box-shadow: inset 0px 0px 68px 20px rgba(210,215,222,0.85);
@@ -31,7 +32,9 @@
 
 .cs2_head_p{
 	padding-top: 20px;
-	font-size: 22px;
+	font-family: $helvetica-bold;
+	color: #3e4757;
+	font-size: em(22);
 	text-align: center;
 }
 .cs2__block_wrap{
@@ -55,6 +58,7 @@
 	
 }
 .cs2_block p{
+	font-family: $helvetica-medium;
 	text-align: center;
 	width: 125px;
 	padding-top: 10px;
@@ -77,7 +81,7 @@
 }
 
 .credit-section3{
-	padding: 30px 10px;
+	padding: 0px 10px 0px;
 	
 	@include clearfix;
 }
@@ -101,15 +105,19 @@
 
 }
 .cs3_block1_headtext{
-	font-size: 22px;
 	margin-bottom: 30px;
 	margin-left: -22px;
+	font-family: $helvetica-bold;
+	font-size: 22px;
+	color: #3e4757;
+
 }
 .cs3_block1_text{
 	position: relative;
 	line-height: 1.5;
 	margin-bottom: 20px;
-
+	font-family: $helvetica-roman;
+	color: #3e4757;
 }
 .cs3_block1_text:before{
 	content: "";
@@ -129,7 +137,8 @@
 	position: relative;
 	line-height: 1.5;
 	margin-bottom: 20px;
-
+	font-family: $helvetica-medium;
+	color: #3e4757;
 }
 .csb_text1:before{
 	content: "";
@@ -178,16 +187,23 @@
 
 .credit-section4{
 	text-align: center;
-	padding: 60px 10px;
+	padding: 55px 10px 60px;
 	line-height: 1.5;
 }
+
+.cs4_text_block {
+	font-family: $helvetica-medium;
+	font-size: em(14);
+	color: #3e4757;
+}
+
 .cs_text_zvonok{
+	font-family: $helvetica-roman;
 	color: #bdc1c6;
 }
 .cs_text_numper{
-	font-size: 20px;
+	font-size: em(20);
 }
 .cs4_buttton{
-	margin-top: 50px
-
+	margin-top: 43px;
 }
