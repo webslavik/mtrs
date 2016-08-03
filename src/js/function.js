@@ -26,26 +26,14 @@
     ]
   });
 
-  // main page new models
-  // $('.matrasses-model__list-items').slick({
-  //   // autoplay: true,
-  //   // autoplaySpeed: 1000
-  //   // prevArrow: '.slider-top__left-arrow',
-  //   // nextArrow: '.slider-top__right-arrow'
-  //   responsive: [
-  //     {
-  //       breakpoint: 620,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //             infinite: true,
-  //             dots: false,
-  //             speed: 1000
-
-  //       }
-  //     }
-  //   ]
-  // });
+  // слайдер айтемов под мобильные
+  $('.mm__list-for-mobile').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '.matrasses__mobile-arrow-left',
+    nextArrow: '.matrasses__mobile-arrow-right'
+   });
 
 
   // main page logos

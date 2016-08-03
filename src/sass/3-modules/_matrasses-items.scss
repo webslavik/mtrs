@@ -15,6 +15,52 @@
 
 }
 
+/* этот блок виден только на мобильных */
+.matrasses__mobile-wrap {
+  display: none;
+  position: relative;
+}
+
+.matrasses__mobile-arrow-left,
+.matrasses__mobile-arrow-right {
+  display: inline-block;
+  padding: 10px;
+
+  position: absolute;
+  top: 35%;
+  z-index: 50;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    svg * {
+      fill: $orange;
+    }
+  }
+
+  svg {
+    width: 25px;
+    height: 50px;
+
+    * {
+      transition: all 180ms ease-in;
+      fill: $arrows-color_1;
+    }
+  }
+}
+
+.matrasses__mobile-arrow-left {
+  left: -15px;
+
+}
+.matrasses__mobile-arrow-right {
+  right: -15px;
+
+}
+
+/* стили для итемов */
+
 .matrasses-model__item {
   margin-bottom: 20px;
   @include grid-col(4, 15);
@@ -79,11 +125,11 @@
 
 }
 
-.matrasses-model__form{
-  // @include grid-row();
-}
-
-.matrasses-model__select {
+/* два селекта - один для мобильных, другой для остального
+  p.s. спасибо продуманному дизайну.
+ */
+.matrasses-model__select,
+.mm__mobile-select {
   width: 50%;
   height: 30px;
   padding-left: 10px;
@@ -93,11 +139,15 @@
   border-radius: 9px;
 }
 
+.mm__mobile-select {
+  display: none;
+}
+
 .matrasses-model__price {
   display: inline-block;
   width: 50%;
   font-family: $font-bold;
-  font-size: rem(24);
+  font-size: em(24);
   color: $blue;
   text-align: right;
   vertical-align: bottom;
@@ -105,25 +155,33 @@
 
 
 .matrasses-model__button-wrap {
-  // background-color: green;
   margin-top: 20px;
   padding: 0 10px;
   @include clearfix;
 }
 
-.matrasses-model__button-click {
+
+/* кнопка "Купить в 1 клик" */
+
+/* обертка для мобильной кнопки */
+.mm__button-click-mobile-wrap {
+  display: none;
+  @include clearfix;
+}
+
+/* mobile - включаем для мобильных, другую - отключаем */
+.matrasses-model__button-click,
+.mm__btn-click-mobile {
   float: left;
   display: inline-block;
   padding: 6px 0 4px 0;
   font-family: $font-light;
-  font-size: rem(14);
+  font-size: em(14);
   color: $white_grey_2;
   background-color: $white;
   border: none;
   border-bottom: 1px dashed $blue;
   cursor: pointer;
-
-  // background-color: tomato;
 }
 
 .matrasses-model__button-basket {
@@ -131,7 +189,7 @@
   display: inline-block;
   padding: 6px 15px 6px 34px;
   font-family: $font-light;
-  font-size: rem(14);
+  font-size: em(14);
   color: $white_grey_2;
   background-color: $white;
   border: 1px dotted $blue;
@@ -230,7 +288,7 @@
 }
 
 /* 670px */
-@include breakpoint(760px down) {
+@include breakpoint(670px down) {
 
   .matrasses-model__item-new {
     margin-bottom: 10px;
@@ -275,15 +333,16 @@
 /* 620px */
 @include breakpoint(620px down) {
 
-  .matrasses-model__list-items {
-    li:nth-child(1n+1) {
-      display: none;
-    }
-    
-    li:first-child {
-      display: block;
-    }
+  .matrasses__mobile-wrap {
+    display: block;
+  }
 
+  /* 
+    приходится применить important,
+    так как не понятно почему не срабатывает display:none 
+  */
+  .main-page__tabs-item {
+    display: none !important;
   }
   
   .matrasses-model__item {
@@ -295,7 +354,7 @@
   }
 
   .matrasses-model__item-wrap {
-    padding: 0 20px;
+    padding: 0 0px;
     background: none;
   }
 
@@ -328,28 +387,76 @@
   }
 
   .matrasses-model__title {
+    margin-bottom: 10px;
     font-family: $font-bold;
     font-size: em(34);
+    line-height: 34px;
+  }
+  
+  /* влючаем один селект, отключаем другой для мобильных */
+  .matrasses-model__select {
+    display: none;
+  }
+  .mm__mobile-select {
+    display: inline-block;
   }
 
   .matrasses-model__price {
-    font-size: em(24);
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
     font-family: $font-bold;
-    color: #505050;
-
+    font-size: em(24);
+    text-align: center;
+    color: #555;
   }
 
-  .matrasses-model__select {
-    // float: left;
+
+  .mm__button-click-mobile-wrap {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   .matrasses-model__button-click {
+    display: none;
+  }
+
+  .mm__btn-click-mobile {
+    float: none;
     font-size: em(20);
   }
 
-  .matrasses-model__button-basket {
+
+  .matrasses-model__button-wrap {
+    margin-top: 0;
+  }
+
+  .mm__mobile-select {
+    width: 43%;
+    height: 55px;
+    font-family: $font-light;
     font-size: em(20);
   }
+
+
+
+  .matrasses-model__button-basket {
+    padding: 14px 20px 14px 90px;
+    font-size: em(20);
+    border-radius: 6px;
+    position: relative;
+
+    &:before {
+      width: 20px;
+      height: 28px;
+      position: absolute;
+      top: 12px;
+      left: 17px;
+    }
+
+  }
+
   
 }
 

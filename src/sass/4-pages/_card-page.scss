@@ -988,7 +988,9 @@
 	/* отключаем блоки для мобильной версии */
 	.slideshow__social,
 	.product__article,
-	.product__title-wrap {
+	.product__title-wrap,
+	.card-page__items,
+	.card-page__arrows {
 		display: none;
 	}
 

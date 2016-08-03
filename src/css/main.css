@@ -449,6 +449,40 @@ ul {
   .matrasses-model__list-items li:last-child:last-child:last-child {
     float: left; }
 
+/* этот блок виден только на мобильных */
+.matrasses__mobile-wrap {
+  display: none;
+  position: relative; }
+
+.matrasses__mobile-arrow-left,
+.matrasses__mobile-arrow-right {
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 35%;
+  z-index: 50;
+  cursor: pointer; }
+  .matrasses__mobile-arrow-left:hover svg *, .matrasses__mobile-arrow-left:focus svg *,
+  .matrasses__mobile-arrow-right:hover svg *,
+  .matrasses__mobile-arrow-right:focus svg * {
+    fill: #ef791a; }
+  .matrasses__mobile-arrow-left svg,
+  .matrasses__mobile-arrow-right svg {
+    width: 25px;
+    height: 50px; }
+    .matrasses__mobile-arrow-left svg *,
+    .matrasses__mobile-arrow-right svg * {
+      -webkit-transition: all 180ms ease-in;
+      transition: all 180ms ease-in;
+      fill: #c1c0ba; }
+
+.matrasses__mobile-arrow-left {
+  left: -15px; }
+
+.matrasses__mobile-arrow-right {
+  right: -15px; }
+
+/* стили для итемов */
 .matrasses-model__item {
   margin-bottom: 20px;
   width: 33.33333%;
@@ -500,7 +534,11 @@ ul {
   margin-top: 0;
   font-weight: normal; }
 
-.matrasses-model__select {
+/* два селекта - один для мобильных, другой для остального
+  p.s. спасибо продуманному дизайну.
+ */
+.matrasses-model__select,
+.mm__mobile-select {
   width: 50%;
   height: 30px;
   padding-left: 10px;
@@ -510,11 +548,14 @@ ul {
   -webkit-border-radius: 9px;
           border-radius: 9px; }
 
+.mm__mobile-select {
+  display: none; }
+
 .matrasses-model__price {
   display: inline-block;
   width: 50%;
   font-family: "FiraSans SemiBold";
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #00acb8;
   text-align: right;
   vertical-align: bottom; }
@@ -528,12 +569,24 @@ ul {
   .matrasses-model__button-wrap::after {
     clear: both; }
 
-.matrasses-model__button-click {
+/* кнопка "Купить в 1 клик" */
+/* обертка для мобильной кнопки */
+.mm__button-click-mobile-wrap {
+  display: none; }
+  .mm__button-click-mobile-wrap::before, .mm__button-click-mobile-wrap::after {
+    content: ' ';
+    display: table; }
+  .mm__button-click-mobile-wrap::after {
+    clear: both; }
+
+/* mobile - включаем для мобильных, другую - отключаем */
+.matrasses-model__button-click,
+.mm__btn-click-mobile {
   float: left;
   display: inline-block;
   padding: 6px 0 4px 0;
   font-family: "FiraSans Light";
-  font-size: 0.875rem;
+  font-size: 0.875em;
   color: #707070;
   background-color: #ffffff;
   border: none;
@@ -545,7 +598,7 @@ ul {
   display: inline-block;
   padding: 6px 15px 6px 34px;
   font-family: "FiraSans Light";
-  font-size: 0.875rem;
+  font-size: 0.875em;
   color: #707070;
   background-color: #ffffff;
   border: 1px dotted #00acb8;
@@ -605,7 +658,7 @@ ul {
     font-size: 0.75em; } }
 
 /* 670px */
-@media screen and (max-width: 47.5em) {
+@media screen and (max-width: 41.875em) {
   .matrasses-model__item-new {
     margin-bottom: 10px; }
   .matrasses-model__item-pic {
@@ -630,10 +683,14 @@ ul {
 */
 /* 620px */
 @media screen and (max-width: 38.75em) {
-  .matrasses-model__list-items li:nth-child(1n+1) {
-    display: none; }
-  .matrasses-model__list-items li:first-child {
+  .matrasses__mobile-wrap {
     display: block; }
+  /* 
+    приходится применить important,
+    так как не понятно почему не срабатывает display:none 
+  */
+  .main-page__tabs-item {
+    display: none !important; }
   .matrasses-model__item {
     width: 100%;
     float: left;
@@ -650,7 +707,7 @@ ul {
   .matrasses-model__item-new {
     display: none; }
   .matrasses-model__item-wrap {
-    padding: 0 20px;
+    padding: 0 0px;
     background: none; }
   .matrasses-model__item-pic {
     width: 100%;
@@ -670,16 +727,51 @@ ul {
       bottom: 0;
       max-width: 100%; }
   .matrasses-model__title {
+    margin-bottom: 10px;
     font-family: "FiraSans SemiBold";
-    font-size: 2.125em; }
+    font-size: 2.125em;
+    line-height: 34px; }
+  /* влючаем один селект, отключаем другой для мобильных */
+  .matrasses-model__select {
+    display: none; }
+  .mm__mobile-select {
+    display: inline-block; }
   .matrasses-model__price {
-    font-size: 1.5em;
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
     font-family: "FiraSans SemiBold";
-    color: #505050; }
+    font-size: 1.5em;
+    text-align: center;
+    color: #555; }
+  .mm__button-click-mobile-wrap {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center; }
   .matrasses-model__button-click {
+    display: none; }
+  .mm__btn-click-mobile {
+    float: none;
+    font-size: 1.25em; }
+  .matrasses-model__button-wrap {
+    margin-top: 0; }
+  .mm__mobile-select {
+    width: 43%;
+    height: 55px;
+    font-family: "FiraSans Light";
     font-size: 1.25em; }
   .matrasses-model__button-basket {
-    font-size: 1.25em; } }
+    padding: 14px 20px 14px 90px;
+    font-size: 1.25em;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+    position: relative; }
+    .matrasses-model__button-basket:before, .matrasses-model__button-basket.description-small__list:after {
+      width: 20px;
+      height: 28px;
+      position: absolute;
+      top: 12px;
+      left: 17px; } }
 
 /* 480px */
 @media screen and (max-width: 30em) {
@@ -2742,9 +2834,11 @@ ul {
   margin-left: 35px; }
 
 .clients-section__button-wrap {
+  display: none;
   text-align: center; }
 
 .btn__client-section {
+  padding: 15px 52px;
   font-family: "FiraSans Light";
   font-size: 1.25em;
   border: 1px solid #d7d7d7;
@@ -2777,8 +2871,8 @@ ul {
 /* 620px */
 @media screen and (max-width: 38.75em) {
   .clients-section {
-    margin-bottom: 0;
-    padding: 20px;
+    margin-bottom: 50px;
+    padding: 20px 20px 0;
     position: relative; }
   .title-section__clients {
     font-size: 1.75em;
@@ -2795,9 +2889,11 @@ ul {
     left: 7px; }
   .cl__clients-data {
     margin-left: 0;
+    margin-bottom: 27px;
     padding-left: 20px; }
   .cl__clients-name {
-    font-family: "FiraSans Light"; }
+    font-family: "FiraSans UltraLight";
+    font-size: 1.25em; }
   .clients-arrow-left, .clients-arrow-right {
     position: absolute;
     top: 50%;
@@ -2809,7 +2905,9 @@ ul {
   .clients-arrow-right {
     margin-left: 0;
     right: 0;
-    left: auto; } }
+    left: auto; }
+  .clients-section__button-wrap {
+    display: block; } }
 
 /* 480px */
 @media screen and (max-width: 30em) {
@@ -5132,7 +5230,9 @@ ul {
   /* отключаем блоки для мобильной версии */
   .slideshow__social,
   .product__article,
-  .product__title-wrap {
+  .product__title-wrap,
+  .card-page__items,
+  .card-page__arrows {
     display: none; }
   /* карточка продукта */
   .product__slideshow,
@@ -5917,10 +6017,6 @@ ul {
   height: 20px; }
 
 /**************media adaptive*****************/
-@media only screen and (max-width: 920px) {
-  .matrasses-model__item {
-    width: 50%; } }
-
 @media only screen and (max-width: 620px) {
   #razmerselect {
     display: block;
@@ -5936,39 +6032,9 @@ ul {
   .catalog__sort_p {
     display: none; }
   .select_wrap {
-    display: none; }
-  .matrasses-model__title {
-    font-family: "FiraSans SemiBold"; }
-  .matrasses-model__item {
-    width: 100%; }
-  .matrasses-model__item-wrap {
-    background-color: #fff; }
-  .matrasses-model__price {
-    width: 100%;
-    text-align: center;
-    color: #505050;
-    font-size: 18px;
-    position: relative;
-    display: inline-block;
-    bottom: 33px; }
-  .matrasses-model__button-click {
-    position: relative;
-    bottom: 47px;
-    left: 40%; }
-  .matrasses-model__select {
-    position: relative;
-    top: 68px; } }
+    display: none; } }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  .matrasses-model__button-click {
-    position: relative;
-    bottom: 47px;
-    left: 34%; } }
-
-/* Custom, iPhone Retina */
-/* Extra Small Devices, Phones */
-/* Small Devices, Tablets */
 /* 
 
 	О НАС 
