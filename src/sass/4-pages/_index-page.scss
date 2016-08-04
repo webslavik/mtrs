@@ -757,7 +757,13 @@
     font-size: em(20);
   }
 
+  
+  .mp-contact__btn-wrap {
+    text-align: center;
+  }
+
   .button-contact {
+    float: none;
     font-family: $font-bold;
     font-size: em(20);
     background-color: $blue;
@@ -784,7 +790,7 @@
   }
 
   .contact-title__title-s {
-    padding-left: 20px;
-    font-size: em(26);
+    padding-left: 12px;
+    font-size: em(22);
   }
 }

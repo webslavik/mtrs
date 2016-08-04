@@ -10,9 +10,11 @@ mixin slider-item(item_image, title, descr, price)
         img(src="img/#{item_image}", alt="Изображение")
       p.big-slider__descr #{descr}
       
-      
-      span.big-slider__price #{price}
-      a(href="card-page.html").big-slider__button.button Узнать больше
+      .big-slider__price-wrap
+        span.big-slider__price #{price}
+
+      .big-slider__button-wrap
+        a(href="card-page.html").big-slider__button.button Узнать больше
 
 
 // BIG TOP SLIDER

@@ -343,6 +343,16 @@
 	}
 }
 
+
+/* 420px */
+@include breakpoint(420px down) {
+	.news__title-header {
+		font-size: em(22);
+		padding-left: 10px;
+	}
+}
+
+
 /* 390px */
 @include breakpoint(390px down) {
 	
@@ -360,3 +370,11 @@
 
 }
 
+
+
+/* 350px */
+@include breakpoint(350px down) {
+	.news__title-header {
+		font-size: em(20);
+	}
+}

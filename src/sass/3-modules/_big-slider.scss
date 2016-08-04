@@ -67,8 +67,12 @@
 }
 
 
-.big-slider__button {
+.big-slider__button-wrap {
   float: left;
+  display: inline-block;
+}
+
+.big-slider__button {
   display: inline-block;
   margin-top: 5px;
   margin-left: 35px;
@@ -77,6 +81,10 @@
   font-family: $font-light;
   font-size: em(16);
   vertical-align: middle;
+}
+
+.big-slider__price-wrap {
+  display: inline-block
 }
 
 .big-slider__price {
@@ -451,17 +459,19 @@
     font-size: em(24);
   }
 
+  .big-slider__button-wrap {
+    float: right;
+  }
+
   .big-slider__price {
     padding-top: 10px;
     font-size: em(38);
-    float: left;
   }
 
   .big-slider__button {
     margin-right: 5px;
     padding: 15px 35px;
     font-size: em(24);
-    float: right;
   }
 
   .slider-top__left-arrow,
@@ -470,6 +480,25 @@
     svg {
       width: 25px;
     }
+  }
+
+}
+
+
+/* 530px */
+@include breakpoint(530px down) {
+
+  .big-slider__price-wrap {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .big-slider__button-wrap {
+    float: none;
+    width: 100%;
+    text-align: center;
   }
 
 }
@@ -488,7 +517,7 @@
 
 
   .big-slider__title {
-    font-size: em(36);
+    font-size: em(32);
   }
 
   .big-slider__descr {
@@ -516,19 +545,11 @@
     font-size: em(18);
   }
 
-
   .big-slider__price {
-    float: none;
-    // text-align: center;
-    padding-left: 50px;
-    width: 100%;
     font-size: em(30);
-    margin-bottom: 10px;
   }
 
  .big-slider__button {
-    float: none;
-    margin-left: 50px;
     padding: 15px 35px;
     font-size: em(18);
   }

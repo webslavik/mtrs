@@ -283,3 +283,19 @@
 		left: auto;
 	}
 }
+
+/* 480px */
+@include breakpoint(480px down) {
+	.title-section__clients {
+		font-size: em(22);
+		padding-left: 10px;
+	}
+}
+
+
+/* 350px */
+@include breakpoint(350px down) {
+	.title-section__clients {
+		font-size: em(20);
+	}
+}

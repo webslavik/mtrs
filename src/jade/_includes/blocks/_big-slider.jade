@@ -5,11 +5,16 @@ mixin slider-item(item_image, title, descr, price)
       
     .big-slider__content
       h2.big-slider__title #{title}
+      // это изображение видно только под мобильные
+      .big-slider__img-for-mobile
+        img(src="img/#{item_image}", alt="Изображение")
       p.big-slider__descr #{descr}
       
-      
-      button.big-slider__button.button Узнать больше
-      span.big-slider__price #{price}
+      .big-slider__price-wrap
+        span.big-slider__price #{price}
+
+      .big-slider__button-wrap
+        a(href="card-page.html").big-slider__button.button Узнать больше
 
 
 // BIG TOP SLIDER
